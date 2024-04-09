@@ -1,0 +1,1 @@
+This folder contains any types that are used in multiple places. 

@@ -1,0 +1,1 @@
+This folder contains all of the top level pages of the app. Given example structure for sub-folder: Home. 
