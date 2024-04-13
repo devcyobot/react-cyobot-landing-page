@@ -1,0 +1,13 @@
+.screens-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.screens-container h2 {
+  text-align: center;
+  grid-area: header;
+}
+
+.screens-group {
+  display: flex;
+}

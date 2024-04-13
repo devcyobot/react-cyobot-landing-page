@@ -1,0 +1,9 @@
+.card-container {
+  box-sizing: border-box;
+  width: 15rem;
+  height: 19rem;
+  border: 6px dashed #3e2486;
+  border-radius: 10px;
+  text-align: center;
+  padding: 1rem;
+}
