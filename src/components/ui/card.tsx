@@ -1,21 +1,30 @@
-import "./card.css";
+import './card.css';
 
 interface CardProps {
   image: {
     src: string;
     alt: string;
   };
-  title: string;
-  text: string;
-  id: string;
+  color?: string;
+  title?: string;
+  text?: string;
+  id?: string;
 }
 
-export default function Card({ image, title, text, id }: CardProps) {
+export default function Card({ image, color, title, text, id }: CardProps) {
+  const containerClassName = `card-container border-${color || ''}`;
   return (
-    <div className="card-container" id={id}>
+    <div className={containerClassName} id={id}>
       <img src={image.src} alt={image.alt} />
-      <h3>{title}</h3>
-      <p>{text}</p>
+      <h3 className="nunito-bold">{title}</h3>
+      <p className="nunito-regular">{text}</p>
     </div>
   );
 }
+
+Card.defaultProps = {
+  color: '',
+  title: '',
+  text: '',
+  id: '',
+};

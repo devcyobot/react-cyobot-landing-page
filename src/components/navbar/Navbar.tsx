@@ -1,4 +1,4 @@
-import "./navbar.css";
+import './navbar.css';
 
 interface NavbarProps {
   src: string;
@@ -7,17 +7,19 @@ interface NavbarProps {
 
 export default function Navbar({ src, alt }: NavbarProps) {
   return (
-    <nav className="nav-container">
+    <header>
       <img className="logo-img" src={src} alt={alt} />
-      <ul className="menu-links nunito-regular">
-        <li>Home</li>
-        <li>About</li>
-        <li>Downloads</li>
-        <li>Event</li>
-      </ul>
+      <nav>
+        <ul className="menu-links nunito-regular">
+          <li>Home</li>
+          <li>About</li>
+          <li>Downloads</li>
+          <li>Event</li>
+        </ul>
+      </nav>
       <button type="button" className="shop-btn nunito-bold">
         Shop
       </button>
-    </nav>
+    </header>
   );
 }

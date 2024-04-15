@@ -1,0 +1,21 @@
+.time-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    'header header'
+    'image bars';
+}
+
+.bar-container-wrapper {
+  grid-area: bars;
+  align-self: center;
+}
+
+.time-container h3 {
+  grid-area: header;
+}
+
+.time-container img {
+  grid-area: image;
+}
