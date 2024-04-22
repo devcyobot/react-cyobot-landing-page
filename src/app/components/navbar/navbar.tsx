@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import MyLink from './link';
+import NavLink from './link';
 
 type NavbarProps = {
 	src: string;
@@ -12,10 +12,10 @@ export default function Navbar({ src, alt }: NavbarProps) {
 			<Image src={src} alt={alt} width={240} height={40} />
 			<nav className="flex items-center">
 				<ul className="flex justify-around">
-					<MyLink href="/" title="Home" />
-					<MyLink href="/about" title="About" />
-					<MyLink href="/downloads" title="Downloads" />
-					<MyLink href="/events" title="Events" />
+					<NavLink href="/" title="Home" />
+					<NavLink href="/about" title="About" />
+					<NavLink href="/downloads" title="Downloads" />
+					<NavLink href="/events" title="Events" />
 				</ul>
 			</nav>
 			<button

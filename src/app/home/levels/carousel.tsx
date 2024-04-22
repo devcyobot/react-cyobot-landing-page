@@ -10,6 +10,11 @@ type CarouselProps = {
 };
 
 export default function Carousel({ current, left, right }: CarouselProps) {
+	let bg = '';
+	if (current === 1) bg = '#f3c449';
+	else if (current === 0) bg = '#1ad69c';
+	else bg = '#e00303';
+
 	return (
 		<div className="bg-black w-[45%] overflow-hidden relative">
 			<div
@@ -24,7 +29,7 @@ export default function Carousel({ current, left, right }: CarouselProps) {
 						// 		src: `${i.src}`,
 						// 		alt: `${i.alt}`,
 						// 	}}
-						// 	color="yellow"
+						// 	color={i.color}
 						// />
 						<Image
 							key={i.id}
@@ -32,7 +37,10 @@ export default function Carousel({ current, left, right }: CarouselProps) {
 							alt={i.alt}
 							width={500}
 							height={500}
-							className={`bg-brand-${i.color}`}
+							className="border-dashed border-8"
+							style={{
+								backgroundColor: bg,
+							}}
 						/>
 					);
 				})}
