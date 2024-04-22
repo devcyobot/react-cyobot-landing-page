@@ -1,0 +1,38 @@
+.hex {
+	margin-left: 2rem;
+	margin-top: 3rem;
+	width: 9rem;
+	height: 5rem;
+	background-color: #3e2486;
+	border-color: #3e2486;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 1rem;
+}
+
+.hex:before {
+	content: '';
+	border-bottom: 30px solid;
+	border-color: inherit;
+	border-left: 4.5rem solid transparent;
+	border-right: 4.5rem solid transparent;
+	position: absolute;
+	top: -30px;
+}
+
+.hex:after {
+	content: '';
+	position: absolute;
+	bottom: -30px;
+	border-top: 30px solid;
+	border-color: inherit;
+	border-left: 4.5rem solid transparent;
+	border-right: 4.5rem solid transparent;
+}
+
+.hexText {
+	font-family: var(--vt323-regular);
+	text-align: center;
+}

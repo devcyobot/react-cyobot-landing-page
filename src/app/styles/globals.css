@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	--brand-light-purple: #3e2486;
+	--brand-dark-purple: #110a25;
+	--brand-green: #1ad69c;
+	--brand-red: #e00303;
+	--brand-yellow: #f3c449;
+}
+
+/* GENERAL */
+
+body {
+	font-family: var(--nunito-regular);
+	/* Source: https://matthewjamestaylor.com/responsive-font-size#how */
+	font-size: calc(15px + 0.390625vw);
+}
+
+h1,
+h2,
+h3 {
+	font-family: var(--vt323-regular);
+}
+
+h2 {
+	padding: 4rem 0;
+}
+
+h4,
+h5 {
+	font-family: var(--roboto-bold);
+}
+
+h4 {
+	font-size: 1.5rem;
+}
+
+/* FONTS */
+
+.vt323-regular {
+	font-family: var(--vt323-regular);
+}
+
+.nunito-regular {
+	font-family: var(--nunito-regular);
+}
+
+.roboto-bold {
+	font-family: var(--roboto-bold);
+}
