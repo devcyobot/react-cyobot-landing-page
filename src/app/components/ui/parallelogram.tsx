@@ -29,7 +29,8 @@ export default function Parallelogram({ num, text }: Parralelogram) {
 
 	return (
 		<div
-			onClick={toggleColor}
+			onMouseEnter={toggleColor}
+			onMouseLeave={toggleColor}
 			className={`w-60 h-96 ${bgColor} -skew-x-12 ml-6`}
 		>
 			<h4
