@@ -1,6 +1,6 @@
 import Image from 'next/image';
-import NavLink from './link';
-
+import DesktopNavBar from './DesktopNavBar';
+import MobileNavBar from './MobileNavBar';
 type NavbarProps = {
 	src: string;
 	alt: string;
@@ -8,22 +8,24 @@ type NavbarProps = {
 
 export default function Navbar({ src, alt }: NavbarProps) {
 	return (
-		<header className="absolute w-full p-6 px-20 flex justify-between bg-brand-purple text-white shadow-lg">
-			<Image src={src} alt={alt} width={240} height={40} />
-			<nav className="flex items-center">
-				<ul className="flex justify-around">
-					<NavLink href="/" title="Home" />
-					<NavLink href="/about" title="About" />
-					<NavLink href="/downloads" title="Downloads" />
-					<NavLink href="/events" title="Events" />
-				</ul>
+		<header className="relative flex h-full lg:h-[9.375rem] bg-brand-purple text-white shadow-lg py-10">
+			<nav className="relative flex w-full items-center justify-end sm:flex-col md:flex-row">
+				<Image
+					src={src}
+					alt={alt}
+					quality={100}
+					fill
+					sizes="(max-width: 600px) 50vw, 100vw"
+					style={{
+						objectFit: 'cover',
+						maxHeight: '2.6rem',
+						maxWidth: '15.438rem',
+					}}
+					className="self-center lg:ml-12 ml-5"
+				/>
+				<DesktopNavBar />
+				<MobileNavBar />
 			</nav>
-			<button
-				type="button"
-				className="w-20 h-12 text-brand-purple bg-white shadow-md rounded-lg border-none text-lg font-bold"
-			>
-				Shop
-			</button>
 		</header>
 	);
 }

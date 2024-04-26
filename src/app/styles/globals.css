@@ -3,19 +3,23 @@
 @tailwind utilities;
 
 :root {
-	--brand-light-purple: #3e2486;
-	--brand-dark-purple: #110a25;
+	--brand-purple: #3e2486;
+	--brand-purple-dark: #22144a;
+	--brand-dark: #110a25;
 	--brand-green: #1ad69c;
 	--brand-red: #e00303;
 	--brand-yellow: #f3c449;
+	--brand-gray-light: #f0f0f0;
+	--brand-gray-dark: #a2a2a2;
 }
 
 /* GENERAL */
 
 body {
 	font-family: var(--nunito-regular);
-	/* Source: https://matthewjamestaylor.com/responsive-font-size#how */
-	font-size: calc(15px + 0.390625vw);
+	/* Source: https://matthewjamestaylor.com/responsive-font-size#how
+	font-size: calc(15px + 0.390625vw); */
+	font-size: 1.5rem;
 }
 
 h1,
@@ -34,7 +38,7 @@ h5 {
 }
 
 h4 {
-	font-size: 1.5rem;
+	font-size: 2rem;
 }
 
 /* FONTS */
@@ -49,4 +53,157 @@ h4 {
 
 .roboto-bold {
 	font-family: var(--roboto-bold);
+}
+
+/* BORDER STYLES AND COLORS */
+.border-dashed-purple {
+	background-image: repeating-linear-gradient(
+			0deg,
+			var(--brand-purple),
+			var(--brand-purple) 45px,
+			transparent 35px,
+			transparent 76px,
+			var(--brand-purple) 56px
+		),
+		repeating-linear-gradient(
+			90deg,
+			var(--brand-purple),
+			var(--brand-purple) 45px,
+			transparent 35px,
+			transparent 76px,
+			var(--brand-purple) 56px
+		),
+		repeating-linear-gradient(
+			180deg,
+			var(--brand-purple),
+			var(--brand-purple) 45px,
+			transparent 35px,
+			transparent 76px,
+			var(--brand-purple) 56px
+		),
+		repeating-linear-gradient(
+			270deg,
+			var(--brand-purple),
+			var(--brand-purple) 45px,
+			transparent 35px,
+			transparent 76px,
+			var(--brand-purple) 56px
+		);
+	background-size: 6px 100%, 100% 6px, 6px 100%, 100% 6px;
+	background-position: 0 0, 0 0, 100% 0, 0 100%;
+	background-repeat: no-repeat;
+}
+
+.border-dashed-yellow {
+	background-image: repeating-linear-gradient(
+			0deg,
+			var(--brand-yellow),
+			var(--brand-yellow) 45px,
+			transparent 35px,
+			transparent 76px,
+			var(--brand-yellow) 56px
+		),
+		repeating-linear-gradient(
+			90deg,
+			var(--brand-yellow),
+			var(--brand-yellow) 45px,
+			transparent 35px,
+			transparent 76px,
+			var(--brand-yellow) 56px
+		),
+		repeating-linear-gradient(
+			180deg,
+			var(--brand-yellow),
+			var(--brand-yellow) 45px,
+			transparent 35px,
+			transparent 76px,
+			var(--brand-yellow) 56px
+		),
+		repeating-linear-gradient(
+			270deg,
+			var(--brand-yellow),
+			var(--brand-yellow) 45px,
+			transparent 35px,
+			transparent 76px,
+			var(--brand-yellow) 56px
+		);
+	background-size: 6px 100%, 100% 6px, 6px 100%, 100% 6px;
+	background-position: 0 0, 0 0, 100% 0, 0 100%;
+	background-repeat: no-repeat;
+}
+
+.border-dashed-green {
+	background-image: repeating-linear-gradient(
+			0deg,
+			var(--brand-green),
+			var(--brand-green) 45px,
+			transparent 35px,
+			transparent 76px,
+			var(--brand-green) 56px
+		),
+		repeating-linear-gradient(
+			90deg,
+			var(--brand-green),
+			var(--brand-green) 45px,
+			transparent 35px,
+			transparent 76px,
+			var(--brand-green) 56px
+		),
+		repeating-linear-gradient(
+			180deg,
+			var(--brand-green),
+			var(--brand-green) 45px,
+			transparent 35px,
+			transparent 76px,
+			var(--brand-green) 56px
+		),
+		repeating-linear-gradient(
+			270deg,
+			var(--brand-green),
+			var(--brand-green) 45px,
+			transparent 35px,
+			transparent 76px,
+			var(--brand-green) 56px
+		);
+	background-size: 6px 100%, 100% 6px, 6px 100%, 100% 6px;
+	background-position: 0 0, 0 0, 100% 0, 0 100%;
+	background-repeat: no-repeat;
+}
+
+.border-dashed-red {
+	background-image: repeating-linear-gradient(
+			0deg,
+			var(--brand-red),
+			var(--brand-red) 45px,
+			transparent 35px,
+			transparent 76px,
+			var(--brand-red) 56px
+		),
+		repeating-linear-gradient(
+			90deg,
+			var(--brand-red),
+			var(--brand-red) 45px,
+			transparent 35px,
+			transparent 76px,
+			var(--brand-red) 56px
+		),
+		repeating-linear-gradient(
+			180deg,
+			var(--brand-red),
+			var(--brand-red) 45px,
+			transparent 35px,
+			transparent 76px,
+			var(--brand-red) 56px
+		),
+		repeating-linear-gradient(
+			270deg,
+			var(--brand-red),
+			var(--brand-red) 45px,
+			transparent 35px,
+			transparent 76px,
+			var(--brand-red) 56px
+		);
+	background-size: 6px 100%, 100% 6px, 6px 100%, 100% 6px;
+	background-position: 0 0, 0 0, 100% 0, 0 100%;
+	background-repeat: no-repeat;
 }

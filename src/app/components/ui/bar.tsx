@@ -13,7 +13,7 @@ export default function Bar({ color, name, amount }: BarProps) {
 
 	return (
 		<>
-			<div className="mt-8 flex flex-col items-start">
+			<div className="mt-8 flex flex-col">
 				<div className="absolute w-[45%] h-7 bg-gray-300 rounded-lg"></div>
 				<div
 					className={`relative h-7 rounded-l-lg rounded-br-3xl`}

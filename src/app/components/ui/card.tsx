@@ -17,20 +17,29 @@ export default function Card({
 	text,
 	className,
 }: CardProps) {
-	let border = '';
-	if (color === 'yellow') border = '#f3c449';
-	else if (color === 'green') border = '#1ad69c';
-	else if (color === 'red') border = '#e00303';
-	else border = '#3e2486';
+	let customColor = '';
+	if (color === 'yellow') customColor = '#f3c449';
+	else if (color === 'green') customColor = '#1ad69c';
+	else if (color === 'red') customColor = '#e00303';
+	else customColor = '#3e2486';
 
 	return (
 		<div
-			className={`m-10 flex flex-col items-center w-80 h-96 text-center p-4 border-8 border-dashed rounded-lg ${className}`}
-			style={{ borderColor: border }}
+			className={`relative flex flex-col items-center justify-end h-1/2 max-w-xs max-h-sm text-center rounded-md ${className} border-dashed-${color}`}
 		>
-			<Image src={image.src} alt={image.alt} width={200} height={200} />
-			<h5 className="py-2">{title}</h5>
-			<p>{text}</p>
+			<Image
+				src={image.src}
+				alt={image.alt}
+				fill
+				quality={100}
+				sizes="(max-width: 600px) 50vw, 100vw"
+				style={{ objectFit: 'contain' }}
+				className="max-h-32 mt-3"
+			/>
+			<h5 style={{ color: customColor }} className="text-lg lg:text-2xl">
+				{title}
+			</h5>
+			<p className="text-sm lg:text-lg mb-3">{text}</p>
 		</div>
 	);
 }

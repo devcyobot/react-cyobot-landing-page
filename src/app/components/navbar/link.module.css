@@ -11,10 +11,14 @@
 }
 
 .navLink:hover:after {
-	width: 100%;
+	width: 90%;
 }
 
 .navLink {
 	position: relative;
 	margin: 0 2rem;
+}
+
+.navLink:hover {
+	font-weight: bold;
 }

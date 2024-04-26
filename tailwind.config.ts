@@ -23,6 +23,10 @@ const config: Config = {
 				'brand-gray-light': '#f0f0f0',
 				'brand-gray-dark': '#A2A2A2',
 			},
+			fontSize: {
+				'font-28px': '1.75rem',
+				'font-80px': '5rem',
+			},
 		},
 	},
 	plugins: [],
