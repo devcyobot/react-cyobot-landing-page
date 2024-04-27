@@ -22,7 +22,7 @@ export default function RootLayout({
 			>
 				<Navbar src={logoImage.src} alt="CYOBot Logo" />
 				{children}
-				<Footer />
+				{/* <Footer /> */}
 			</body>
 		</html>
 	);

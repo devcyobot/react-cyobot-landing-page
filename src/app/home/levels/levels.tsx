@@ -32,27 +32,21 @@ export default function Levels() {
 
 	return (
 		<section className="bg-brand-purple text-white flex flex-col items-center">
-			<h2 className="text-center" style={{ fontSize: '4rem' }}>
+			{/* <h2 className="text-center" style={{ fontSize: '4rem' }}>
 				CHOOSE YOUR QUEST
-			</h2>
-			<div className="w-[40%]">
+			</h2> */}
+			<div className="w-auto h-auto">
 				<Carousel
 					current={currentLevel}
 					left={handleClickLeft}
 					right={handleClickRight}
 				/>
 			</div>
-			<h3
-				className={`bg-brand-dark bg-opacity-25 pt-5 text-center w-[30.063rem] h-[5.813rem] mt-12 text-4xl rounded-lg border-dashed-${border}`}
-				style={{ fontSize: '4rem' }}
-			>
-				{levelName}
-			</h3>
-			<div>
+			{/* <div>
 				<Summary text={levelSumm} />
 				<Time image={levelTimeImage} atr={levelTimeDataArray} />
 				<Tasks data={levelRewardsArray} />
-			</div>
+			</div> */}
 		</section>
 	);
 }
