@@ -17,8 +17,8 @@ type Reward = {
 
 export default function Rewards({ data }: RewardsProps) {
 	return (
-		<>
-			<h4 className="pb-3 pt-12">Rewards</h4>
+		<div className="mx-[8.25rem]">
+			<h4 className="mt-20 mb-5">Rewards</h4>
 			<div className="flex flex-wrap justify-center">
 				{data.map((d) => {
 					return (
@@ -32,6 +32,6 @@ export default function Rewards({ data }: RewardsProps) {
 					);
 				})}
 			</div>
-		</>
+		</div>
 	);
 }

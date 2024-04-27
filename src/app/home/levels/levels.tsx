@@ -48,7 +48,7 @@ export default function Levels() {
 			>
 				{levelName}
 			</h3>
-			<div className="grid gap-20">
+			<div>
 				<Summary text={levelSumm} />
 				<Time image={levelTimeImage} atr={levelTimeDataArray} />
 				<Tasks data={levelRewardsArray} />

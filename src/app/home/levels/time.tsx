@@ -18,8 +18,8 @@ type Attribute = {
 
 export default function Time({ image, atr }: TimeProps) {
 	return (
-		<>
-			<h4 className="pb-3 pt-12">Time Attribute</h4>
+		<div className="mx-[8.25rem]">
+			<h4 className="mt-20 mb-5">Time Attribute</h4>
 			<div className="flex items-center">
 				<Image src={image.src} alt={image.alt} width={500} height={500} />
 				<div className="ml-40 w-full">
@@ -30,6 +30,6 @@ export default function Time({ image, atr }: TimeProps) {
 					})}
 				</div>
 			</div>
-		</>
+		</div>
 	);
 }
