@@ -1,6 +1,6 @@
 import Card from '../components/ui/card';
 import Image from 'next/image';
-import { imageBenefits } from '../data/imageBenefits';
+import { imageBenefits } from '../data/imageSpecs';
 import Link from 'next/link';
 
 export default function Benefits() {
@@ -9,7 +9,7 @@ export default function Benefits() {
 			<h2 className="text-6xl text-center w-4/5 lg:w-[77.25rem] lg:px-56">
 				TAKE YOU THROUGH 1,000 LEVELS WITH OUR SUPPORTED HARDWARE
 			</h2>
-			<div className="relative bg-[url('/benefits-background.png')] bg-no-repeat bg-contain h-[60rem] grid grid-cols-4 justify-items-center items-end lg:gap-y-56 lg:gap-x-36 [grid-template-areas:'card-4_image_image_card-2''card-1_image_image_card-3']">
+			<div className="relative bg-[url('/specs-background.png')] bg-no-repeat bg-contain h-[60rem] grid grid-cols-4 justify-items-center items-end lg:gap-y-56 lg:gap-x-36 [grid-template-areas:'card-4_image_image_card-2''card-1_image_image_card-3']">
 				{imageBenefits.map((b) => {
 					return (
 						<Card

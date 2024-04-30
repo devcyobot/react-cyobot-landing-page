@@ -3,7 +3,7 @@
 import Intro from './home/intro';
 import Levels from './home/levels/levels';
 import Roles from './home/roles';
-import Benefits from './home/benefits';
+import Benefits from './home/specs';
 import Environments from './home/environtments';
 import Steps from './home/steps';
 // import Footer from './components/footer/footer';
