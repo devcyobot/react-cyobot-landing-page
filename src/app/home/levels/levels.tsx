@@ -1,24 +1,33 @@
 'use client';
 import { levelsData } from '../../data/levelsData';
-import Carousel from './carousel';
 import Time from './time';
 import Tasks from './rewards';
 import Summary from './summary';
 import { useState } from 'react';
+// --------TESTING--------------
+import { imageCarousel } from '../../data/imageCarousel';
+import DesktopCarousel from './desktopCarousel';
+import MobileCarousel from './mobileCarousel';
 
 export default function Levels() {
 	const [currentLevel, setCurrentLevel] = useState(1);
 
-	function handleClickLeft() {
+	function handleClickPrev() {
 		setCurrentLevel((prevState) => {
 			return prevState === 0 ? levelsArray.length - 1 : prevState - 1;
+			// return prevState > 0 ? prevState - 1 : prevState;
 		});
 	}
 
-	function handleClickRight() {
+	function handleClickNext() {
 		setCurrentLevel((prevState) => {
 			return prevState === levelsArray.length - 1 ? 0 : prevState + 1;
+			// return prevState < levelsArray.length - 1 ? prevState + 1 : prevState;
 		});
+	}
+
+	function handleClickImageCarousel(index: number) {
+		setCurrentLevel(index);
 	}
 
 	const levelsArray = levelsData.models;
@@ -28,25 +37,29 @@ export default function Levels() {
 	const levelTimeDataArray = levelsArray[currentLevel].timeData;
 	const levelRewardsArray = levelsArray[currentLevel].rewards;
 
-	let border = levelRewardsArray[0].color;
-
 	return (
-		<section className="bg-brand-purple text-white flex flex-col items-center">
-			{/* <h2 className="text-center" style={{ fontSize: '4rem' }}>
+		<section className="bg-brand-purple text-white flex flex-col">
+			<h2 className="text-center" style={{ fontSize: '4rem' }}>
 				CHOOSE YOUR QUEST
-			</h2> */}
-			<div className="w-auto h-auto">
-				<Carousel
-					current={currentLevel}
-					left={handleClickLeft}
-					right={handleClickRight}
-				/>
-			</div>
-			{/* <div>
-				<Summary text={levelSumm} />
-				<Time image={levelTimeImage} atr={levelTimeDataArray} />
-				<Tasks data={levelRewardsArray} />
-			</div> */}
+			</h2>
+			<DesktopCarousel
+				className="hidden lg:block"
+				data={imageCarousel}
+				currentLevel={currentLevel}
+				// prev={handleClickPrev}
+				// next={handleClickNext}
+				navigate={handleClickImageCarousel}
+			/>
+			{/* <MobileCarousel
+				className="lg:hidden"
+				data={imageCarousel}
+				currentLevel={currentLevel}
+				// prev={handleClickPrev}
+				// next={handleClickNext}
+			/> */}
+			<Summary text={levelSumm} />
+			<Time image={levelTimeImage} atr={levelTimeDataArray} />
+			<Tasks data={levelRewardsArray} />
 		</section>
 	);
 }

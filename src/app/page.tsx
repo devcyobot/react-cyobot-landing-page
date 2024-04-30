@@ -11,12 +11,12 @@ import Steps from './home/steps';
 export default function Home() {
 	return (
 		<main>
-			{/* <Intro /> */}
+			<Intro />
 			<Levels />
-			{/* <Roles />
+			<Roles />
 			<Benefits />
 			<Environments />
-			<Steps /> */}
+			<Steps />
 		</main>
 	);
 }

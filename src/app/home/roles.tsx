@@ -23,7 +23,7 @@ export default function Roles() {
 						<Hexagon text="INTERN" />
 					</div>
 				</div>
-				<div className="w-1/2 lg:w-[45.563rem] h-[30rem] lg:h-[43.063rem] flex justify-center items-center border-dashed-green rounded-lg">
+				<div className="w-1/2 lg:w-[45.563rem] h-[30rem] lg:h-[43.063rem] flex justify-center items-center border-dashed-green-bold rounded-lg">
 					<p className="bg-brand-green bg-opacity-40 h-4/5 w-full"></p>
 				</div>
 			</div>

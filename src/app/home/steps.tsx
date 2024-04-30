@@ -3,8 +3,8 @@ import Image from 'next/image';
 
 export default function Steps() {
 	return (
-		<section className="bg-brand-purple-dark pt-20">
-			<div className="flex justify-center">
+		<section className="bg-brand-purple-dark pt-20 overflow-hidden">
+			<div className="relative flex justify-center">
 				<Parallelogram num={1} text="Choose your quest and environment" />
 				<Parallelogram
 					num={2}
@@ -16,17 +16,22 @@ export default function Steps() {
 				/>
 				<Parallelogram num={4} text="Build your github profile in less than " />
 			</div>
-			<div className="bg-brand-gray-light w-full mt-20 flex justify-between items-center">
+			<div className="bg-brand-gray-light w-full mt-20 flex justify-between">
 				<Image
 					src="/steps-all-models.png"
 					alt="All CYOBot models"
-					width={500}
-					height={500}
-					className="relative -top-24"
+					quality={100}
+					// fill
+					width={757}
+					height={345}
+					sizes="(max-width: 1440px) 100vw"
+					style={{
+						objectFit: 'contain',
+						// maxHeight: '345px',
+						// maxWidth: '757px',
+					}}
+					className="relative -top-32"
 				/>
-				<button type="button" className="bg-brand-green rounded-md">
-					A button
-				</button>
 			</div>
 		</section>
 	);

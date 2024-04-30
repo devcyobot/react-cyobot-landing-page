@@ -20,9 +20,9 @@ export default function Time({ image, atr }: TimeProps) {
 	return (
 		<div className="mx-[8.25rem]">
 			<h4 className="mt-20 mb-5">Time Attribute</h4>
-			<div className="flex items-center">
+			<div className="flex flex-col lg:flex-row items-center">
 				<Image src={image.src} alt={image.alt} width={500} height={500} />
-				<div className="ml-40 w-full">
+				<div className="lg:ml-40 w-full">
 					{atr.map((a) => {
 						return (
 							<Bar key={a.id} color={a.color} name={a.name} amount={a.amount} />

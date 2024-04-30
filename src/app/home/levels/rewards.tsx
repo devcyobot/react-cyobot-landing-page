@@ -20,7 +20,7 @@ export default function Rewards({ data }: RewardsProps) {
 		<div className="mx-[8.25rem]">
 			<h4 className="mt-20 mb-5">Rewards</h4>
 			<div className="flex flex-wrap justify-center">
-				{data.map((d) => {
+				{/* {data.map((d) => {
 					return (
 						<Card
 							key={d.id}
@@ -30,7 +30,8 @@ export default function Rewards({ data }: RewardsProps) {
 							text={d.job}
 						/>
 					);
-				})}
+				})} */}
+				WILL BE ADDED LATER
 			</div>
 		</div>
 	);

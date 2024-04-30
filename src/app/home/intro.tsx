@@ -10,7 +10,7 @@ export default function Intro() {
 				</h1>
 				<form className="mt-9">
 					<label htmlFor="user-email">
-						<p className="text-2xl lg:text-font-28px w-full lg:w-4/5">
+						<p className="text-2xl lg:text-font-28px w-full lg:w-[90%]">
 							Engineer doesn&rsquo;t have to be that hard. Advance your career
 							in 6 months!
 						</p>
@@ -19,7 +19,7 @@ export default function Intro() {
 								type="text"
 								id="user-email"
 								placeholder="Your email"
-								className="md:h-[3.563rem] md:w-[21.125rem] w-1/2 mt-9 px-3 py-2 text-black border-none md:text-2xl text-xl"
+								className="font-light md:h-[3.563rem] md:w-[21.125rem] w-1/2 mt-9 px-6 py-2 text-black border-none md:text-2xl text-xl"
 							/>
 							<button
 								type="submit"

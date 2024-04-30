@@ -29,7 +29,7 @@ h3 {
 }
 
 h2 {
-	padding: 4rem 0;
+	padding: 3rem 0;
 }
 
 h4,
@@ -56,152 +56,304 @@ h4 {
 }
 
 /* BORDER STYLES AND COLORS */
-.border-dashed-purple {
+.border-dashed-purple-bold {
 	background-image: repeating-linear-gradient(
 			0deg,
 			var(--brand-purple),
-			var(--brand-purple) 45px,
+			var(--brand-purple) 55px,
 			transparent 35px,
-			transparent 76px,
-			var(--brand-purple) 56px
+			transparent 74px,
+			var(--brand-purple) 74px
 		),
 		repeating-linear-gradient(
 			90deg,
 			var(--brand-purple),
-			var(--brand-purple) 45px,
+			var(--brand-purple) 55px,
 			transparent 35px,
-			transparent 76px,
-			var(--brand-purple) 56px
+			transparent 74px,
+			var(--brand-purple) 74px
 		),
 		repeating-linear-gradient(
 			180deg,
 			var(--brand-purple),
-			var(--brand-purple) 45px,
+			var(--brand-purple) 55px,
 			transparent 35px,
-			transparent 76px,
-			var(--brand-purple) 56px
+			transparent 74px,
+			var(--brand-purple) 74px
 		),
 		repeating-linear-gradient(
 			270deg,
 			var(--brand-purple),
-			var(--brand-purple) 45px,
+			var(--brand-purple) 55px,
 			transparent 35px,
-			transparent 76px,
-			var(--brand-purple) 56px
+			transparent 74px,
+			var(--brand-purple) 74px
+		);
+	background-size: 10px 100%, 100% 10px, 10px 100%, 100% 10px;
+	background-position: 0 0, 0 0, 100% 0, 0 100%;
+	background-repeat: no-repeat;
+}
+
+.border-dashed-purple-regular {
+	background-image: repeating-linear-gradient(
+			0deg,
+			var(--brand-purple),
+			var(--brand-purple) 55px,
+			transparent 35px,
+			transparent 74px,
+			var(--brand-purple) 74px
+		),
+		repeating-linear-gradient(
+			90deg,
+			var(--brand-purple),
+			var(--brand-purple) 55px,
+			transparent 35px,
+			transparent 74px,
+			var(--brand-purple) 74px
+		),
+		repeating-linear-gradient(
+			180deg,
+			var(--brand-purple),
+			var(--brand-purple) 55px,
+			transparent 35px,
+			transparent 74px,
+			var(--brand-purple) 74px
+		),
+		repeating-linear-gradient(
+			270deg,
+			var(--brand-purple),
+			var(--brand-purple) 55px,
+			transparent 35px,
+			transparent 74px,
+			var(--brand-purple) 74px
 		);
 	background-size: 6px 100%, 100% 6px, 6px 100%, 100% 6px;
 	background-position: 0 0, 0 0, 100% 0, 0 100%;
 	background-repeat: no-repeat;
 }
 
-.border-dashed-yellow {
+.border-dashed-yellow-bold {
 	background-image: repeating-linear-gradient(
 			0deg,
 			var(--brand-yellow),
-			var(--brand-yellow) 45px,
+			var(--brand-yellow) 55px,
 			transparent 35px,
-			transparent 76px,
-			var(--brand-yellow) 56px
+			transparent 74px,
+			var(--brand-yellow) 74px
 		),
 		repeating-linear-gradient(
 			90deg,
 			var(--brand-yellow),
-			var(--brand-yellow) 45px,
+			var(--brand-yellow) 55px,
 			transparent 35px,
-			transparent 76px,
-			var(--brand-yellow) 56px
+			transparent 74px,
+			var(--brand-yellow) 74px
 		),
 		repeating-linear-gradient(
 			180deg,
 			var(--brand-yellow),
-			var(--brand-yellow) 45px,
+			var(--brand-yellow) 55px,
 			transparent 35px,
-			transparent 76px,
-			var(--brand-yellow) 56px
+			transparent 74px,
+			var(--brand-yellow) 74px
 		),
 		repeating-linear-gradient(
 			270deg,
 			var(--brand-yellow),
-			var(--brand-yellow) 45px,
+			var(--brand-yellow) 55px,
 			transparent 35px,
-			transparent 76px,
-			var(--brand-yellow) 56px
+			transparent 74px,
+			var(--brand-yellow) 74px
+		);
+	background-size: 10px 100%, 100% 10px, 10px 100%, 100% 10px;
+	background-position: 0 0, 0 0, 100% 0, 0 100%;
+	background-repeat: no-repeat;
+}
+
+.border-dashed-yellow-regular {
+	background-image: repeating-linear-gradient(
+			0deg,
+			var(--brand-yellow),
+			var(--brand-yellow) 55px,
+			transparent 35px,
+			transparent 74px,
+			var(--brand-yellow) 74px
+		),
+		repeating-linear-gradient(
+			90deg,
+			var(--brand-yellow),
+			var(--brand-yellow) 55px,
+			transparent 35px,
+			transparent 74px,
+			var(--brand-yellow) 74px
+		),
+		repeating-linear-gradient(
+			180deg,
+			var(--brand-yellow),
+			var(--brand-yellow) 55px,
+			transparent 35px,
+			transparent 74px,
+			var(--brand-yellow) 74px
+		),
+		repeating-linear-gradient(
+			270deg,
+			var(--brand-yellow),
+			var(--brand-yellow) 55px,
+			transparent 35px,
+			transparent 74px,
+			var(--brand-yellow) 74px
 		);
 	background-size: 6px 100%, 100% 6px, 6px 100%, 100% 6px;
 	background-position: 0 0, 0 0, 100% 0, 0 100%;
 	background-repeat: no-repeat;
 }
 
-.border-dashed-green {
+.border-dashed-green-bold {
 	background-image: repeating-linear-gradient(
 			0deg,
 			var(--brand-green),
-			var(--brand-green) 45px,
+			var(--brand-green) 55px,
 			transparent 35px,
-			transparent 76px,
-			var(--brand-green) 56px
+			transparent 74px,
+			var(--brand-green) 74px
 		),
 		repeating-linear-gradient(
 			90deg,
 			var(--brand-green),
-			var(--brand-green) 45px,
+			var(--brand-green) 55px,
 			transparent 35px,
-			transparent 76px,
-			var(--brand-green) 56px
+			transparent 74px,
+			var(--brand-green) 74px
 		),
 		repeating-linear-gradient(
 			180deg,
 			var(--brand-green),
-			var(--brand-green) 45px,
+			var(--brand-green) 55px,
 			transparent 35px,
-			transparent 76px,
-			var(--brand-green) 56px
+			transparent 74px,
+			var(--brand-green) 74px
 		),
 		repeating-linear-gradient(
 			270deg,
 			var(--brand-green),
-			var(--brand-green) 45px,
+			var(--brand-green) 55px,
 			transparent 35px,
-			transparent 76px,
-			var(--brand-green) 56px
+			transparent 74px,
+			var(--brand-green) 74px
+		);
+	background-size: 10px 100%, 100% 10px, 10px 100%, 100% 10px;
+	background-position: 0 0, 0 0, 100% 0, 0 100%;
+	background-repeat: no-repeat;
+}
+
+.border-dashed-green-regular {
+	background-image: repeating-linear-gradient(
+			0deg,
+			var(--brand-green),
+			var(--brand-green) 55px,
+			transparent 35px,
+			transparent 74px,
+			var(--brand-green) 74px
+		),
+		repeating-linear-gradient(
+			90deg,
+			var(--brand-green),
+			var(--brand-green) 55px,
+			transparent 35px,
+			transparent 74px,
+			var(--brand-green) 74px
+		),
+		repeating-linear-gradient(
+			180deg,
+			var(--brand-green),
+			var(--brand-green) 55px,
+			transparent 35px,
+			transparent 74px,
+			var(--brand-green) 74px
+		),
+		repeating-linear-gradient(
+			270deg,
+			var(--brand-green),
+			var(--brand-green) 55px,
+			transparent 35px,
+			transparent 74px,
+			var(--brand-green) 74px
 		);
 	background-size: 6px 100%, 100% 6px, 6px 100%, 100% 6px;
 	background-position: 0 0, 0 0, 100% 0, 0 100%;
 	background-repeat: no-repeat;
 }
 
-.border-dashed-red {
+.border-dashed-red-bold {
 	background-image: repeating-linear-gradient(
 			0deg,
 			var(--brand-red),
-			var(--brand-red) 45px,
+			var(--brand-red) 55px,
 			transparent 35px,
-			transparent 76px,
-			var(--brand-red) 56px
+			transparent 74px,
+			var(--brand-purple) 74px
 		),
 		repeating-linear-gradient(
 			90deg,
 			var(--brand-red),
-			var(--brand-red) 45px,
+			var(--brand-red) 55px,
 			transparent 35px,
-			transparent 76px,
-			var(--brand-red) 56px
+			transparent 74px,
+			var(--brand-green) 74px
 		),
 		repeating-linear-gradient(
 			180deg,
 			var(--brand-red),
-			var(--brand-red) 45px,
+			var(--brand-red) 55px,
 			transparent 35px,
-			transparent 76px,
-			var(--brand-red) 56px
+			transparent 74px,
+			var(--brand-red) 74px
 		),
 		repeating-linear-gradient(
 			270deg,
 			var(--brand-red),
-			var(--brand-red) 45px,
+			var(--brand-red) 55px,
 			transparent 35px,
-			transparent 76px,
-			var(--brand-red) 56px
+			transparent 74px,
+			var(--brand-red) 74px
+		);
+	background-size: 10px 100%, 100% 10px, 10px 100%, 100% 10px;
+	background-position: 0 0, 0 0, 100% 0, 0 100%;
+	background-repeat: no-repeat;
+}
+
+.border-dashed-red-regular {
+	background-image: repeating-linear-gradient(
+			0deg,
+			var(--brand-red),
+			var(--brand-red) 55px,
+			transparent 35px,
+			transparent 74px,
+			var(--brand-purple) 74px
+		),
+		repeating-linear-gradient(
+			90deg,
+			var(--brand-red),
+			var(--brand-red) 55px,
+			transparent 35px,
+			transparent 74px,
+			var(--brand-green) 74px
+		),
+		repeating-linear-gradient(
+			180deg,
+			var(--brand-red),
+			var(--brand-red) 55px,
+			transparent 35px,
+			transparent 74px,
+			var(--brand-red) 74px
+		),
+		repeating-linear-gradient(
+			270deg,
+			var(--brand-red),
+			var(--brand-red) 55px,
+			transparent 35px,
+			transparent 74px,
+			var(--brand-red) 74px
 		);
 	background-size: 6px 100%, 100% 6px, 6px 100%, 100% 6px;
 	background-position: 0 0, 0 0, 100% 0, 0 100%;

@@ -4,14 +4,14 @@ export default function Environments() {
 	return (
 		<section className="bg-brand-gray-light flex flex-col items-center justify-evenly pb-40">
 			<h2 className="text-6xl">SELECT YOUR BEST ENVIRONMENTS</h2>
-			<div className="grid grid-cols-2 gap-32 justify-items-center items-end [grid-template-areas:'screen-1_screen-2''screen-3_screen-3']">
+			<div className="lg:grid grid-cols-2 gap-y-16 gap-x-28 justify-items-center items-end [grid-template-areas:'screen-1_screen-2''screen-3_screen-3']">
 				<Screen
 					image={{ src: '/env-python.png', alt: 'Python Screen' }}
 					language="PYTHON"
 					caption="SUITABLE FOR ..."
 					width={532}
 					height={311}
-					className="[grid-area:screen-1]"
+					className="[grid-area:screen-1] mb-10"
 				/>
 				<Screen
 					image={{ src: '/env-block.png', alt: 'Block Screen' }}
@@ -19,7 +19,7 @@ export default function Environments() {
 					caption="SUITABLE FOR K-12/BEGINNER"
 					width={532}
 					height={311}
-					className="[grid-area:screen-2]"
+					className="[grid-area:screen-2] mb-10"
 				/>
 				<Screen
 					image={{ src: '/env-c++.png', alt: 'C/C++ Screen' }}

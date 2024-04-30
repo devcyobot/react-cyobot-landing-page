@@ -5,11 +5,11 @@ import Link from 'next/link';
 
 export default function Benefits() {
 	return (
-		<section className="flex flex-col items-center bg-brand-gray-light pb-24">
-			<h2 className="text-6xl text-center w-[77.25rem] px-56">
+		<section className="flex flex-col items-center bg-brand-gray-light pb-24 px-8">
+			<h2 className="text-6xl text-center w-4/5 lg:w-[77.25rem] lg:px-56">
 				TAKE YOU THROUGH 1,000 LEVELS WITH OUR SUPPORTED HARDWARE
 			</h2>
-			<div className="bg-[url('/benefits-background.png')] bg-no-repeat bg-contain h-[60rem] grid grid-cols-4 justify-items-center items-end lg:gap-y-56 lg:gap-x-36 [grid-template-areas:'card-4_image_image_card-2''card-1_image_image_card-3']">
+			<div className="relative bg-[url('/benefits-background.png')] bg-no-repeat bg-contain h-[60rem] grid grid-cols-4 justify-items-center items-end lg:gap-y-56 lg:gap-x-36 [grid-template-areas:'card-4_image_image_card-2''card-1_image_image_card-3']">
 				{imageBenefits.map((b) => {
 					return (
 						<Card
@@ -18,7 +18,7 @@ export default function Benefits() {
 							color="purple"
 							title={b.title}
 							text={b.text}
-							className={`b.class w-[15.063rem] h-[20.625rem]`}
+							className={`${b.class} w-[15.063rem] h-[20.625rem]`}
 						/>
 					);
 				})}
@@ -26,9 +26,15 @@ export default function Benefits() {
 					<Image
 						src="/benefits-main.png"
 						alt="benefits robot"
-						width={422}
-						height={386}
-						className="self-center"
+						quality={100}
+						fill
+						sizes="(max-width: 1440px) 100vw"
+						style={{
+							objectFit: 'contain',
+							maxHeight: '386px',
+							maxWidth: '422px',
+						}}
+						className="self-center justify-self-center"
 					/>
 					<figcaption className="text-brand-purple text-center w-[35.813rem] h-[8.25rem] mt-28">
 						<div>Our hardware:</div>
@@ -40,7 +46,7 @@ export default function Benefits() {
 			</div>
 			<Link
 				href="/stats"
-				className="mt-12 vt323-regular underline text-2xl underline-offset-4"
+				className="cursor-pointer mt-12 vt323-regular underline text-2xl underline-offset-4"
 			>
 				&lt;&lt; Stats for nerds &gt;&gt;
 			</Link>
