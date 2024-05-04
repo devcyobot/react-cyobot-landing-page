@@ -15,8 +15,8 @@ export default function Home() {
 			<Levels />
 			{/* <Roles /> */}
 			<Specs />
-			{/* <Environments />
-			<Steps /> */}
+			<Environments />
+			<Steps />
 		</main>
 	);
 }

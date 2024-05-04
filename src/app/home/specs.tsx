@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 export default function Specs() {
 	return (
-		<section className="flex flex-col items-center bg-brand-gray-light">
+		<section className="pt-16 flex flex-col items-center bg-brand-gray-light">
 			<h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-center w-1/2 h-full">
 				TAKE YOU THROUGH 1,000 LEVELS WITH OUR SUPPORTED HARDWARE
 			</h2>

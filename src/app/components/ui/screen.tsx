@@ -22,7 +22,7 @@ export default function Screen({
 }: ScreenProps) {
 	return (
 		<div
-			className={`flex flex-col justify-center items-center bg-gray-900 shadow-lg rounded-2xl w-[33.938rem] h-[26.5rem] ${className}`}
+			className={`flex flex-col justify-center items-center bg-gray-900 shadow-lg rounded-2xl w-[15rem] md:w-[20rem] lg:w-[25rem] h-44 sm:h-52 md:h-64 lg:h-80 ${className}`}
 		>
 			<figure className="relative h-full w-full flex items-end">
 				<Image
@@ -37,7 +37,7 @@ export default function Screen({
 					}}
 					className="justify-self-center"
 				/>
-				<figcaption className="relative vt323-regular bg-brand-green rounded-tl-3xl rounded-r-md shadow-lg top-2 left-20 pl-5 w-[90%]">
+				<figcaption className="relative vt323-regular bg-brand-green rounded-tl-3xl rounded-r-md shadow-lg top-2 left-10 md:left-16 lg:left-20 pl-5 w-[90%] text-xs sm:text-sm md:text-lg lg:text-xl">
 					<span className="text-white">[</span>
 					{language}
 					<span className="text-white">] </span>
