@@ -25,9 +25,9 @@ export default function Card({
 
 	return (
 		<div
-			className={`w-auto md:w-36 lg:w-56 h-[70%] md:h-full max-w-xs max-h-72 px-2 text-center rounded-md ${className} border-dashed-${color}-regular`}
+			className={`w-auto md:w-36 lg:w-56 h-full max-w-xs max-h-72 px-2 text-center rounded-md ${className} border-dashed-${color}-regular`}
 		>
-			<figure className="relative w-auto h-16 md:h-16 lg:h-36 mt-3">
+			<figure className="relative w-auto h-16 lg:h-36 mt-3">
 				<Image
 					src={image.src}
 					alt={image.alt}
