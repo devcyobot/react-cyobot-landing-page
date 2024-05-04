@@ -11,7 +11,7 @@ import Steps from './home/steps';
 export default function Home() {
 	return (
 		<main>
-			{/* <Intro /> */}
+			<Intro />
 			<Levels />
 			{/* <Roles /> */}
 			<Specs />
