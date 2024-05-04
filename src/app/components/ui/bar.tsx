@@ -13,8 +13,7 @@ export default function Bar({ color, name, amount }: BarProps) {
 
 	return (
 		<>
-			<div className="mt-8 flex flex-col">
-				<div className="absolute w-[45%] h-7 bg-gray-300 rounded-lg"></div>
+			<div className="w-4/5 h-7 bg-gray-300 rounded-lg">
 				<div
 					className={`relative h-7 rounded-l-lg rounded-br-3xl`}
 					style={{
@@ -23,7 +22,7 @@ export default function Bar({ color, name, amount }: BarProps) {
 					}}
 				></div>
 			</div>
-			<p className="vt323-regular text-3xl">{name}</p>
+			<p className="vt323-regular text-3xl mb-5">{name}</p>
 		</>
 	);
 }

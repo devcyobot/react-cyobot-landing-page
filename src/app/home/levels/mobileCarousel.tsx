@@ -19,7 +19,7 @@ type MobileCarouselProps = {
 };
 
 export default function MobileCarousel(props: MobileCarouselProps) {
-	function getStyles(index: number) {
+	function getSlide(index: number) {
 		if (props.currentLevel === index)
 			return {
 				opacity: 1,
@@ -56,7 +56,7 @@ export default function MobileCarousel(props: MobileCarouselProps) {
 			<div className={styles.slideContainer}>
 				{props.data.map((item, i) => (
 					<React.Fragment key={item.id}>
-						<div className={styles.slide} style={{ ...getStyles(i) }}>
+						<div className={styles.slide} style={{ ...getSlide(i) }}>
 							<ImageSlide
 								active={props.currentLevel === item.id ? true : false}
 								src={item.src}

@@ -38,25 +38,21 @@ export default function Levels() {
 	const levelRewardsArray = levelsArray[currentLevel].rewards;
 
 	return (
-		<section className="bg-brand-purple text-white flex flex-col">
-			<h2 className="text-center" style={{ fontSize: '4rem' }}>
-				CHOOSE YOUR QUEST
-			</h2>
+		<section className="bg-brand-purple text-white flex flex-col px-36">
+			<h2 className="text-center text-6xl mb-6">CHOOSE YOUR QUEST</h2>
 			<DesktopCarousel
 				className="hidden lg:block"
 				data={imageCarousel}
 				currentLevel={currentLevel}
-				// prev={handleClickPrev}
-				// next={handleClickNext}
 				navigate={handleClickImageCarousel}
 			/>
-			{/* <MobileCarousel
+			<MobileCarousel
 				className="lg:hidden"
 				data={imageCarousel}
 				currentLevel={currentLevel}
-				// prev={handleClickPrev}
-				// next={handleClickNext}
-			/> */}
+				prev={handleClickPrev}
+				next={handleClickNext}
+			/>
 			<Summary text={levelSumm} />
 			<Time image={levelTimeImage} atr={levelTimeDataArray} />
 			<Tasks data={levelRewardsArray} />

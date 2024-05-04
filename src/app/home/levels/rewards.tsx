@@ -17,8 +17,8 @@ type Reward = {
 
 export default function Rewards({ data }: RewardsProps) {
 	return (
-		<div className="mx-[8.25rem]">
-			<h4 className="mt-20 mb-5">Rewards</h4>
+		<>
+			<h4 className="mt-16 mb-3 text-3xl">Rewards</h4>
 			<div className="flex flex-wrap justify-center">
 				{/* {data.map((d) => {
 					return (
@@ -33,6 +33,6 @@ export default function Rewards({ data }: RewardsProps) {
 				})} */}
 				WILL BE ADDED LATER
 			</div>
-		</div>
+		</>
 	);
 }

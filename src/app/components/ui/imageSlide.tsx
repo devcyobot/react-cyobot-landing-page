@@ -35,11 +35,11 @@ export default function ImageSlide({
 	};
 
 	return (
-		<div className="relative flex flex-col items-center w-4/5 h-full">
+		<div className="relative flex flex-col items-center w-full h-full">
 			{active ? (
 				// When image is selected/active
 				<div
-					className={`h-full w-full border-dashed-${color}-bold rounded-[10px] px-12 py-14`}
+					className={`h-full w-full border-dashed-${color}-bold rounded-[10px] px-10 py-11`}
 				>
 					{/* Colored background begind the Image */}
 					<div
@@ -65,7 +65,7 @@ export default function ImageSlide({
 				<div className="relative h-full w-full flex flex-col items-center justify-center">
 					{/* Dark shadow */}
 					<div
-						className="left-20 top-24 absolute w-4/5 h-4/5 rounded-[30px]"
+						className="left-20 top-24 absolute w-4/5 h-[75%] rounded-[30px]"
 						style={{
 							backgroundColor: 'rgba(0, 0, 0, 0.5)',
 							boxShadow: '0px 4px 10px 2px rgba(0, 0, 0, 0.25)',
@@ -93,10 +93,9 @@ export default function ImageSlide({
 			<p
 				className={
 					active
-						? `border-dashed-${color}-regular vt323-regular bg-brand-dark bg-opacity-25 text-center pt-5 pb-auto w-full h-[15%] mt-12 text-4xl rounded-lg`
+						? `text-5xl border-dashed-${color}-regular vt323-regular bg-brand-dark bg-opacity-25 text-center pt-2 pb-auto w-full h-[15%] mt-12 text-4xl rounded-lg`
 						: 'w-[30.063rem]'
 				}
-				style={{ fontSize: '4rem' }}
 			>
 				{active ? title : ''}
 			</p>

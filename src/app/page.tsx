@@ -3,7 +3,7 @@
 import Intro from './home/intro';
 import Levels from './home/levels/levels';
 import Roles from './home/roles';
-import Benefits from './home/specs';
+import Specs from './home/specs';
 import Environments from './home/environtments';
 import Steps from './home/steps';
 // import Footer from './components/footer/footer';
@@ -11,12 +11,12 @@ import Steps from './home/steps';
 export default function Home() {
 	return (
 		<main>
-			<Intro />
+			{/* <Intro /> */}
 			<Levels />
-			<Roles />
-			<Benefits />
-			<Environments />
-			<Steps />
+			{/* <Roles /> */}
+			<Specs />
+			{/* <Environments />
+			<Steps /> */}
 		</main>
 	);
 }

@@ -4,9 +4,9 @@ type SummaryProps = {
 
 export default function Summary({ text }: SummaryProps) {
 	return (
-		<div className="mx-[8.25rem]">
-			<h4 className="mt-20 mb-5">Level Summary</h4>
-			<p className="w-[94%]">{text}</p>
+		<div>
+			<h4 className="mt-16 mb-3 text-3xl">Level Summary</h4>
+			<p className="text-2xl">{text}</p>
 		</div>
 	);
 }

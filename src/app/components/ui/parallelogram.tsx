@@ -34,12 +34,12 @@ export default function Parallelogram({ num, text }: Parralelogram) {
 			className={`w-60 h-96 ${bgColor} -skew-x-12 ml-6`}
 		>
 			<h4
-				className={`vt323-regular text-center rounded-br-3xl ${headerBgColor} rounded-tl-lg relative top-8 right-5 w-2/3`}
+				className={`vt323-regular text-center rounded-br-3xl ${headerBgColor} rounded-tl-lg relative top-8 right-5 w-2/3 text-3xl`}
 			>
 				<span className="text-white">[</span>STEP {num}
 				<span className="text-white">]</span>
 			</h4>
-			<p className={`my-28 ${pTextColor} text-center`}>{text}</p>
+			<p className={`my-28 ${pTextColor} text-center text-2xl`}>{text}</p>
 		</div>
 	);
 }

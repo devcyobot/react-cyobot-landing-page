@@ -25,23 +25,23 @@ export default function Card({
 
 	return (
 		<div
-			className={`relative flex flex-col items-center justify-end h-1/2 w-auto max-w-xs max-h-sm text-center rounded-md ${className} border-dashed-${color}-regular`}
+			className={`flex flex-col w-auto lg:w-1/2 h-[70%] lg:h-[90%] max-w-xs max-h-sm text-center rounded-md ${className} border-dashed-${color}-regular`}
 		>
-			<Image
-				src={image.src}
-				alt={image.alt}
-				fill
-				quality={100}
-				sizes="(max-width: 600px) 50vw, 100vw"
-				style={{ objectFit: 'contain' }}
-				className="max-h-32 mt-3"
-			/>
-			<div className="h-1/2">
-				<h5 style={{ color: customColor }} className="text-lg lg:text-2xl">
-					{title}
-				</h5>
-				<p className="text-sm lg:text-lg mb-3 px-5">{text}</p>
-			</div>
+			<figure className="relative h-56 sm:h-72 md:h-36 lg:h-40">
+				<Image
+					src={image.src}
+					alt={image.alt}
+					fill
+					quality={100}
+					sizes="(max-width: 600px) 50vw, 100vw"
+					style={{ objectFit: 'contain' }}
+					className="max-h-32 mt-3"
+				/>
+			</figure>
+			<h5 style={{ color: customColor }} className="md:text-base lg:text-lg">
+				{title}
+			</h5>
+			<p className="text-xs md:text-sm lg:text-base">{text}</p>
 		</div>
 	);
 }

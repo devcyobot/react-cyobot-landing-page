@@ -2,18 +2,18 @@
 	position: relative;
 	perspective: 1000px;
 	transform-style: preserve-3d;
-	width: 480.65px;
-	height: 648px;
+	width: 330px;
+	height: 550px;
 	margin: 0 auto;
 }
 
 .slide {
-	width: 480.65px;
-	height: 648px;
+	width: 330px;
+	height: 550px;
 	transition: transform 500ms ease 0s, opacity 500ms ease 0s,
 		visibility 500ms ease 0s;
 	position: absolute;
-	/* top: 0; */
+	top: 0;
 	border-radius: 12px;
 	display: flex;
 	justify-content: center;
