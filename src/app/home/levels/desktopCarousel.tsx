@@ -28,7 +28,7 @@ export default function DesktopCarousel(props: DesktopCarouselProps) {
 		else if (props.currentLevel - 1 === index)
 			return {
 				opacity: 1,
-				transform: 'translateX(-530px) translateZ(-400px) rotateY(0deg)',
+				transform: 'translateX(-500px) translateZ(-400px) rotateY(0deg)',
 				zIndex: 9,
 			};
 		else if (props.currentLevel + 1 === index)
@@ -40,13 +40,13 @@ export default function DesktopCarousel(props: DesktopCarouselProps) {
 		else if (props.currentLevel - 2 === index)
 			return {
 				opacity: 1,
-				transform: 'translateX(-830px) translateZ(-500px) rotateY(0deg)',
+				transform: 'translateX(-700px) translateZ(-500px) rotateY(0deg)',
 				zIndex: 8,
 			};
 		else if (props.currentLevel + 2 === index)
 			return {
 				opacity: 1,
-				transform: 'translateX(830px) translateZ(-500px) rotateY(0deg)',
+				transform: 'translateX(700px) translateZ(-500px) rotateY(0deg)',
 				zIndex: 8,
 			};
 	}

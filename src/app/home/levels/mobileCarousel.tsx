@@ -52,32 +52,44 @@ export default function MobileCarousel(props: MobileCarouselProps) {
 			};
 	}
 	return (
-		<div className={`${props.className} overflow-hidden`}>
-			<div className={styles.slideContainer}>
-				{props.data.map((item, i) => (
-					<React.Fragment key={item.id}>
-						<div className={styles.slide} style={{ ...getSlide(i) }}>
-							<ImageSlide
-								active={props.currentLevel === item.id ? true : false}
-								src={item.src}
-								alt={item.alt}
-								color={item.color}
-								title={item.title}
-								imageFit={item.id === 2 ? 'contain' : 'cover'}
-							/>
-						</div>
-					</React.Fragment>
-				))}
-			</div>
-			{/* Navigation Buttons */}
-			<div className="flex w-full items-center justify-center">
-				<button type="button" onClick={props.prev} className="mr-10">
-					Prev
-				</button>
-				<button type="button" onClick={props.next}>
-					Next
-				</button>
+		<div className={styles.slider}>
+			<a href="#slide-1">1</a>
+			<a href="#slide-2">2</a>
+			<a href="#slide-3">3</a>
+
+			<div className={styles.slides}>
+				<div id="slide-1">1</div>
+				<div id="slide-2">2</div>
+				<div id="slide-3">3</div>
 			</div>
 		</div>
+		// <div className={`${props.className} overflow-hidden`}>
+		// 	<div className={styles.slideContainer}>
+		// {props.data.map((item, i) => (
+		// 	<React.Fragment key={item.id}>
+		// 		<div className={styles.slide} style={{ ...getSlide(i) }}>
+		// 			<ImageSlide
+		// 				active={props.currentLevel === item.id ? true : false}
+		// 				src={item.src}
+		// 				alt={item.alt}
+		// 				color={item.color}
+		// 				title={item.title}
+		// 				imageFit={item.id === 2 ? 'contain' : 'cover'}
+		// 			/>
+		// 		</div>
+		// 	</React.Fragment>
+		// ))}
+		// 	</div>
+
+		// 	{/* Navigation Buttons */}
+		// 	<div className="flex w-full items-center justify-center">
+		// 		<button type="button" onClick={props.prev} className="mr-10">
+		// 			Prev
+		// 		</button>
+		// 		<button type="button" onClick={props.next}>
+		// 			Next
+		// 		</button>
+		// 	</div>
+		// </div>
 	);
 }

@@ -9,7 +9,7 @@ type NavbarProps = {
 export default function Navbar({ src, alt }: NavbarProps) {
 	return (
 		<header className="text-2xl relative flex h-full lg:h-[9.375rem] bg-brand-purple text-white shadow-lg py-10">
-			<nav className="relative flex w-full items-center justify-end sm:flex-col md:flex-row">
+			<nav className="flex w-full items-center justify-end sm:flex-col md:flex-row">
 				<Image
 					src={src}
 					alt={alt}

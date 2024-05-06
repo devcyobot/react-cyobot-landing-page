@@ -43,7 +43,7 @@ export default function ImageSlide({
 				>
 					{/* Colored background begind the Image */}
 					<div
-						className="relative w-full h-full rounded-[30px] flex flex-col items-center justify-center"
+						className="relative w-full h-[98%] rounded-[30px] flex flex-col items-center justify-center"
 						style={{
 							backgroundColor: bg,
 							boxShadow: `4px 4px 10px 2px ${shadowColor}`,
@@ -73,7 +73,7 @@ export default function ImageSlide({
 					></div>
 					{/* Background color */}
 					<div
-						className="relative w-[90%] h-[75%] rounded-[30px] birghtness-50 bg-brand-gray-dark px-12 py-14"
+						className="relative w-[90%] h-[74.2%] rounded-[30px] birghtness-50 bg-brand-gray-dark px-12 py-14"
 						style={{
 							boxShadow: '0px 4px 10px 2px rgba(0, 0, 0, 0.25)',
 						}}

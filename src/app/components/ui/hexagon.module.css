@@ -1,8 +1,8 @@
 .hex {
 	margin-left: 2rem;
-	margin-top: 5rem;
-	width: 12.188rem;
-	height: 6.637rem;
+	margin-top: 4rem;
+	width: 10rem;
+	height: 4.7rem;
 	background-color: #3e2486;
 	border-color: #3e2486;
 	position: relative;
@@ -15,57 +15,58 @@
 .hex:before {
 	content: '';
 	position: absolute;
-	top: -42px;
-	border-bottom: 42px solid;
+	top: -2.5rem;
+	border-bottom: 2.5rem solid;
 	border-color: inherit;
-	border-left: 6.12rem solid transparent;
-	border-right: 6.12rem solid transparent;
+	border-left: 5rem solid transparent;
+	border-right: 5rem solid transparent;
 }
 
 .hex:after {
 	content: '';
 	position: absolute;
-	bottom: -42px;
-	border-top: 42px solid;
+	bottom: -2.5rem;
+	border-top: 2.5rem solid;
 	border-color: inherit;
-	border-left: 6.12rem solid transparent;
-	border-right: 6.12rem solid transparent;
+	border-left: 5rem solid transparent;
+	border-right: 5rem solid transparent;
 }
 
 .hexText {
 	position: relative;
-	font-size: 2rem;
+	font-size: 1.5rem;
 	font-family: var(--vt323-regular);
 	text-align: center;
-	line-height: 2rem;
+	line-height: 1.5rem;
+	transform: scaleY(1.1);
 }
 
 @media screen and (max-width: 1200px) {
 	.hex {
 		margin-left: 1.5rem;
 		margin-top: 3.5rem;
-		width: 9rem;
-		height: 5rem;
+		width: 8.3rem;
+		height: 4.2rem;
 	}
 
 	.hex:before {
-		top: -35px;
-		border-bottom: 35px solid;
+		top: -2.19rem;
+		border-bottom: 2.2rem solid;
 		border-color: inherit;
-		border-left: 4.55rem solid transparent;
-		border-right: 4.55rem solid transparent;
+		border-left: 4.2rem solid transparent;
+		border-right: 4.2rem solid transparent;
 	}
 
 	.hex:after {
-		bottom: -35px;
-		border-top: 35px solid;
+		bottom: -2.19rem;
+		border-top: 2.2rem solid;
 		border-color: inherit;
-		border-left: 4.55rem solid transparent;
-		border-right: 4.55rem solid transparent;
+		border-left: 4.2rem solid transparent;
+		border-right: 4.2rem solid transparent;
 	}
 
 	.hexText {
-		font-size: 1.5rem;
+		font-size: 1.2rem;
 	}
 }
 

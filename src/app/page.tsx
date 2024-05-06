@@ -13,7 +13,7 @@ export default function Home() {
 		<main>
 			<Intro />
 			<Levels />
-			{/* <Roles /> */}
+			<Roles />
 			<Specs />
 			<Environments />
 			<Steps />

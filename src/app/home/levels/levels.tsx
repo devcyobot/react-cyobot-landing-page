@@ -38,8 +38,10 @@ export default function Levels() {
 	const levelRewardsArray = levelsArray[currentLevel].rewards;
 
 	return (
-		<section className="bg-brand-purple text-white flex flex-col px-36">
-			<h2 className="text-center text-6xl mb-6">CHOOSE YOUR QUEST</h2>
+		<section className="bg-brand-purple text-white flex flex-col px-16 lg:px-36">
+			<h2 className="text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl my-12">
+				CHOOSE YOUR QUEST
+			</h2>
 			<DesktopCarousel
 				className="hidden lg:block"
 				data={imageCarousel}

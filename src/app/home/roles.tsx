@@ -3,12 +3,12 @@ import Link from 'next/link';
 
 export default function Roles() {
 	return (
-		<section className="bg-brand-dark text-white px-24">
-			<h2 className="text-center text-6xl py-6">
+		<section className="bg-brand-dark text-white py-12">
+			<h2 className="h-auto text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl pb-12">
 				UNLOCK ROLES IN ROBOTICS ENGINEERING
 			</h2>
-			<div className="flex flex-col lg:flex-row items-center justify-center">
-				<div className="flex flex-col items-center lg:mr-[8rem] mb-20 lg:mb-0">
+			<div className="h-[90%] flex justify-around items-center pb-20">
+				<div className="flex flex-col self-start mt-5">
 					<div className="flex justify-between">
 						<Hexagon text="ROBOTICS ENGINEER" />
 						<Hexagon text="NETWORK ENGINEER" />
@@ -24,7 +24,7 @@ export default function Roles() {
 						<Hexagon text="INTERN" />
 					</div>
 				</div>
-				<div className="w-1/2 lg:w-[41.5rem] h-[30rem] lg:h-[35rem] flex justify-center items-center border-dashed-green-bold rounded-lg">
+				<div className="relative top-10 w-1/2 lg:w-[42rem] h-[30rem] lg:h-[36rem] flex justify-center items-center border-dashed-green-bold rounded-lg">
 					<div className="bg-brand-green bg-opacity-40 h-4/5 w-full flex items-center justify-center">
 						<Link
 							href="/stats"

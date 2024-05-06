@@ -22,8 +22,8 @@ export default function Steps() {
 					alt="All CYOBot models"
 					quality={100}
 					// fill
-					width={757}
-					height={345}
+					width={700}
+					height={300}
 					sizes="(max-width: 1440px) 100vw"
 					style={{
 						objectFit: 'contain',

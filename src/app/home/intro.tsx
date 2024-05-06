@@ -4,13 +4,13 @@ import { imageIntro } from '../data/imageIntro';
 export default function Intro() {
 	return (
 		<section className="bg-brand-purple text-white flex lg:flex-row flex-col items-center h-[45rem] lg:pl-32 pt-10">
-			<div className="w-[70%] lg:w-2/5 h-1/2 lg:h-full flex flex-col pt-10">
-				<h1 className="leading-none  text-6xl lg:text-font-80px">
+			<div className="w-[70%] lg:w-[48%] h-1/2 lg:h-full flex flex-col pt-10">
+				<h1 className="leading-none  text-5xl md:text-6xl lg:text-font-80px">
 					BEST PLATFORM TO MASTER ROBOTICS!
 				</h1>
 				<form className="mt-9">
 					<label htmlFor="user-email">
-						<p className="text-2xl lg:text-font-28px w-full lg:w-[90%]">
+						<p className="text-xl lg:text-font-28px w-full lg:w-[90%]">
 							Engineer doesn&rsquo;t have to be that hard. Advance your career
 							in 6 months!
 						</p>
@@ -31,7 +31,7 @@ export default function Intro() {
 					</label>
 				</form>
 			</div>
-			<div className="top-5 lg:top-0 relative w-1/2 h-full flex justify-end ml-10">
+			<div className="top-5 lg:top-0 relative w-2/3 h-full flex justify-end ml-10">
 				<Image
 					src="/intro.png"
 					alt="Adventurer with mini logos"

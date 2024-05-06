@@ -25,9 +25,9 @@ export default function Card({
 
 	return (
 		<div
-			className={`w-auto md:w-36 lg:w-56 h-full max-w-xs max-h-72 px-2 text-center rounded-md ${className} border-dashed-${color}-regular`}
+			className={`w-auto sm:w-32 md:w-36 lg:w-44 h-full max-w-xs max-h-64 px-2 text-center rounded-md ${className} border-dashed-${color}-regular`}
 		>
-			<figure className="relative w-auto h-16 lg:h-36 mt-3">
+			<figure className="relative w-auto h-16 lg:h-24 mt-3">
 				<Image
 					src={image.src}
 					alt={image.alt}
@@ -38,10 +38,10 @@ export default function Card({
 					className="max-h-32"
 				/>
 			</figure>
-			<h5 style={{ color: customColor }} className="text-sm lg:text-lg">
+			<h5 style={{ color: customColor }} className="text-sm lg:text-base">
 				{title}
 			</h5>
-			<p className="text-xs lg:text-base pb-3">{text}</p>
+			<p className="text-xs lg:text-sm pb-3">{text}</p>
 		</div>
 	);
 }
