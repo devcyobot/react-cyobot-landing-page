@@ -10,6 +10,7 @@ export default function Navbar({ src, alt }: NavbarProps) {
 	return (
 		<header className="text-2xl relative flex h-full lg:h-[9.375rem] bg-brand-purple text-white shadow-lg py-10">
 			<nav className="flex w-full items-center justify-end sm:flex-col md:flex-row">
+				{/* Logo section */}
 				<Image
 					src={src}
 					alt={alt}
@@ -23,6 +24,7 @@ export default function Navbar({ src, alt }: NavbarProps) {
 					}}
 					className="self-center lg:ml-12 ml-5"
 				/>
+				{/* Lists of other pages and Shop buttons */}
 				<DesktopNavBar />
 				<MobileNavBar />
 			</nav>

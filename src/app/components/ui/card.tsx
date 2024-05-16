@@ -17,6 +17,7 @@ export default function Card({
 	text,
 	className,
 }: CardProps) {
+	// Choose color for this card
 	let customColor = '';
 	if (color === 'yellow') customColor = '#f3c449';
 	else if (color === 'green') customColor = '#1ad69c';
