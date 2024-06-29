@@ -4,7 +4,7 @@ import { stepsData } from '../data/stepsData';
 
 export default function Steps() {
 	return (
-		<section className="bg-brand-purple-dark pt-20 overflow-hidden">
+		<section className="bg-brand-purple-dark py-20 overflow-hidden">
 			<div className="relative flex justify-center">
 				{/* <Parallelogram num={1} text="Choose your quest and environment" />
 				<Parallelogram
