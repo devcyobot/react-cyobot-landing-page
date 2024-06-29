@@ -3,27 +3,28 @@ import { imageIntro } from '../data/imageIntro';
 
 export default function Intro() {
 	return (
-		<section className="bg-brand-purple text-white flex lg:flex-row flex-col items-center h-[45rem] lg:pl-32 pt-10">
-			<div className="w-[70%] lg:w-[48%] h-1/2 lg:h-full flex flex-col pt-10">
-				<h1 className="leading-none  text-5xl md:text-6xl lg:text-font-80px">
+		<section className="h-[50rem] lg:pl-20 w-full max-w-[1440px] pt-16 xl:pt-24 mx-auto bg-white text-brand-purple flex lg:flex-row flex-col justify-between ">
+			<div className="w-auto lg:w-[35%] h-1/2 lg:h-2/3 flex flex-col my-auto">
+				<h1 className="text-black leading-none text-5xl md:text-6xl lg:text-7xl">
 					BEST PLATFORM TO MASTER ROBOTICS!
 				</h1>
-				<form className="mt-9">
-					<label htmlFor="user-email">
-						<p className="text-xl lg:text-font-28px w-full lg:w-[90%]">
-							Engineer doesn&rsquo;t have to be that hard. Advance your career
-							in 6 months!
-						</p>
-						<div className="w-full">
+				<form className="w-full mt-20">
+					<label
+						htmlFor="user-email"
+						className="font-roboto font-medium text-xl lg:text-[1.7rem] w-full"
+					>
+						Engineer doesn&rsquo;t have to be that hard. <br /> Advance your
+						career in 6 months!
+						<div className="w-full h-full">
 							<input
 								type="text"
 								id="user-email"
 								placeholder="Your email"
-								className="font-light md:h-[3.563rem] md:w-[21.125rem] w-1/2 mt-9 px-6 py-2 text-black border-none md:text-2xl text-xl"
+								className="font-roboto rounded-l-md bg-brand-gray-light text-brand-gray-dark font-light md:h-1/3 h-11 md:w-2/3 w-1/2 mt-9 px-6 py-1 md:text-xl text-lg"
 							/>
 							<button
 								type="submit"
-								className="bg-brand-green md:text-2xl text-xl md:w-[10.375rem] md:h-[3.563rem] h-11"
+								className="rounded-r-md bg-brand-green text-white md:text-2xl text-lg font-normal md:w-36 md:h-1/3 h-11"
 							>
 								Star Quest
 							</button>
@@ -31,17 +32,17 @@ export default function Intro() {
 					</label>
 				</form>
 			</div>
-			<div className="top-5 lg:top-0 relative w-2/3 h-full flex justify-end ml-10">
+			<div className="top-5 lg:top-0 relative w-[55%] h-full flex justify-end">
 				<Image
-					src="/intro.png"
+					src="/intro-robot.png"
 					alt="Adventurer with mini logos"
 					quality={100}
 					fill
-					sizes="(max-width: 1440px) 100vw"
+					sizes="(max-width: 768px) 100vw, 50vw"
 					style={{
 						objectFit: 'contain',
-						maxHeight: '559px',
-						maxWidth: '650px',
+						maxHeight: '860px',
+						maxWidth: '900px',
 					}}
 				/>
 			</div>

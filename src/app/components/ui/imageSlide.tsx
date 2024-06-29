@@ -29,36 +29,35 @@ export default function ImageSlide({
 	if (color === 'yellow' || color === 'red') shadowColor = '#1ad69c';
 	else shadowColor = '#f3c449';
 
-	// Image fit
-	let objectFit = {
-		objectFit: imageFit,
-	};
-
 	return (
-		<div className="relative flex flex-col items-center w-full h-full">
+		<div className="cursor-pointer flex flex-col items-center w-full h-full">
 			{active ? (
 				// When image is selected/active
-				<div
-					className={`h-full w-full border-dashed-${color}-bold rounded-[10px] px-10 py-11`}
-				>
-					{/* Colored background begind the Image */}
+				<div className="relative w-full h-full overflow-visible">
 					<div
-						className="relative w-full h-[98%] rounded-[30px] flex flex-col items-center justify-center"
-						style={{
-							backgroundColor: bg,
-							boxShadow: `4px 4px 10px 2px ${shadowColor}`,
-						}}
+						className={`h-full w-full border-dashed-${color}-bold rounded-[10px] px-5 py-11 overflow-visible`}
 					>
-						<Image
-							src={src}
-							alt={alt}
-							fill
-							quality={100}
-							sizes="(max-width: 600px) 50vw, 100vw"
-							className="overflow-visible"
-							style={objectFit}
-						/>
+						{/* Colored background begind the Image */}
+						<div
+							className="shadow-[20px_20px_15px_black] w-full h-[98%] rounded-3xl flex flex-col items-center justify-center"
+							style={{
+								backgroundColor: bg,
+							}}
+						></div>
 					</div>
+					<Image
+						src={src}
+						alt={alt}
+						fill
+						quality={100}
+						sizes="100vw"
+						className="overflow-visible"
+						style={{
+							objectFit: imageFit,
+							maxHeight: '380px',
+							maxWidth: '380px',
+						}}
+					/>
 				</div>
 			) : (
 				// When image is not selected
@@ -72,20 +71,19 @@ export default function ImageSlide({
 						}}
 					></div>
 					{/* Background color */}
-					<div
-						className="relative w-[90%] h-[74.2%] rounded-[30px] birghtness-50 bg-brand-gray-dark px-12 py-14"
-						style={{
-							boxShadow: '0px 4px 10px 2px rgba(0, 0, 0, 0.25)',
-						}}
-					>
+					<div className="relative w-[90%] h-[74.2%] rounded-[30px] birghtness-50 bg-brand-gray-dark px-12 py-14">
 						<Image
 							src={src}
 							alt={alt}
 							fill
 							quality={100}
-							sizes="(max-width: 600px) 50vw, 100vw"
-							className="brightness-[25%] overflow-visible"
-							style={objectFit}
+							sizes="100vw"
+							className="brightness-[20%] overflow-visible"
+							style={{
+								objectFit: imageFit,
+								maxHeight: '550px',
+								maxWidth: '400px',
+							}}
 						/>
 					</div>
 				</div>
@@ -93,7 +91,7 @@ export default function ImageSlide({
 			<p
 				className={
 					active
-						? `text-5xl border-dashed-${color}-regular vt323-regular bg-brand-dark bg-opacity-25 text-center pt-2 pb-auto w-full h-[15%] mt-12 text-4xl rounded-lg`
+						? `border-dashed-${color}-regular font-vt323 bg-brand-dark bg-opacity-25 text-center pt-2 pb-auto w-full h-[16%] mt-12 text-5xl`
 						: 'w-[30.063rem]'
 				}
 			>

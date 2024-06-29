@@ -1,31 +1,29 @@
-import Card from '../components/ui/card';
 import Image from 'next/image';
-import { imageBenefits } from '../data/imageSpecs';
+import { specsDetailsData } from '../data/imageSpecs';
+import DropDown from '../components/ui/DropDown';
 import Link from 'next/link';
+import './specs.css';
 
 export default function Specs() {
 	return (
-		<section className="flex flex-col items-center bg-brand-gray-light">
-			<h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-center w-1/2 lg:w-[45%] h-full my-12">
-				TAKE YOU THROUGH 1,000 LEVELS WITH OUR SUPPORTED HARDWARE
+		<section className="h-auto flex flex-col items-center bg-brand-gray-light pb-56">
+			<h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl text-center w-1/2 lg:w-full my-10">
+				TAKE YOU THROUGH 1,000 LEVELS <br />
+				WITH OUR SUPPORTED HARDWARE
 			</h2>
+			<Link
+				href="/stats"
+				passHref={true}
+				target="_blank"
+				className="font-vt323 underline text-base md:text-lg lg:text-3xl underline-offset-4 mb-24"
+			>
+				&lt;&lt; Stats for nerds &gt;&gt;
+			</Link>
 			<div
 				style={{ backgroundSize: '75%' }}
-				className="bg-[url('/specs-background.png')] bg-no-repeat bg-center w-full grid grid-cols-4 justify-items-center items-start gap-y-32 lg:gap-y-44 [grid-template-areas:'card-4_image_image_card-2''card-1_image_image_card-3']"
+				className="relative h-[45rem] max-w-[1440px] bg-[url('/specs-background.png')] bg-no-repeat bg-center w-full"
 			>
-				{imageBenefits.map((b) => {
-					return (
-						<Card
-							key={b.id}
-							image={{ src: b.src, alt: b.alt }}
-							color="purple"
-							title={b.title}
-							text={b.text}
-							className={`${b.class} w-[15.063rem] h-[20.625rem]`}
-						/>
-					);
-				})}
-				<figure className="relative w-2/5 h-full [grid-area:image] flex felx-col justify-center">
+				<figure className="relative left-80 w-1/2 h-full">
 					<Image
 						src="/specs-main.png"
 						alt="benefits robot"
@@ -34,25 +32,27 @@ export default function Specs() {
 						sizes="(max-width: 1440px) 100vw"
 						style={{
 							objectFit: 'contain',
-							maxHeight: '386px',
-							maxWidth: '422px',
+							maxHeight: '350px',
+							maxWidth: '450px',
 						}}
 						className="self-center justify-self-center"
 					/>
 				</figure>
-				<figcaption className="[grid-area:image] text-xs md:text-sm lg:text-lg text-brand-purple text-center self-end w-[55%]">
-					<div>Our hardware:</div>
-					Assembled robot powered by ESP32 with common robotic peripherals,
-					motion sensor, microphone, speaker, LED matrix, WiFi and Bluetooth
-					module.
-				</figcaption>
+				{specsDetailsData.map((detail, index) => (
+					<div
+						key={`specs-details-dropdown-${index}`}
+						className={`absolute detail-item item-${index + 1}`}
+					>
+						<DropDown
+							label={detail.label}
+							src={detail.src}
+							src2={detail.src2}
+							caption={detail.caption}
+							index={index + 1}
+						/>
+					</div>
+				))}
 			</div>
-			<Link
-				href="/stats"
-				className="vt323-regular underline text-base md:text-lg lg:text-2xl underline-offset-4 mt-5"
-			>
-				&lt;&lt; Stats for nerds &gt;&gt;
-			</Link>
 		</section>
 	);
 }

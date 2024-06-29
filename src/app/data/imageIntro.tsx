@@ -1,4 +1,8 @@
-export const imageIntro = [
+export const imageIntro: {
+	id: number;
+	src: string;
+	alt: string;
+}[] = [
 	{
 		id: 0,
 		src: '/intro-red.png',

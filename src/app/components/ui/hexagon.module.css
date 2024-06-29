@@ -2,14 +2,24 @@
 	margin-left: 2rem;
 	margin-top: 4rem;
 	width: 10rem;
-	height: 4.7rem;
-	background-color: #3e2486;
-	border-color: #3e2486;
+	height: 5rem;
 	position: relative;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	padding: 0rem 2rem;
+	background-color: #3e2486;
+	border-color: #3e2486;
+}
+
+.greenBackground {
+	background-color: #1ad69c;
+	border-color: #1ad69c;
+}
+
+.purpleBackground {
+	background-color: #3e2486;
+	border-color: #3e2486;
 }
 
 .hex:before {

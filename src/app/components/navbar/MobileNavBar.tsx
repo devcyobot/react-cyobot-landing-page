@@ -14,9 +14,24 @@ export default function MobileNavBar() {
 		<div className="lg:hidden flex flex-col self-end">
 			<button
 				onClick={handleDrawerToggle}
-				className="h-12 text-brand-purple bg-white shadow-md rounded-lg border-none text-2xl font-bold mr-5"
+				className="hover:bg-brand-purple bg-opacity-50 rounded mr-5 p-1"
 			>
-				menu
+				<svg
+					className="w-7 h-7"
+					fill="none"
+					stroke="currentColor"
+					viewBox="0 0 24 24"
+					xmlns="http://www.w3.org/2000/svg"
+				>
+					<path
+						strokeLinecap="round"
+						strokeLinejoin="round"
+						strokeWidth="2"
+						d={
+							isDrawerOpen ? 'M6 18L18 6M6 6l12 12' : 'M4 6h16M4 12h16M4 18h16'
+						}
+					></path>
+				</svg>
 			</button>
 			<div
 				className={
@@ -41,9 +56,9 @@ export default function MobileNavBar() {
 				</ul>
 				<button
 					type="button"
-					className="h-12 text-brand-purple bg-white shadow-md rounded-lg border-none text-2xl font-bold justify-self-end"
+					className="hover:shadow-[4px_4px_4px_#1AD69C] font-roboto text-2xl font-medium w-32 h-12 text-brand-purple bg-white shadow-md rounded-lg border-none justify-self-end"
 				>
-					Shop
+					<Link href="https://cyobot.myshopify.com/">Shop</Link>
 				</button>
 			</div>
 		</div>

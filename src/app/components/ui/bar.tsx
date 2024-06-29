@@ -15,7 +15,7 @@ export default function Bar({ color, name, amount }: BarProps) {
 	return (
 		<div>
 			{/* The grey part of the bar */}
-			<div className="w-4/5 h-7 bg-gray-300 rounded-lg">
+			<div className="w-full h-7 bg-gray-300 rounded-xl max-w-3xl">
 				{/* The colored part of the bar */}
 				<div
 					className={`relative h-7 rounded-l-lg rounded-br-3xl`}
@@ -25,7 +25,7 @@ export default function Bar({ color, name, amount }: BarProps) {
 					}}
 				></div>
 			</div>
-			<p className="vt323-regular text-3xl mb-5">{name}</p>
+			<p className="font-vt323 text-2xl mt-2 mb-10">{name}</p>
 		</div>
 	);
 }

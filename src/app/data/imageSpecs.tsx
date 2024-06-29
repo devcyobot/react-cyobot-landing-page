@@ -1,34 +1,44 @@
-export const imageBenefits = [
+export const specsDetailsData: {
+	label: string;
+	src: string;
+	src2?: string;
+	caption: string;
+}[] = [
 	{
-		id: 0,
-		class: '[grid-area:card-1]',
-		src: '/specs-cool-pet.png',
-		alt: 'A Cool Pet',
-		title: 'A Cool Pet',
-		text: 'Turn your robot to a high-tech pet that reacts to your movement, voice and commands',
+		label: '12-channel motor controller',
+		src: '/specs-12-channels-controller.jpg',
+		caption:
+			'Control up to 12 servo motors with built-in power system and microcontroller',
 	},
 	{
-		id: 1,
-		class: '[grid-area:card-2]',
-		src: '/specs-personal-assistant.png',
-		alt: 'Personal Assistant',
-		title: 'Personal Assistant',
-		text: 'Turn your robot into a personal assistant that tells you time, read you news and study with you',
+		label: 'Snap fit 3D printed design',
+		src: '/specs-3d-printings.jpg',
+		caption:
+			'All mechanical designs are open-source, 3D printable and snap fit into each other',
 	},
 	{
-		id: 2,
-		class: '[grid-area:card-3]',
-		src: '/specs-shapeshifting.png',
-		alt: 'Shapeshifting',
-		title: 'Shapeshifting',
-		text: 'Snap in your favorite peripherals and create a one-of-a-kind robot',
+		label: 'All the LEDs you need',
+		src: '/specs-LEDs.png',
+		caption:
+			'Equipped with 33-LED RGB NeoPixel display and 12-LED RGB NeoPixel ring',
 	},
 	{
-		id: 3,
-		class: '[grid-area:card-4]',
-		src: '/specs-game-console.png',
-		alt: 'Game Console',
-		title: 'Game Console',
-		text: 'Develop and play hundreds of games, including Spade Invaders and Flappy Bird',
+		label: 'ESP32 & micro SD card',
+		src: '/specs-esp32.jpg',
+		caption:
+			'Robot is powered by ESP32 microcontroller with WiFi and Bluetooth and a micro SD card to store all your code and libraries',
+	},
+	{
+		label: 'External peripherals',
+		src: '/specs-external-peripherals.jpg',
+		caption:
+			'Connect extra peripherals to the robot via extension block with power output, I2C and UART',
+	},
+	{
+		label: 'Sensors and inputs',
+		src: '/specs-sensors-1.jpg',
+		src2: '/specs-sensors-2.jpg',
+		caption:
+			'I2S speaker and ADC microphone help bring your robot to life with voice command and sound effect. Plus, a 6 DOF motion sensor (IMU) and 2 buttons for inputs',
 	},
 ];

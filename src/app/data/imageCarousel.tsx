@@ -1,4 +1,10 @@
-export const imageCarousel = [
+export const imageCarousel: {
+	id: number;
+	title: string;
+	src: string;
+	alt: string;
+	color: string;
+}[] = [
 	{
 		id: 0,
 		title: 'EXPLORER',

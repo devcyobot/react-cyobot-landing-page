@@ -8,13 +8,9 @@ const config: Config = {
 	],
 	theme: {
 		extend: {
-			backgroundImage: {
-				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-				'gradient-conic':
-					'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-			},
 			colors: {
 				'brand-dark': '#110a25',
+				'brand-dark-2': '#1F1441',
 				'brand-purple-dark': '#22144A',
 				'brand-purple': '#3e2486',
 				'brand-green': '#1ad69c',
@@ -23,9 +19,11 @@ const config: Config = {
 				'brand-gray-light': '#f0f0f0',
 				'brand-gray-dark': '#A2A2A2',
 			},
-			fontSize: {
-				'font-28px': '1.75rem',
-				'font-80px': '5rem',
+			fontFamily: {
+				vt323: ['var(--vt323-regular)', 'monospace'],
+				nunito: ['var(--nunito-regular)', 'monospace'],
+				robotoCondensed: ['var(--roboto-condensed)', 'monospace'],
+				roboto: ['var(--roboto-bold)', 'monospace'],
 			},
 		},
 	},

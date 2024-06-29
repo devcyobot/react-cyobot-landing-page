@@ -14,11 +14,6 @@
 }
 
 /* GENERAL */
-
-body {
-	font-family: var(--nunito-regular);
-}
-
 h1,
 h2,
 h3 {
@@ -30,321 +25,935 @@ h5 {
 	font-family: var(--roboto-bold);
 }
 
-/* FONTS */
-
-.vt323-regular {
-	font-family: var(--vt323-regular);
-}
-
-.nunito-regular {
-	font-family: var(--nunito-regular);
-}
-
-.roboto-bold {
-	font-family: var(--roboto-bold);
-}
-
 /* BORDER STYLES AND COLORS */
+/* purple bold */
+
 .border-dashed-purple-bold {
-	background-image: repeating-linear-gradient(
-			0deg,
-			var(--brand-purple),
-			var(--brand-purple) 55px,
-			transparent 35px,
-			transparent 74px,
-			var(--brand-purple) 74px
-		),
-		repeating-linear-gradient(
-			90deg,
-			var(--brand-purple),
-			var(--brand-purple) 55px,
-			transparent 35px,
-			transparent 74px,
-			var(--brand-purple) 74px
-		),
-		repeating-linear-gradient(
-			180deg,
-			var(--brand-purple),
-			var(--brand-purple) 55px,
-			transparent 35px,
-			transparent 74px,
-			var(--brand-purple) 74px
-		),
-		repeating-linear-gradient(
-			270deg,
-			var(--brand-purple),
-			var(--brand-purple) 55px,
-			transparent 35px,
-			transparent 74px,
-			var(--brand-purple) 74px
-		);
-	background-size: 10px 100%, 100% 10px, 10px 100%, 100% 10px;
-	background-position: 0 0, 0 0, 100% 0, 0 100%;
-	background-repeat: no-repeat;
+	position: relative;
+	border-left: 0.6rem solid transparent;
+	border-right: 0.6rem solid transparent;
+	border-image: linear-gradient(
+		to bottom,
+		var(--brand-purple) 0,
+		var(--brand-purple) 20%,
+		transparent 20%,
+		transparent 38%,
+		var(--brand-purple) 38%,
+		var(--brand-purple) 62%,
+		transparent 62%,
+		transparent 80%,
+		var(--brand-purple) 80%,
+		var(--brand-purple) 100%
+	);
+	border-image-slice: 1;
+	border-radius: 0.6rem;
+	mask-image: radial-gradient(circle, white, black);
 }
+
+.border-dashed-purple-bold::before,
+.border-dashed-purple-bold::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	height: 0.6rem;
+	background-image: linear-gradient(
+		to right,
+		var(--brand-purple) 33.33%,
+		transparent 33.33%,
+		transparent 66.66%,
+		var(--brand-purple) 66.66%,
+		var(--brand-purple) 100%
+	);
+}
+
+.border-dashed-purple-bold::before {
+	top: 0;
+}
+
+.border-dashed-purple-bold::after {
+	bottom: 0;
+}
+
+/* purple regular */
 
 .border-dashed-purple-regular {
-	background-image: repeating-linear-gradient(
-			0deg,
-			var(--brand-purple),
-			var(--brand-purple) 55px,
-			transparent 35px,
-			transparent 74px,
-			var(--brand-purple) 74px
-		),
-		repeating-linear-gradient(
-			90deg,
-			var(--brand-purple),
-			var(--brand-purple) 55px,
-			transparent 35px,
-			transparent 74px,
-			var(--brand-purple) 74px
-		),
-		repeating-linear-gradient(
-			180deg,
-			var(--brand-purple),
-			var(--brand-purple) 55px,
-			transparent 35px,
-			transparent 74px,
-			var(--brand-purple) 74px
-		),
-		repeating-linear-gradient(
-			270deg,
-			var(--brand-purple),
-			var(--brand-purple) 55px,
-			transparent 35px,
-			transparent 74px,
-			var(--brand-purple) 74px
-		);
-	background-size: 6px 100%, 100% 6px, 6px 100%, 100% 6px;
-	background-position: 0 0, 0 0, 100% 0, 0 100%;
-	background-repeat: no-repeat;
+	position: relative;
+	border-left: 0.3rem solid transparent;
+	border-right: 0.3rem solid transparent;
+	border-image: linear-gradient(
+		to bottom,
+		var(--brand-purple) 33.33%,
+		transparent 33.33%,
+		transparent 66.66%,
+		var(--brand-purple) 66.66%,
+		var(--brand-purple) 100%
+	);
+	border-image-slice: 1;
+	border-radius: 0.6rem;
+	mask-image: radial-gradient(circle, white, black);
 }
+
+.border-dashed-purple-regular::before,
+.border-dashed-purple-regular::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	height: 0.3rem;
+	background-image: linear-gradient(
+		to right,
+		var(--brand-purple) 0%,
+		var(--brand-purple) 10%,
+		transparent 10%,
+		transparent 15%,
+		var(--brand-purple) 15%,
+		var(--brand-purple) 30%,
+		transparent 30%,
+		transparent 35%,
+		var(--brand-purple) 35%,
+		var(--brand-purple) 50%,
+		transparent 50%,
+		transparent 54.54%,
+		var(--brand-purple) 54.54%,
+		var(--brand-purple) 69%,
+		transparent 69%,
+		transparent 72.72%,
+		var(--brand-purple) 72.72%,
+		var(--brand-purple) 87%,
+		transparent 87%,
+		transparent 90.9%,
+		var(--brand-purple) 90.9%,
+		var(--brand-purple) 100%
+	);
+}
+
+.border-dashed-purple-regular::before {
+	top: 0;
+}
+
+.border-dashed-purple-regular::after {
+	bottom: 0;
+}
+
+/* yellow bold */
 
 .border-dashed-yellow-bold {
-	background-image: repeating-linear-gradient(
-			0deg,
-			var(--brand-yellow),
-			var(--brand-yellow) 55px,
-			transparent 35px,
-			transparent 74px,
-			var(--brand-yellow) 74px
-		),
-		repeating-linear-gradient(
-			90deg,
-			var(--brand-yellow),
-			var(--brand-yellow) 55px,
-			transparent 35px,
-			transparent 74px,
-			var(--brand-yellow) 74px
-		),
-		repeating-linear-gradient(
-			180deg,
-			var(--brand-yellow),
-			var(--brand-yellow) 55px,
-			transparent 35px,
-			transparent 74px,
-			var(--brand-yellow) 74px
-		),
-		repeating-linear-gradient(
-			270deg,
-			var(--brand-yellow),
-			var(--brand-yellow) 55px,
-			transparent 35px,
-			transparent 74px,
-			var(--brand-yellow) 74px
-		);
-	background-size: 10px 100%, 100% 10px, 10px 100%, 100% 10px;
-	background-position: 0 0, 0 0, 100% 0, 0 100%;
-	background-repeat: no-repeat;
+	position: relative;
+	border-left: 0.5rem solid transparent;
+	border-right: 0.5rem solid transparent;
+	border-image: linear-gradient(
+		to bottom,
+		var(--brand-yellow) 0%,
+		var(--brand-yellow) 10%,
+		transparent 10%,
+		transparent 15.38%,
+		var(--brand-yellow) 15.38%,
+		var(--brand-yellow) 27%,
+		transparent 27%,
+		transparent 30.76%,
+		var(--brand-yellow) 30.76%,
+		var(--brand-yellow) 42%,
+		transparent 42%,
+		transparent 46.14%,
+		var(--brand-yellow) 46.14%,
+		var(--brand-yellow) 58%,
+		transparent 58%,
+		transparent 61.52%,
+		var(--brand-yellow) 61.52%,
+		var(--brand-yellow) 73%,
+		transparent 73%,
+		transparent 76.9%,
+		var(--brand-yellow) 76.9%,
+		var(--brand-yellow) 88%,
+		transparent 88%,
+		transparent 92.28%,
+		var(--brand-yellow) 92.28%,
+		var(--brand-yellow) 100%
+	);
+	border-image-slice: 1;
+	border-radius: 0.6rem;
+	mask-image: radial-gradient(circle, white, black);
 }
+
+.border-dashed-yellow-bold::before,
+.border-dashed-yellow-bold::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	height: 0.5rem;
+	background-image: linear-gradient(
+		to right,
+		var(--brand-yellow) 0%,
+		var(--brand-yellow) 10%,
+		transparent 10%,
+		transparent 15%,
+		var(--brand-yellow) 15%,
+		var(--brand-yellow) 30%,
+		transparent 30%,
+		transparent 35%,
+		var(--brand-yellow) 35%,
+		var(--brand-yellow) 50%,
+		transparent 50%,
+		transparent 54.54%,
+		var(--brand-yellow) 54.54%,
+		var(--brand-yellow) 69%,
+		transparent 69%,
+		transparent 72.72%,
+		var(--brand-yellow) 72.72%,
+		var(--brand-yellow) 87%,
+		transparent 87%,
+		transparent 90.9%,
+		var(--brand-yellow) 90.9%,
+		var(--brand-yellow) 100%
+	);
+}
+
+.border-dashed-yellow-bold::before {
+	top: 0;
+}
+
+.border-dashed-yellow-bold::after {
+	bottom: 0;
+}
+
+/* yellow regular */
 
 .border-dashed-yellow-regular {
-	background-image: repeating-linear-gradient(
-			0deg,
-			var(--brand-yellow),
-			var(--brand-yellow) 55px,
-			transparent 35px,
-			transparent 74px,
-			var(--brand-yellow) 74px
-		),
-		repeating-linear-gradient(
-			90deg,
-			var(--brand-yellow),
-			var(--brand-yellow) 55px,
-			transparent 35px,
-			transparent 74px,
-			var(--brand-yellow) 74px
-		),
-		repeating-linear-gradient(
-			180deg,
-			var(--brand-yellow),
-			var(--brand-yellow) 55px,
-			transparent 35px,
-			transparent 74px,
-			var(--brand-yellow) 74px
-		),
-		repeating-linear-gradient(
-			270deg,
-			var(--brand-yellow),
-			var(--brand-yellow) 55px,
-			transparent 35px,
-			transparent 74px,
-			var(--brand-yellow) 74px
-		);
-	background-size: 6px 100%, 100% 6px, 6px 100%, 100% 6px;
-	background-position: 0 0, 0 0, 100% 0, 0 100%;
-	background-repeat: no-repeat;
+	position: relative;
+	border-left: 0.3rem solid transparent;
+	border-right: 0.3rem solid transparent;
+	border-image: linear-gradient(
+		to bottom,
+		var(--brand-yellow) 33.33%,
+		transparent 33.33%,
+		transparent 66.66%,
+		var(--brand-yellow) 66.66%,
+		var(--brand-yellow) 100%
+	);
+	border-image-slice: 1;
+	border-radius: 0.6rem;
+	mask-image: radial-gradient(circle, white, black);
 }
+
+.border-dashed-yellow-regular::before,
+.border-dashed-yellow-regular::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	height: 0.3rem;
+	background-image: linear-gradient(
+		to right,
+		var(--brand-yellow) 0%,
+		var(--brand-yellow) 10%,
+		transparent 10%,
+		transparent 15%,
+		var(--brand-yellow) 15%,
+		var(--brand-yellow) 30%,
+		transparent 30%,
+		transparent 35%,
+		var(--brand-yellow) 35%,
+		var(--brand-yellow) 50%,
+		transparent 50%,
+		transparent 54.54%,
+		var(--brand-yellow) 54.54%,
+		var(--brand-yellow) 69%,
+		transparent 69%,
+		transparent 72.72%,
+		var(--brand-yellow) 72.72%,
+		var(--brand-yellow) 87%,
+		transparent 87%,
+		transparent 90.9%,
+		var(--brand-yellow) 90.9%,
+		var(--brand-yellow) 100%
+	);
+}
+
+.border-dashed-yellow-regular::before {
+	top: 0;
+}
+
+.border-dashed-yellow-regular::after {
+	bottom: 0;
+}
+
+/* green bold */
 
 .border-dashed-green-bold {
-	background-image: repeating-linear-gradient(
-			0deg,
-			var(--brand-green),
-			var(--brand-green) 55px,
-			transparent 35px,
-			transparent 74px,
-			var(--brand-green) 74px
-		),
-		repeating-linear-gradient(
-			90deg,
-			var(--brand-green),
-			var(--brand-green) 55px,
-			transparent 35px,
-			transparent 74px,
-			var(--brand-green) 74px
-		),
-		repeating-linear-gradient(
-			180deg,
-			var(--brand-green),
-			var(--brand-green) 55px,
-			transparent 35px,
-			transparent 74px,
-			var(--brand-green) 74px
-		),
-		repeating-linear-gradient(
-			270deg,
-			var(--brand-green),
-			var(--brand-green) 55px,
-			transparent 35px,
-			transparent 74px,
-			var(--brand-green) 74px
-		);
-	background-size: 10px 100%, 100% 10px, 10px 100%, 100% 10px;
-	background-position: 0 0, 0 0, 100% 0, 0 100%;
-	background-repeat: no-repeat;
+	position: relative;
+	border-left: 0.5rem solid transparent;
+	border-right: 0.5rem solid transparent;
+	border-image: linear-gradient(
+		to bottom,
+		var(--brand-green) 0%,
+		var(--brand-green) 10%,
+		transparent 10%,
+		transparent 15.38%,
+		var(--brand-green) 15.38%,
+		var(--brand-green) 27%,
+		transparent 27%,
+		transparent 30.76%,
+		var(--brand-green) 30.76%,
+		var(--brand-green) 42%,
+		transparent 42%,
+		transparent 46.14%,
+		var(--brand-green) 46.14%,
+		var(--brand-green) 58%,
+		transparent 58%,
+		transparent 61.52%,
+		var(--brand-green) 61.52%,
+		var(--brand-green) 73%,
+		transparent 73%,
+		transparent 76.9%,
+		var(--brand-green) 76.9%,
+		var(--brand-green) 88%,
+		transparent 88%,
+		transparent 92.28%,
+		var(--brand-green) 92.28%,
+		var(--brand-green) 100%
+	);
+	border-image-slice: 1;
+	border-radius: 0.6rem;
+	mask-image: radial-gradient(circle, white, black);
 }
+
+.border-dashed-green-bold::before,
+.border-dashed-green-bold::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	height: 0.5rem;
+	background-image: linear-gradient(
+		to right,
+		var(--brand-green) 0%,
+		var(--brand-green) 10%,
+		transparent 10%,
+		transparent 15%,
+		var(--brand-green) 15%,
+		var(--brand-green) 30%,
+		transparent 30%,
+		transparent 35%,
+		var(--brand-green) 35%,
+		var(--brand-green) 50%,
+		transparent 50%,
+		transparent 54.54%,
+		var(--brand-green) 54.54%,
+		var(--brand-green) 69%,
+		transparent 69%,
+		transparent 72.72%,
+		var(--brand-green) 72.72%,
+		var(--brand-green) 87%,
+		transparent 87%,
+		transparent 90.9%,
+		var(--brand-green) 90.9%,
+		var(--brand-green) 100%
+	);
+}
+
+.border-dashed-green-bold::before {
+	top: 0;
+}
+
+.border-dashed-green-bold::after {
+	bottom: 0;
+}
+
+/* green regular */
 
 .border-dashed-green-regular {
-	background-image: repeating-linear-gradient(
-			0deg,
-			var(--brand-green),
-			var(--brand-green) 55px,
-			transparent 35px,
-			transparent 74px,
-			var(--brand-green) 74px
-		),
-		repeating-linear-gradient(
-			90deg,
-			var(--brand-green),
-			var(--brand-green) 55px,
-			transparent 35px,
-			transparent 74px,
-			var(--brand-green) 74px
-		),
-		repeating-linear-gradient(
-			180deg,
-			var(--brand-green),
-			var(--brand-green) 55px,
-			transparent 35px,
-			transparent 74px,
-			var(--brand-green) 74px
-		),
-		repeating-linear-gradient(
-			270deg,
-			var(--brand-green),
-			var(--brand-green) 55px,
-			transparent 35px,
-			transparent 74px,
-			var(--brand-green) 74px
-		);
-	background-size: 6px 100%, 100% 6px, 6px 100%, 100% 6px;
-	background-position: 0 0, 0 0, 100% 0, 0 100%;
-	background-repeat: no-repeat;
+	position: relative;
+	border-left: 0.3rem solid transparent;
+	border-right: 0.3rem solid transparent;
+	border-image: linear-gradient(
+		to bottom,
+		var(--brand-green) 33.33%,
+		transparent 33.33%,
+		transparent 66.66%,
+		var(--brand-green) 66.66%,
+		var(--brand-green) 100%
+	);
+	border-image-slice: 1;
+	border-radius: 0.6rem;
+	mask-image: radial-gradient(circle, white, black);
 }
+
+.border-dashed-green-regular::before,
+.border-dashed-green-regular::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	height: 0.3rem;
+	background-image: linear-gradient(
+		to right,
+		var(--brand-green) 0%,
+		var(--brand-green) 10%,
+		transparent 10%,
+		transparent 15%,
+		var(--brand-green) 15%,
+		var(--brand-green) 30%,
+		transparent 30%,
+		transparent 35%,
+		var(--brand-green) 35%,
+		var(--brand-green) 50%,
+		transparent 50%,
+		transparent 54.54%,
+		var(--brand-green) 54.54%,
+		var(--brand-green) 69%,
+		transparent 69%,
+		transparent 72.72%,
+		var(--brand-green) 72.72%,
+		var(--brand-green) 87%,
+		transparent 87%,
+		transparent 90.9%,
+		var(--brand-green) 90.9%,
+		var(--brand-green) 100%
+	);
+}
+
+.border-dashed-green-regular::before {
+	top: 0;
+}
+
+.border-dashed-green-regular::after {
+	bottom: 0;
+}
+
+/* red bold */
 
 .border-dashed-red-bold {
-	background-image: repeating-linear-gradient(
-			0deg,
-			var(--brand-red),
-			var(--brand-red) 55px,
-			transparent 35px,
-			transparent 74px,
-			var(--brand-purple) 74px
-		),
-		repeating-linear-gradient(
-			90deg,
-			var(--brand-red),
-			var(--brand-red) 55px,
-			transparent 35px,
-			transparent 74px,
-			var(--brand-green) 74px
-		),
-		repeating-linear-gradient(
-			180deg,
-			var(--brand-red),
-			var(--brand-red) 55px,
-			transparent 35px,
-			transparent 74px,
-			var(--brand-red) 74px
-		),
-		repeating-linear-gradient(
-			270deg,
-			var(--brand-red),
-			var(--brand-red) 55px,
-			transparent 35px,
-			transparent 74px,
-			var(--brand-red) 74px
-		);
-	background-size: 10px 100%, 100% 10px, 10px 100%, 100% 10px;
-	background-position: 0 0, 0 0, 100% 0, 0 100%;
-	background-repeat: no-repeat;
+	position: relative;
+	border-left: 0.5rem solid transparent;
+	border-right: 0.5rem solid transparent;
+	border-image: linear-gradient(
+		to bottom,
+		var(--brand-red) 0%,
+		var(--brand-red) 10%,
+		transparent 10%,
+		transparent 15.38%,
+		var(--brand-red) 15.38%,
+		var(--brand-red) 27%,
+		transparent 27%,
+		transparent 30.76%,
+		var(--brand-red) 30.76%,
+		var(--brand-red) 42%,
+		transparent 42%,
+		transparent 46.14%,
+		var(--brand-red) 46.14%,
+		var(--brand-red) 58%,
+		transparent 58%,
+		transparent 61.52%,
+		var(--brand-red) 61.52%,
+		var(--brand-red) 73%,
+		transparent 73%,
+		transparent 76.9%,
+		var(--brand-red) 76.9%,
+		var(--brand-red) 88%,
+		transparent 88%,
+		transparent 92.28%,
+		var(--brand-red) 92.28%,
+		var(--brand-red) 100%
+	);
+	border-image-slice: 1;
+	border-radius: 0.6rem;
+	mask-image: radial-gradient(circle, white, black);
 }
 
+.border-dashed-red-bold::before,
+.border-dashed-red-bold::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	height: 0.5rem;
+	background-image: linear-gradient(
+		to right,
+		var(--brand-red) 0%,
+		var(--brand-red) 10%,
+		transparent 10%,
+		transparent 15%,
+		var(--brand-red) 15%,
+		var(--brand-red) 30%,
+		transparent 30%,
+		transparent 35%,
+		var(--brand-red) 35%,
+		var(--brand-red) 50%,
+		transparent 50%,
+		transparent 54.54%,
+		var(--brand-red) 54.54%,
+		var(--brand-red) 69%,
+		transparent 69%,
+		transparent 72.72%,
+		var(--brand-red) 72.72%,
+		var(--brand-red) 87%,
+		transparent 87%,
+		transparent 90.9%,
+		var(--brand-red) 90.9%,
+		var(--brand-red) 100%
+	);
+}
+
+.border-dashed-red-bold::before {
+	top: 0;
+}
+
+.border-dashed-red-bold::after {
+	bottom: 0;
+}
+
+/* red regular */
+
 .border-dashed-red-regular {
-	background-image: repeating-linear-gradient(
-			0deg,
-			var(--brand-red),
-			var(--brand-red) 55px,
-			transparent 35px,
-			transparent 74px,
-			var(--brand-purple) 74px
-		),
-		repeating-linear-gradient(
-			90deg,
-			var(--brand-red),
-			var(--brand-red) 55px,
-			transparent 35px,
-			transparent 74px,
-			var(--brand-green) 74px
-		),
-		repeating-linear-gradient(
-			180deg,
-			var(--brand-red),
-			var(--brand-red) 55px,
-			transparent 35px,
-			transparent 74px,
-			var(--brand-red) 74px
-		),
-		repeating-linear-gradient(
-			270deg,
-			var(--brand-red),
-			var(--brand-red) 55px,
-			transparent 35px,
-			transparent 74px,
-			var(--brand-red) 74px
-		);
-	background-size: 6px 100%, 100% 6px, 6px 100%, 100% 6px;
-	background-position: 0 0, 0 0, 100% 0, 0 100%;
-	background-repeat: no-repeat;
+	position: relative;
+	border-left: 0.3rem solid transparent;
+	border-right: 0.3rem solid transparent;
+	border-image: linear-gradient(
+		to bottom,
+		var(--brand-red) 33.33%,
+		transparent 33.33%,
+		transparent 66.66%,
+		var(--brand-red) 66.66%,
+		var(--brand-red) 100%
+	);
+	border-image-slice: 1;
+	border-radius: 0.6rem;
+	mask-image: radial-gradient(circle, white, black);
+}
+
+.border-dashed-red-regular::before,
+.border-dashed-red-regular::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	height: 0.3rem;
+	background-image: linear-gradient(
+		to right,
+		var(--brand-red) 0%,
+		var(--brand-red) 10%,
+		transparent 10%,
+		transparent 15%,
+		var(--brand-red) 15%,
+		var(--brand-red) 30%,
+		transparent 30%,
+		transparent 35%,
+		var(--brand-red) 35%,
+		var(--brand-red) 50%,
+		transparent 50%,
+		transparent 54.54%,
+		var(--brand-red) 54.54%,
+		var(--brand-red) 69%,
+		transparent 69%,
+		transparent 72.72%,
+		var(--brand-red) 72.72%,
+		var(--brand-red) 87%,
+		transparent 87%,
+		transparent 90.9%,
+		var(--brand-red) 90.9%,
+		var(--brand-red) 100%
+	);
+}
+
+.border-dashed-red-regular::before {
+	top: 0;
+}
+
+.border-dashed-red-regular::after {
+	bottom: 0;
+}
+
+/* CARD BORDER */
+
+.card-purple {
+	position: relative;
+	border-left: 0.3rem solid transparent;
+	border-right: 0.3rem solid transparent;
+	border-image: linear-gradient(
+		to bottom,
+		var(--brand-purple) 0%,
+		var(--brand-purple) 10%,
+		transparent 10%,
+		transparent 15%,
+		var(--brand-purple) 15%,
+		var(--brand-purple) 30%,
+		transparent 30%,
+		transparent 35%,
+		var(--brand-purple) 35%,
+		var(--brand-purple) 50%,
+		transparent 50%,
+		transparent 54.54%,
+		var(--brand-purple) 54.54%,
+		var(--brand-purple) 69%,
+		transparent 69%,
+		transparent 72.72%,
+		var(--brand-purple) 72.72%,
+		var(--brand-purple) 87%,
+		transparent 87%,
+		transparent 90.9%,
+		var(--brand-purple) 90.9%,
+		var(--brand-purple) 100%
+	);
+	border-image-slice: 1;
+	border-radius: 0.6rem;
+	mask-image: radial-gradient(circle, white, black);
+}
+
+.card-purple::before,
+.card-purple::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	height: 0.3rem;
+	background-image: linear-gradient(
+		to right,
+		var(--brand-purple) 0%,
+		var(--brand-purple) 10%,
+		transparent 10%,
+		transparent 15%,
+		var(--brand-purple) 15%,
+		var(--brand-purple) 30%,
+		transparent 30%,
+		transparent 35%,
+		var(--brand-purple) 35%,
+		var(--brand-purple) 50%,
+		transparent 50%,
+		transparent 54.54%,
+		var(--brand-purple) 54.54%,
+		var(--brand-purple) 69%,
+		transparent 69%,
+		transparent 72.72%,
+		var(--brand-purple) 72.72%,
+		var(--brand-purple) 87%,
+		transparent 87%,
+		transparent 90.9%,
+		var(--brand-purple) 90.9%,
+		var(--brand-purple) 100%
+	);
+}
+
+.card-purple::before {
+	top: 0;
+}
+
+.card-purple::after {
+	bottom: 0;
+}
+
+/* card yellow */
+
+.card-yellow {
+	position: relative;
+	border-left: 0.3rem solid transparent;
+	border-right: 0.3rem solid transparent;
+	border-image: linear-gradient(
+		to bottom,
+		var(--brand-yellow) 0%,
+		var(--brand-yellow) 10%,
+		transparent 10%,
+		transparent 15%,
+		var(--brand-yellow) 15%,
+		var(--brand-yellow) 30%,
+		transparent 30%,
+		transparent 35%,
+		var(--brand-yellow) 35%,
+		var(--brand-yellow) 50%,
+		transparent 50%,
+		transparent 54.54%,
+		var(--brand-yellow) 54.54%,
+		var(--brand-yellow) 69%,
+		transparent 69%,
+		transparent 72.72%,
+		var(--brand-yellow) 72.72%,
+		var(--brand-yellow) 87%,
+		transparent 87%,
+		transparent 90.9%,
+		var(--brand-yellow) 90.9%,
+		var(--brand-yellow) 100%
+	);
+	border-image-slice: 1;
+	border-radius: 0.6rem;
+	mask-image: radial-gradient(circle, white, black);
+}
+
+.card-yellow::before,
+.card-yellow::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	height: 0.3rem;
+	background-image: linear-gradient(
+		to right,
+		var(--brand-yellow) 0%,
+		var(--brand-yellow) 10%,
+		transparent 10%,
+		transparent 15%,
+		var(--brand-yellow) 15%,
+		var(--brand-yellow) 30%,
+		transparent 30%,
+		transparent 35%,
+		var(--brand-yellow) 35%,
+		var(--brand-yellow) 50%,
+		transparent 50%,
+		transparent 54.54%,
+		var(--brand-yellow) 54.54%,
+		var(--brand-yellow) 69%,
+		transparent 69%,
+		transparent 72.72%,
+		var(--brand-yellow) 72.72%,
+		var(--brand-yellow) 87%,
+		transparent 87%,
+		transparent 90.9%,
+		var(--brand-yellow) 90.9%,
+		var(--brand-yellow) 100%
+	);
+}
+
+.card-yellow::before {
+	top: 0;
+}
+
+.card-yellow::after {
+	bottom: 0;
+}
+
+/* card green */
+
+.card-green {
+	position: relative;
+	border-left: 0.3rem solid transparent;
+	border-right: 0.3rem solid transparent;
+	border-image: linear-gradient(
+		to bottom,
+		var(--brand-green) 0%,
+		var(--brand-green) 10%,
+		transparent 10%,
+		transparent 15%,
+		var(--brand-green) 15%,
+		var(--brand-green) 30%,
+		transparent 30%,
+		transparent 35%,
+		var(--brand-green) 35%,
+		var(--brand-green) 50%,
+		transparent 50%,
+		transparent 54.54%,
+		var(--brand-green) 54.54%,
+		var(--brand-green) 69%,
+		transparent 69%,
+		transparent 72.72%,
+		var(--brand-green) 72.72%,
+		var(--brand-green) 87%,
+		transparent 87%,
+		transparent 90.9%,
+		var(--brand-green) 90.9%,
+		var(--brand-green) 100%
+	);
+	border-image-slice: 1;
+	border-radius: 0.6rem;
+	mask-image: radial-gradient(circle, white, black);
+}
+
+.card-green::before,
+.card-green::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	height: 0.3rem;
+	background-image: linear-gradient(
+		to right,
+		var(--brand-green) 0%,
+		var(--brand-green) 10%,
+		transparent 10%,
+		transparent 15%,
+		var(--brand-green) 15%,
+		var(--brand-green) 30%,
+		transparent 30%,
+		transparent 35%,
+		var(--brand-green) 35%,
+		var(--brand-green) 50%,
+		transparent 50%,
+		transparent 54.54%,
+		var(--brand-green) 54.54%,
+		var(--brand-green) 69%,
+		transparent 69%,
+		transparent 72.72%,
+		var(--brand-green) 72.72%,
+		var(--brand-green) 87%,
+		transparent 87%,
+		transparent 90.9%,
+		var(--brand-green) 90.9%,
+		var(--brand-green) 100%
+	);
+}
+
+.card-green::before {
+	top: 0;
+}
+
+.card-green::after {
+	bottom: 0;
+}
+
+/* card red */
+
+.card-red {
+	position: relative;
+	border-left: 0.3rem solid transparent;
+	border-right: 0.3rem solid transparent;
+	border-image: linear-gradient(
+		to bottom,
+		var(--brand-red) 0%,
+		var(--brand-red) 10%,
+		transparent 10%,
+		transparent 15%,
+		var(--brand-red) 15%,
+		var(--brand-red) 30%,
+		transparent 30%,
+		transparent 35%,
+		var(--brand-red) 35%,
+		var(--brand-red) 50%,
+		transparent 50%,
+		transparent 54.54%,
+		var(--brand-red) 54.54%,
+		var(--brand-red) 69%,
+		transparent 69%,
+		transparent 72.72%,
+		var(--brand-red) 72.72%,
+		var(--brand-red) 87%,
+		transparent 87%,
+		transparent 90.9%,
+		var(--brand-red) 90.9%,
+		var(--brand-red) 100%
+	);
+	border-image-slice: 1;
+	border-radius: 0.6rem;
+	mask-image: radial-gradient(circle, white, black);
+}
+
+.card-red::before,
+.card-red::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	height: 0.3rem;
+	background-image: linear-gradient(
+		to right,
+		var(--brand-red) 0%,
+		var(--brand-red) 10%,
+		transparent 10%,
+		transparent 15%,
+		var(--brand-red) 15%,
+		var(--brand-red) 30%,
+		transparent 30%,
+		transparent 35%,
+		var(--brand-red) 35%,
+		var(--brand-red) 50%,
+		transparent 50%,
+		transparent 54.54%,
+		var(--brand-red) 54.54%,
+		var(--brand-red) 69%,
+		transparent 69%,
+		transparent 72.72%,
+		var(--brand-red) 72.72%,
+		var(--brand-red) 87%,
+		transparent 87%,
+		transparent 90.9%,
+		var(--brand-red) 90.9%,
+		var(--brand-red) 100%
+	);
+}
+
+.card-red::before {
+	top: 0;
+}
+
+.card-red::after {
+	bottom: 0;
+}
+
+/* dashboard border */
+.dashboard-border {
+	position: relative;
+	border-left: 0.5rem solid transparent;
+	border-right: 0.5rem solid transparent;
+	border-image: linear-gradient(
+		to bottom,
+		var(--brand-green) 0%,
+		var(--brand-green) 8%,
+		/* 1st stripe ends at 5.88% */ transparent 8%,
+		transparent 11%,
+		/* 2nd stripe ends at 11.76% */ var(--brand-green) 11%,
+		var(--brand-green) 19%,
+		/* 3rd stripe ends at 17.65% */ transparent 19%,
+		transparent 22%,
+		/* 4th stripe ends at 23.53% */ var(--brand-green) 22%,
+		var(--brand-green) 31%,
+		/* 5th stripe ends at 29.41% */ transparent 31%,
+		transparent 34%,
+		/* 6th stripe ends at 35.29% */ var(--brand-green) 34%,
+		var(--brand-green) 43%,
+		/* 7th stripe ends at 41.18% */ transparent 43%,
+		transparent 46.5%,
+		/* 8th stripe ends at 47.06% */ var(--brand-green) 46.5%,
+		var(--brand-green) 55%,
+		/* 9th stripe ends at 52.94% */ transparent 55%,
+		transparent 58%,
+		/* 10th stripe ends at 58.82% */ var(--brand-green) 58%,
+		var(--brand-green) 66%,
+		/* 11th stripe ends at 64.71% */ transparent 66%,
+		transparent 69.4%,
+		/* 12th stripe ends at 70.59% */ var(--brand-green) 69.4%,
+		var(--brand-green) 78%,
+		/* 13th stripe ends at 76.47% */ transparent 78%,
+		transparent 81%,
+		/* 14th stripe ends at 82.35% */ var(--brand-green) 81%,
+		var(--brand-green) 88.24%,
+		/* 15th stripe ends at 88.24% */ transparent 88.24%,
+		transparent 92%,
+		/* 16th stripe ends at 94.12% */ var(--brand-green) 92%,
+		var(--brand-green) 100% /* 17th stripe ends at 100% */
+	);
+	border-image-slice: 1;
+	border-radius: 0.6rem;
+	mask-image: radial-gradient(circle, white, black);
+}
+
+.dashboard-border::before,
+.dashboard-border::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	height: 0.5rem;
+	background-image: linear-gradient(
+		to right,
+		var(--brand-green) 0%,
+		var(--brand-green) 5%,
+		/* 1st stripe ends at 14.29% */ transparent 5%,
+		transparent 9%,
+		/* 2nd stripe ends at 28.57% */ var(--brand-green) 9%,
+		var(--brand-green) 18%,
+		/* 3rd stripe ends at 42.86% */ transparent 18%,
+		transparent 83%,
+		/* 4th stripe ends at 57.14% */ var(--brand-green) 83%,
+		var(--brand-green) 91%,
+		/* 5th stripe ends at 71.43% */ transparent 91%,
+		transparent 95%,
+		/* 6th stripe ends at 85.71% */ var(--brand-green) 95%,
+		var(--brand-green) 100% /* 7th stripe ends at 100% */
+	);
+}
+
+.dashboard-border::before {
+	top: 0;
+}
+
+.dashboard-border::after {
+	bottom: 0;
 }

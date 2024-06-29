@@ -1,13 +1,17 @@
+'use client';
 import Image from 'next/image';
+import { useState } from 'react';
 type CardProps = {
 	image: {
 		src: string;
+		staticSrc: string;
 		alt: string;
 	};
 	color: string;
 	title?: string;
 	text?: string;
 	className?: string;
+	background?: string;
 };
 
 export default function Card({
@@ -16,33 +20,39 @@ export default function Card({
 	title,
 	text,
 	className,
+	background,
 }: CardProps) {
-	// Choose color for this card
-	let customColor = '';
-	if (color === 'yellow') customColor = '#f3c449';
-	else if (color === 'green') customColor = '#1ad69c';
-	else if (color === 'red') customColor = '#e00303';
-	else customColor = '#3e2486';
-
+	const [isHovered, setIsHovered] = useState(false);
+	let textColor = '#fff';
+	if (color === 'purple') textColor = '#3e2486';
 	return (
 		<div
-			className={`w-auto sm:w-32 md:w-36 lg:w-44 h-full max-w-xs max-h-64 px-2 text-center rounded-md ${className} border-dashed-${color}-regular`}
+			className={`bg-brand-${background} w-auto sm:w-32 md:w-36 lg:w-full h-full max-w-80 max-h-fit text-center rounded-md ${className} card-${color}`}
 		>
-			<figure className="relative w-auto h-16 lg:h-24 mt-3">
+			<figure
+				className="relative w-auto h-16 lg:h-32 mt-3"
+				onMouseEnter={() => setIsHovered(true)}
+				onMouseLeave={() => setIsHovered(false)}
+			>
 				<Image
-					src={image.src}
+					src={isHovered && image.staticSrc ? image.src : image.staticSrc}
 					alt={image.alt}
 					fill
 					quality={100}
-					sizes="(max-width: 600px) 50vw, 100vw"
-					style={{ objectFit: 'contain' }}
+					sizes="100vw"
+					style={{ objectFit: 'cover' }}
 					className="max-h-32"
 				/>
 			</figure>
-			<h5 style={{ color: customColor }} className="text-sm lg:text-base">
+			<h5
+				className={`w-[90%] mx-auto font-roboto font-bold text-sm lg:text-xl mt-3 mb-2`}
+				style={{ color: textColor }}
+			>
 				{title}
 			</h5>
-			<p className="text-xs lg:text-sm pb-3">{text}</p>
+			<p className="text-xs md:text-sm lg:text-lg font-nunito font-light pb-3 mx-2">
+				{text}
+			</p>
 		</div>
 	);
 }
