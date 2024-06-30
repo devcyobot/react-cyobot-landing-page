@@ -26,7 +26,7 @@ export default function Intro() {
 								type="submit"
 								className="rounded-r-md bg-brand-green text-white md:text-2xl text-lg font-normal md:w-36 md:h-1/3 h-11"
 							>
-								Star Quest
+								Start Quest
 							</button>
 						</div>
 					</label>

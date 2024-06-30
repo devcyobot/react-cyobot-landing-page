@@ -20,7 +20,7 @@ export const hexagonData: {
 	},
 	{
 		id: 3,
-		text: 'EMBEDDED SYSTEM ENGINEER',
+		text: 'EMBEDDED SYSTEM',
 		available: true,
 	},
 	{

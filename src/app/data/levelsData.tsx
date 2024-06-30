@@ -187,18 +187,18 @@ export const levelsData = {
 					color: 'red',
 					name: '3D printed prosthesis',
 					staticSrc: '/.jpeg',
-					job: 'Control a dexterous 3D printed prosthesis with CYOBrain',
+					job: 'Control a 3D printed dexterous prosthesis with CYOBrain',
 				},
 				{
 					id: 17,
 					image: {
-						src: '/hybrid-walking.gif',
-						staticSrc: '/hybrid-walking.jpg',
+						src: '/remote-control-demo.gif',
+						staticSrc: '/remote-control-demo.jpg',
 						alt: 'Hybrid walking',
 					},
 					color: 'red',
-					name: 'Mars Rover',
-					job: 'Reconfigure robot to different forms and walk your way through different terrains',
+					name: 'Remote control',
+					job: 'Use another CYOBrain to control your robot wirelessly',
 				},
 			],
 			timeImage: {
