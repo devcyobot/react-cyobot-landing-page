@@ -51,7 +51,7 @@ export default function MobileNavBar() {
 						<Link href="/downloads">Downloads</Link>
 					</li>
 					<li className={styles.navLink} onClick={handleDrawerToggle}>
-						<Link href="/events">Events</Link>
+						<Link href="/faq">FAQ</Link>
 					</li>
 				</ul>
 				<button
