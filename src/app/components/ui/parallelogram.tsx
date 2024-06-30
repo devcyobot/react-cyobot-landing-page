@@ -36,19 +36,19 @@ export default function Parallelogram(props: Parralelogram) {
 		<div
 			onMouseEnter={toggleColor}
 			onMouseLeave={toggleColor}
-			className={`hover:scale-110 hover:translate-x-2 hover:translate-y-2 w-[16rem] h-96 ${bgColor} -skew-x-12 ml-6 flex flex-col items-center`}
+			className={`hover:scale-110 hover:translate-x-2 hover:translate-y-2 w-[16rem] h-[27rem] lg:h-96 ${bgColor} -skew-x-12 ml-6 flex flex-col items-center`}
 		>
 			<h4
-				className={`font-vt323 text-center rounded-[0.2rem] ${headerBgColor} relative top-8 left-24 w-2/3 text-lg sm:text-xl md:text-2xl lg:text-3xl`}
+				className={`font-vt323 text-center rounded-[0.2rem] ${headerBgColor} relative top-8 left-10 lg:left-20 w-2/3 text-lg sm:text-xl md:text-2xl lg:text-3xl`}
 			>
 				STEP {props.num}
 			</h4>
 			<p
-				className={`h-1/3 my-20 px-5 ${pTextColor} text-center font-robotoCondensed text-sm sm:text-base md:text-lg lg:text-xl font-light`}
+				className={`h-1/3 my-11 lg:my-16 xl:my-20 px-5 ${pTextColor} text-center font-robotoCondensed text-sm md:text-base lg:text-lg xl:text-xl font-light`}
 			>
 				<span className="font-bold">{props.label}</span> {props.description}
 			</p>
-			<div className="absolute top-[85%] left-1/2 transform -translate-x-1/2 -translate-y-3/4">
+			<div className="absolute top-[95%] xl:top-[85%] left-1/2 transform -translate-x-1/2 -translate-y-3/4">
 				<button className="">
 					<Link href={props.link} passHref={true} target="_blank">
 						<svg
