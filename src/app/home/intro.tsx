@@ -22,11 +22,11 @@ export default function Intro() {
 							type="text"
 							id="user-email"
 							placeholder="Your email"
-							className="font-roboto rounded-r-md sm:rounded-r-none rounded-l-md bg-brand-gray-light text-brand-gray-dark font-light h-full w-full sm:w-1/2 md:w-2/3 px-6 py-1 md:text-xl text-lg"
+							className="font-roboto rounded-r-md sm:rounded-r-none rounded-l-md bg-brand-gray-light text-brand-gray-dark font-light h-full w-full sm:w-1/2 md:w-2/3 px-6 py-1 text-sm sm:text-lg xl:text-xl"
 						/>
 						<button
 							type="button"
-							className="rounded-l-md sm:rounded-l-none rounded-r-md bg-brand-green text-white lg:text-xl xl:text-2xl font-normal w-2/3 sm:w-28 xl:w-36 h-full"
+							className="rounded-l-md sm:rounded-l-none rounded-r-md bg-brand-green text-white md:text-xl xl:text-2xl font-normal w-2/3 sm:w-28 xl:w-36 h-full"
 						>
 							<Link
 								href="https://www.roboticsquest.com/"

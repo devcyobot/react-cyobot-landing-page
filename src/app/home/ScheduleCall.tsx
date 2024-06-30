@@ -18,12 +18,13 @@ const ScheduleCall: FC = () => {
 						}}
 					/>
 				</div>
-				<div className="col-span-2 px-40 text-center pt-28">
-					<p className="font-roboto font-medium text-2xl">
-						Still have question about how our robotic kit would be a good fit for you?
+				<div className="col-span-2 sm:px-20 xl:px-40 text-center pt-28">
+					<p className="font-roboto font-medium text-lg sm:text-xl lg:text-2xl">
+						Still have question about how our robotic kit would be a good fit
+						for you?
 					</p>
-					<button className='pt-8'>
-						<p className="font-vt323 font-medium text-2xl bg-brand-green px-2 py-1 rounded-md text-brand-purple-dark">
+					<button className="pt-8">
+						<p className="font-vt323 font-medium text-xl sm:text-2xl bg-brand-green px-2 py-1 rounded-md text-brand-purple-dark">
 							Book A Call
 						</p>
 					</button>
