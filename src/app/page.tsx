@@ -15,10 +15,10 @@ export default function Home() {
 			<Intro />
 			<Roles />
 			<Levels />
-			{/* <Specs />
+			<Specs />
 			<Environments />
 			<Steps />
-			<Schedule /> */}
+			<Schedule />
 		</main>
 	);
 }

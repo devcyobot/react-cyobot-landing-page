@@ -52,8 +52,6 @@ export default function MobileCarousel(props: MobileCarouselProps) {
 			};
 	}
 
-	const totalPages = 3;
-
 	return (
 		<div
 			className={`${props.className} overflow-hidden w-full h-full relative`}

@@ -21,8 +21,6 @@ const HexagonBadge: FC<HexagonBadgeProps> = ({
 	orientation = 'pointy',
 	available = false,
 }) => {
-	const [dimensions, setDimensions] = useState<number>(0);
-
 	// Caculate the path data points
 	function getPath(r: number): string {
 		let a, b, c, d, e, f;
@@ -67,41 +65,13 @@ const HexagonBadge: FC<HexagonBadgeProps> = ({
 
 	const textRef = useRef<SVGTextElement | null>(null);
 
-	let startY = 0;
+	let startY = '0%';
 	const words = roles.split(' ');
-	const ratio = (width / height) * dimensions;
-	if (words.length > 2) startY = 65 * ratio;
-	else if (words.length > 1) startY = 80 * ratio;
-	else startY = 100 * ratio;
+	if (words.length > 2) startY = '35%';
+	else if (words.length > 1) startY = '40%';
+	else startY = '50%';
 
 	useEffect(() => {
-		const updateDimensions = () => {
-			// 2xl
-			if (window.matchMedia('(min-width: 1536px)').matches) {
-				setDimensions(1);
-			}
-			// xl
-			else if (window.matchMedia('(min-width: 1280px)').matches) {
-				setDimensions(1);
-			}
-			// lg
-			else if (window.matchMedia('(min-width: 1024px)').matches) {
-				setDimensions(0.7);
-			}
-			// md
-			else if (window.matchMedia('(min-width: 768px)').matches) {
-				setDimensions(0.6);
-			}
-			// sm
-			else if (window.matchMedia('(min-width: 640px)').matches) {
-				setDimensions(0.5);
-			}
-			// mobile
-			else {
-				setDimensions(0.23); // Default dimensions for mobile
-			}
-		};
-
 		const svgText = textRef.current;
 		if (!svgText) return;
 
@@ -118,14 +88,7 @@ const HexagonBadge: FC<HexagonBadgeProps> = ({
 
 			svgText.appendChild(tspan);
 		});
-
-		updateDimensions(); // Set initial dimensions on mount
-		window.addEventListener('resize', updateDimensions);
-
-		return () => {
-			window.removeEventListener('resize', updateDimensions);
-		};
-	}, [roles, words]);
+	}, [words]);
 
 	return (
 		<div>
@@ -143,11 +106,13 @@ const HexagonBadge: FC<HexagonBadgeProps> = ({
 				></path>
 				<text
 					ref={textRef}
-					y={`${startY}`}
+					x="50%"
+					y={startY}
 					textAnchor="middle"
 					dominantBaseline="middle"
 					className="font-vt323 text-[0.6rem] sm:text-lg md:text-xl lg:text-3xl xl:text-4xl fill-white"
 				></text>
+				;
 			</svg>
 		</div>
 	);

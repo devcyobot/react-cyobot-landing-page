@@ -1,7 +1,7 @@
 export const specsDetailsData: {
 	label: string;
 	src: string;
-	src2?: string;
+	src2?: string | undefined;
 	caption: string;
 }[] = [
 	{
