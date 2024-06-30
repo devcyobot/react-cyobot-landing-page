@@ -25,6 +25,20 @@ const config: Config = {
 				robotoCondensed: ['var(--roboto-condensed)', 'monospace'],
 				roboto: ['var(--roboto-bold)', 'monospace'],
 			},
+			keyframes: {
+				slideDown: {
+					'0%': { opacity: '0', transform: 'translateY(-10px)' },
+					'100%': { opacity: '1', transform: 'translateY(0)' },
+				},
+				slideUp: {
+					'0%': { opacity: '1', transform: 'translateY(0)' },
+					'100%': { opacity: '0', transform: 'translateY(-10px)' },
+				},
+			},
+			animation: {
+				slideDown: 'slideDown 0.3s ease-out forwards',
+				slideUp: 'slideUp 0.3s ease-out forwards',
+			},
 		},
 	},
 	plugins: [],

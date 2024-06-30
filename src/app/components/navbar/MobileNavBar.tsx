@@ -5,6 +5,14 @@ import { useState } from 'react';
 
 export default function MobileNavBar() {
 	const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+	const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+	const toggleDropdown = () => {
+		setIsDropdownOpen(!isDropdownOpen);
+	};
+
+	const handleOnclick = () => {
+		alert('In progress of developing. Please try download later.');
+	};
 
 	function handleDrawerToggle() {
 		setIsDrawerOpen(!isDrawerOpen);
@@ -47,8 +55,38 @@ export default function MobileNavBar() {
 					<li className={styles.navLink} onClick={handleDrawerToggle}>
 						<Link href="/about">About</Link>
 					</li>
-					<li className={styles.navLink} onClick={handleDrawerToggle}>
-						<Link href="/downloads">Downloads</Link>
+					<li>
+						<div className="relative">
+							<button
+								onClick={toggleDropdown}
+								className="text-white focus:outline-none"
+							>
+								Downloads
+							</button>
+							<div
+								onMouseLeave={toggleDropdown}
+								className={`text-end absolute mt-2 w-20 bg-brand-dark-2 rounded-md shadow-lg z-20 transition-all duration-300 ${
+									isDropdownOpen
+										? 'animate-slideDown'
+										: 'animate-slideUp hidden'
+								}`}
+							>
+								<button
+									onClick={handleOnclick}
+									type="button"
+									className="w-full px-4 py-2 text-white hover:text-brand-green"
+								>
+									Python
+								</button>
+								<button
+									onClick={handleOnclick}
+									type="button"
+									className="w-full px-4 py-2 text-white hover:text-brand-green"
+								>
+									Block
+								</button>
+							</div>
+						</div>
 					</li>
 					<li className={styles.navLink} onClick={handleDrawerToggle}>
 						<Link href="/faq">FAQ</Link>
