@@ -25,6 +25,19 @@ h5 {
 	font-family: var(--roboto-bold);
 }
 
+/* Hide the default arrow of the details tag */
+details > summary {
+	list-style: none;
+}
+
+details > summary::marker {
+	display: none;
+}
+
+details > summary::-webkit-details-marker {
+	display: none;
+}
+
 /* BORDER STYLES AND COLORS */
 /* purple bold */
 

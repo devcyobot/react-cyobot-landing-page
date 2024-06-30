@@ -27,7 +27,7 @@ export default function Card({
 	if (color === 'purple') textColor = '#3e2486';
 	return (
 		<div
-			className={`bg-brand-${background} w-full h-full max-w-80 max-h-fit text-center rounded-md ${className} card-${color}`}
+			className={`bg-brand-${background} w-full h-full max-w-56 sm:max-w-80 max-h-fit text-center rounded-md ${className} card-${color}`}
 		>
 			<figure
 				className="relative w-full h-16 lg:h-[12rem] mt-3"

@@ -14,7 +14,7 @@ export default function DesktopNavBar() {
 	};
 
 	return (
-		<div className="text-lg lg:text-xl xl:text-2xl font-roboto w-[65%] md:flex hidden items-center justify-between mr-12">
+		<div className="text-lg lg:text-xl xl:text-2xl font-roboto w-[75%] lg:w-[95%] md:flex hidden items-center justify-between mr-12">
 			<ul className="flex justify-around">
 				<li className={styles.navLink}>
 					<Link href="/">Home</Link>

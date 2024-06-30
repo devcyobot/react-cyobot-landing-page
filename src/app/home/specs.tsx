@@ -33,9 +33,9 @@ export default function Specs() {
 			</Link>
 			<div
 				style={{ backgroundSize: '75%' }}
-				className="hidden md:block relative h-[45rem] max-w-[1440px] bg-[url('/specs-background.png')] bg-no-repeat bg-center w-full"
+				className="hidden md:flex items-center justify-center relative h-[45rem] max-w-[1440px] bg-[url('/specs-background.png')] bg-no-repeat bg-center w-full"
 			>
-				<figure className="relative md:left-72 lg:left-80 xl:left-96 w-1/4 lg:w-1/3 xl:w-1/2 h-full">
+				<figure className="relative w-1/3 xl:w-1/4 h-full">
 					<Image
 						src="/specs-main.png"
 						alt="benefits robot"
@@ -44,8 +44,6 @@ export default function Specs() {
 						sizes="(max-width: 1440px) 100vw"
 						style={{
 							objectFit: 'contain',
-							maxHeight: '350px',
-							maxWidth: '450px',
 						}}
 						className="self-center justify-self-center"
 					/>

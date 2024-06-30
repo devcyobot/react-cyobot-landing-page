@@ -68,8 +68,8 @@ const HexagonBadge: FC<HexagonBadgeProps> = ({
 	let startY = '0%';
 	const words = roles.split(' ');
 	if (words.length > 2) startY = '35%';
-	else if (words.length > 1) startY = '40%';
-	else startY = '50%';
+	else if (words.length > 1) startY = '45%';
+	else startY = '55%';
 
 	useEffect(() => {
 		const svgText = textRef.current;

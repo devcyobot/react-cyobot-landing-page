@@ -29,7 +29,7 @@ export default function Levels() {
 	const levelRewardsArray = levelsArray[currentDifficulty.index].rewards;
 
 	return (
-		<section className="bg-brand-dark-2 text-white flex flex-col px-5 sm:px-16 lg:px-20">
+		<section className="h-auto bg-brand-dark-2 text-white flex flex-col px-5 sm:px-16 lg:px-20">
 			<h2 className="font-vt323 text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl mt-10 sm:my-12">
 				CHOOSE YOUR DIFFICULTY
 			</h2>

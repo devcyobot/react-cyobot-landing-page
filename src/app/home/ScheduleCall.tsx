@@ -4,8 +4,8 @@ import Image from 'next/image';
 const ScheduleCall: FC = () => {
 	return (
 		<section className="relative bg-brand-gray-light h-[380px] w-full flex justify-between">
-			<div className="grid grid-cols-4 w-full">
-				<div className="col-span-2 flex justify-center">
+			<div className="grid grid-cols-2 w-full justify-items-center items-center">
+				<div className="flex">
 					<Image
 						src="/steps-all-models.png"
 						alt="All CYOBot models"
@@ -18,7 +18,7 @@ const ScheduleCall: FC = () => {
 						}}
 					/>
 				</div>
-				<div className="col-span-2 sm:px-20 xl:px-40 text-center pt-28">
+				<div className="text-center w-2/3 xl:w-1/2">
 					<p className="font-roboto font-medium text-lg sm:text-xl lg:text-2xl">
 						Still have question about how our robotic kit would be a good fit
 						for you?
