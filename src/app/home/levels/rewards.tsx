@@ -33,7 +33,7 @@ export default function Rewards({ data }: RewardsProps) {
 				PROJECTS
 			</h4>
 			<div
-				className={`my-10 max-w-[1440px] w-full sm:w-[75%] md:w-full h-full 
+				className={`mx-auto my-10 max-w-[1440px] w-full sm:w-[75%] md:w-full h-full 
 					grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 grid-rows-${rowNum} place-items-center justify-items-center 
 					gap-y-10 sm:gap-5 md:gap-10 lg:gap-5 xl:gap-y-16 xl:gap-x-0`}
 			>

@@ -101,7 +101,7 @@ export default function Specs() {
 				</div>
 				<div className="w-[34%] absolute flex items-center justify-between">
 					<svg
-						className="relative right-[5.5rem]"
+						className="cursor-pointer relative right-[5.5rem]"
 						onClick={handlePrev}
 						width="35%"
 						height="55"
@@ -119,7 +119,7 @@ export default function Specs() {
 						/>
 					</svg>
 					<svg
-						className="relative left-[6.6rem] bottom-1"
+						className="cursor-pointer relative left-[6.6rem] bottom-1"
 						onClick={handleNext}
 						width="35%"
 						height="55"
