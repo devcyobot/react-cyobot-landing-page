@@ -3,7 +3,7 @@ import styles from './link.module.css';
 
 export default function DesktopNavBar() {
 	return (
-		<div className="text-2xl font-roboto w-[65%] lg:flex hidden items-center justify-between mr-12">
+		<div className="text-lg lg:text-xl xl:text-2xl font-roboto w-[65%] md:flex hidden items-center justify-between mr-12">
 			<ul className="flex justify-around">
 				<li className={styles.navLink}>
 					<Link href="/">Home</Link>
@@ -18,14 +18,14 @@ export default function DesktopNavBar() {
 					<Link href="/faq">FAQ</Link>
 				</li>
 			</ul>
-			<div className="font-vt323">
+			{/* <div className="font-vt323">
 				<button>EN</button>
 				<span> / </span>
 				<button>VN</button>
-			</div>
+			</div> */}
 			<button
 				type="button"
-				className="hover:shadow-[4px_4px_4px_#1AD69C] font-roboto text-2xl font-medium w-32 h-12 text-brand-purple bg-white shadow-md rounded-lg border-none justify-self-end"
+				className="hover:shadow-[4px_4px_4px_#1AD69C] font-roboto text-lg lg:text-xl xl:text-2xl font-medium py-1 lg:py-2 px-3 lg:px-12 text-brand-purple bg-white shadow-md rounded-lg border-none justify-self-end"
 			>
 				<Link
 					href="https://cyobot.myshopify.com/"

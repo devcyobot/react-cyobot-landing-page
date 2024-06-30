@@ -11,10 +11,10 @@ export default function MobileNavBar() {
 	}
 
 	return (
-		<div className="lg:hidden flex flex-col self-end">
+		<div className="md:hidden h-full flex flex-col ml-auto mr-5 justify-center">
 			<button
 				onClick={handleDrawerToggle}
-				className="hover:bg-brand-purple bg-opacity-50 rounded mr-5 p-1"
+				className="hover:bg-brand-purple bg-opacity-50 rounded"
 			>
 				<svg
 					className="w-7 h-7"
@@ -36,8 +36,8 @@ export default function MobileNavBar() {
 			<div
 				className={
 					isDrawerOpen
-						? 'z-10 lg:hidden absolute top-[86px] right-0 bottom-0 left-0 flex flex-col justify-center items-center w-full h-screen bg-brand-purple-dark text-white ease-in duration-300'
-						: 'z-10 lg:hidden absolute top-[86px] right-0 -left-full flex flex-col justify-center items-center w-full h-screen bg-brand-purple-dark text-white ease-in duration-300'
+						? 'z-10 lg:hidden absolute top-[4rem] right-0 bottom-0 left-0 flex flex-col justify-center items-center w-full h-screen bg-brand-dark-2 text-white ease-in duration-300'
+						: 'z-10 lg:hidden absolute top-[4rem] right-0 -left-full flex flex-col justify-center items-center w-full h-screen bg-brand-dark-2 text-white ease-in duration-300'
 				}
 			>
 				<ul className="h-1/2 text-2xl flex flex-col items-center justify-evenly">
