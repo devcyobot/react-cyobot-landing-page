@@ -71,7 +71,7 @@ export default function Footer() {
 					</li>
 					<li className="text-sm sm:text-base lg:text-lg xl:text-xl hover:underline">
 						<Link
-							href="https://cyobot.myshopify.com/products/cyocrawler"
+							href="https://cyobot.myshopify.com/products/cyobot-main-board-esp32-microcontroller"
 							passHref={true}
 							target="_blank"
 						>
