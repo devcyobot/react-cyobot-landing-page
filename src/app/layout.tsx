@@ -26,7 +26,7 @@ export default function RootLayout({
 				<Navbar src="/cyobot-logo.png" alt="CYOBot Logo" />
 
 				<DifficultyProvider>{children}</DifficultyProvider>
-				{/* <Footer /> */}
+				<Footer />
 			</body>
 		</html>
 	);

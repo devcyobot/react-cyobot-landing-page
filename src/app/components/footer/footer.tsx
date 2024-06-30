@@ -20,8 +20,8 @@ export default function Footer() {
 		},
 	];
 	return (
-		<footer className="h-56 bg-brand-dark-2 w-full grid grid-cols-[2fr_1fr_1fr_1fr] gap-x-5 grid-rows-1 p-6">
-			<div className="grid grid-cols-2 items-center">
+		<footer className="text-center sm:text-start h-[30rem] sm:h-56 bg-brand-dark-2 w-full flex flex-col justify-evenly sm:grid grid-cols-[2fr_1fr_1fr_1fr] gap-x-5 grid-rows-1 p-6">
+			<div className="grid grid-cols-1 sm:grid-cols-2 gap-x-2 items-center">
 				<div className="h-full w-full flex flex-col items-center justify-center">
 					<div className="relative h-1/2 w-full">
 						<Image
@@ -145,12 +145,12 @@ export default function Footer() {
 				<h4 className="font-vt323 text-lg sm:text-xl lg:text-2xl xl:text-3xl">
 					GET IN TOUCH
 				</h4>
-				<ul className="flex justify-between w-4/5">
+				<ul className="flex justify-evenly sm:justify-between w-4/5 mx-auto sm:mx-0">
 					<Link
 						passHref={true}
 						target="_blank"
 						href={options[0].link}
-						className="relative bg-brand-dark-2 w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 lg:w-11 lg:h-11 xl:w-14 xl:h-14 overflow-hidden rounded flex items-center justify-center hover:bg-gray-500 transition-colors"
+						className="relative bg-brand-dark-2 w-7 h-7 sm:w-9 sm:h-9 md:w-10 md:h-10 lg:w-11 lg:h-11 xl:w-14 xl:h-14 overflow-hidden rounded flex items-center justify-center hover:bg-gray-500 transition-colors"
 					>
 						<div className="absolute inset-0">
 							<Image
@@ -166,7 +166,7 @@ export default function Footer() {
 						passHref={true}
 						target="_blank"
 						href={options[1].link}
-						className="relative bg-brand-dark-2 w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 lg:w-11 lg:h-11 xl:w-14 xl:h-14 rounded-full overflow-hidden flex items-center justify-center hover:bg-gray-500 transition-colors"
+						className="relative bg-brand-dark-2 w-7 h-7 sm:w-9 sm:h-9 md:w-10 md:h-10 lg:w-11 lg:h-11 xl:w-14 xl:h-14 rounded-full overflow-hidden flex items-center justify-center hover:bg-gray-500 transition-colors"
 					>
 						<div className="absolute inset-0">
 							<Image
@@ -182,7 +182,7 @@ export default function Footer() {
 						passHref={true}
 						target="_blank"
 						href={options[2].link}
-						className="relative bg-brand-dark-2 w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 lg:w-11 lg:h-11 xl:w-14 xl:h-14 rounded-full overflow-hidden flex items-center justify-center hover:bg-gray-500 transition-colors"
+						className="relative bg-brand-dark-2 w-7 h-7 sm:w-9 sm:h-9 md:w-10 md:h-10 lg:w-11 lg:h-11 xl:w-14 xl:h-14 rounded-full overflow-hidden flex items-center justify-center hover:bg-gray-500 transition-colors"
 					>
 						<div className="absolute inset-0">
 							<Image
