@@ -1,114 +1,5 @@
-// import styles from './hexagon.module.css';
-
-// interface HexagonProps {
-// 	text: string;
-// 	// available: boolean;
-// }
-
-// export default function Hexagon({ text }: HexagonProps) {
-// 	// const backgroundColorClass = available
-// 	// 	? styles.greenBackground
-// 	// 	: styles.purpleBackground;
-// 	return (
-// 		<div className={styles.hex}>
-// 			<p className={styles.hexText}>{text}</p>
-// 		</div>
-// 	);
-// }
-
-// import { FC } from 'react';
-// type HexagonBadgeProps = {
-// 	src?: string;
-// 	alt?: string;
-// 	colorFill: string;
-// 	colorStroke: string;
-// };
-
-// const HexagonBadge: FC<HexagonBadgeProps> = ({
-// 	src,
-// 	alt,
-// 	colorFill,
-// 	colorStroke,
-// }) => {
-// 	const numVertices = 6;
-// 	const angle = (2 * Math.PI) / numVertices;
-// 	const radius = 60; // Adjusted radius for smaller size
-// 	const widthScale = (Math.sqrt(3) / 2) * 1;
-// 	const heightScale = widthScale * 0.8;
-
-// 	const points = Array.from({ length: numVertices }, (_, i) => {
-// 		const x = Math.cos(angle * i - Math.PI / 2) * radius * widthScale;
-// 		const y = Math.sin(angle * i - Math.PI / 2) * radius * heightScale;
-// 		return `${x},${y}`;
-// 	}).join(' ');
-
-// 	const viewBoxWidth = 4 * radius * widthScale;
-// 	const viewBoxHeight = 4.3 * radius * heightScale;
-
-// 	// Adjusted image size to be smaller than the hexagon
-// 	const imageScale = 0.48;
-// 	const imageWidth = viewBoxWidth * imageScale;
-// 	const imageHeight = viewBoxHeight * imageScale;
-
-// 	return (
-// 		<div
-// 			className="w-full h-full overflow-hidden relative"
-// 			style={{ width: viewBoxWidth, height: viewBoxHeight }}
-// 		>
-// 			<svg
-// 				width="100%"
-// 				height="100%"
-// 				viewBox={`-${viewBoxWidth / 4} -${viewBoxHeight / 4} ${
-// 					viewBoxWidth / 2
-// 				} ${viewBoxHeight / 2}`}
-// 				className="absolute top-0 left-0 w-full h-full rounded"
-// 			>
-// 				{src ? (
-// 					<>
-// 						<defs>
-// 							<clipPath id="hexagon-clip">
-// 								<polygon points={points} />
-// 							</clipPath>
-// 						</defs>
-// 						<image
-// 							href={src}
-// 							x={`-${viewBoxWidth / 4}`}
-// 							y={`-${viewBoxHeight / 4}`}
-// 							width={imageWidth}
-// 							height={imageHeight}
-// 							preserveAspectRatio="xMidYMid slice"
-// 							clipPath="url(#hexagon-clip)"
-// 						/>
-// 						<polygon
-// 							points={points}
-// 							fill="none"
-// 							stroke="#1ad69c"
-// 							strokeDasharray="6.7"
-// 							strokeWidth="1.5"
-// 							strokeLinecap="round"
-// 						/>
-// 					</>
-// 				) : (
-// 					<polygon
-// 						points={points}
-// 						fill={colorFill}
-// 						stroke={colorStroke}
-// 						strokeDasharray="100"
-// 						strokeWidth="1"
-// 						strokeLinecap="round"
-// 					/>
-// 				)}
-// 			</svg>
-// 		</div>
-// 	);
-// };
-
-// export default HexagonBadge;
-
-// Hexagon Generator used in this code: https://codepen.io/wvr/pen/WrNgJp
-
 'use client';
-import { FC, useEffect, useRef } from 'react';
+import { FC, useEffect, useRef, useState } from 'react';
 import { Path, Vector } from './VectorPathType';
 
 type HexagonBadgeProps = {
@@ -130,10 +21,7 @@ const HexagonBadge: FC<HexagonBadgeProps> = ({
 	orientation = 'pointy',
 	available = false,
 }) => {
-	// Lengths are approximate to adjust the stroke-dasharray for the corners
-	const edgeLength = 32; // Approximate length of each edge segment of the hexagon
-	const cornerLength = 19; // Length of the corner strokes
-	const gapLength = edgeLength - cornerLength; // Length of the gaps between strokes
+	const [dimensions, setDimensions] = useState<number>(0);
 
 	// Caculate the path data points
 	function getPath(r: number): string {
@@ -181,11 +69,39 @@ const HexagonBadge: FC<HexagonBadgeProps> = ({
 
 	let startY = 0;
 	const words = roles.split(' ');
-	if (words.length > 2) startY = 65;
-	else if (words.length > 1) startY = 80;
-	else startY = 100;
+	const ratio = (width / height) * dimensions;
+	if (words.length > 2) startY = 65 * ratio;
+	else if (words.length > 1) startY = 80 * ratio;
+	else startY = 100 * ratio;
 
 	useEffect(() => {
+		const updateDimensions = () => {
+			// 2xl
+			if (window.matchMedia('(min-width: 1536px)').matches) {
+				setDimensions(1);
+			}
+			// xl
+			else if (window.matchMedia('(min-width: 1280px)').matches) {
+				setDimensions(1);
+			}
+			// lg
+			else if (window.matchMedia('(min-width: 1024px)').matches) {
+				setDimensions(0.7);
+			}
+			// md
+			else if (window.matchMedia('(min-width: 768px)').matches) {
+				setDimensions(0.6);
+			}
+			// sm
+			else if (window.matchMedia('(min-width: 640px)').matches) {
+				setDimensions(0.5);
+			}
+			// mobile
+			else {
+				setDimensions(0.23); // Default dimensions for mobile
+			}
+		};
+
 		const svgText = textRef.current;
 		if (!svgText) return;
 
@@ -202,6 +118,13 @@ const HexagonBadge: FC<HexagonBadgeProps> = ({
 
 			svgText.appendChild(tspan);
 		});
+
+		updateDimensions(); // Set initial dimensions on mount
+		window.addEventListener('resize', updateDimensions);
+
+		return () => {
+			window.removeEventListener('resize', updateDimensions);
+		};
 	}, [roles, words]);
 
 	return (
@@ -223,7 +146,7 @@ const HexagonBadge: FC<HexagonBadgeProps> = ({
 					y={`${startY}`}
 					textAnchor="middle"
 					dominantBaseline="middle"
-					className="font-vt323 text-4xl fill-white"
+					className="font-vt323 text-[0.6rem] sm:text-lg md:text-xl lg:text-3xl xl:text-4xl fill-white"
 				></text>
 			</svg>
 		</div>

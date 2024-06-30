@@ -14,11 +14,11 @@ export default function Home() {
 		<main>
 			<Intro />
 			<Roles />
-			<Levels />
+			{/* <Levels />
 			<Specs />
 			<Environments />
 			<Steps />
-			<Schedule />
+			<Schedule /> */}
 		</main>
 	);
 }

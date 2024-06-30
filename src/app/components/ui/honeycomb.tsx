@@ -44,7 +44,7 @@ const HexagonBadgeMatrix: React.FC<HexagonBadgeMatrixProps> = ({
 			}
 			// mobile
 			else {
-				setDimensions(50); // Default dimensions for mobile
+				setDimensions(45); // Default dimensions for mobile
 			}
 		};
 
@@ -57,7 +57,7 @@ const HexagonBadgeMatrix: React.FC<HexagonBadgeMatrixProps> = ({
 	}, []);
 
 	return (
-		<div className="h-[65%] flex flex-col items-center">
+		<div className="w-full h-1/2 sm:h-[65%] flex flex-col items-center">
 			<div className="flex items-center">
 				{combinedLogos.slice(0, 7).map((logo, index) => (
 					<HexagonBadge
@@ -72,7 +72,7 @@ const HexagonBadgeMatrix: React.FC<HexagonBadgeMatrixProps> = ({
 					/>
 				))}
 			</div>
-			<div className="relative bottom-[1rem] flex items-center">
+			<div className="relative bottom-[0.25rem] sm:bottom-[0.3rem] md:bottom-[0.7rem] xl:bottom-[1rem] flex items-center">
 				{combinedLogos.slice(7, 13).map((logo, index) => (
 					<HexagonBadge
 						key={`row-2-${index}`}
@@ -86,7 +86,7 @@ const HexagonBadgeMatrix: React.FC<HexagonBadgeMatrixProps> = ({
 					/>
 				))}
 			</div>
-			<div className="relative bottom-[2rem] flex items-center">
+			<div className="relative bottom-[0.5rem] sm:bottom-[0.6rem] md:bottom-[1.4rem] xl:bottom-[2rem] flex items-center">
 				{combinedLogos.slice(13, 20).map((logo, index) => (
 					<HexagonBadge
 						key={`row-3-${index}`}
