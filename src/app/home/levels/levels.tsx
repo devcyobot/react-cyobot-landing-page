@@ -13,18 +13,13 @@ import { useDifficultyContext } from '../../context/DifficultyContext';
 
 export default function Levels() {
 	const { currentDifficulty, setDifficulty } = useDifficultyContext();
-	const [currentLevel, setCurrentLevel] = useState(1);
 
 	function handleClickPrev() {
-		setCurrentLevel((prevState) => {
-			return prevState === 0 ? levelsArray.length - 1 : prevState - 1;
-		});
+		if (currentDifficulty.index > 0) setDifficulty(currentDifficulty.index - 1);
 	}
 
 	function handleClickNext() {
-		setCurrentLevel((prevState) => {
-			return prevState === levelsArray.length - 1 ? 0 : prevState + 1;
-		});
+		if (currentDifficulty.index < 2) setDifficulty(currentDifficulty.index + 1);
 	}
 
 	const levelsArray = levelsData.models;
@@ -34,21 +29,21 @@ export default function Levels() {
 	const levelRewardsArray = levelsArray[currentDifficulty.index].rewards;
 
 	return (
-		<section className="bg-brand-dark-2 text-white flex flex-col px-16 lg:px-20">
-			<h2 className="font-vt323 text-center text-2xl sm:text-3xl md:text-4xl lg:text-6xl my-12">
+		<section className="bg-brand-dark-2 text-white flex flex-col px-5 sm:px-16 lg:px-20">
+			<h2 className="font-vt323 text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl mt-10 sm:my-12">
 				CHOOSE YOUR DIFFICULTY
 			</h2>
-			<div className="max-w-[1440px] flex flex-col justify-evenly mx-auto">
+			<div className="mx-auto max-w-[1440px] flex flex-col justify-evenly w-full">
 				<DesktopCarousel
-					className="hidden lg:block"
+					className="hidden md:block"
 					data={imageCarousel}
 					currentLevel={currentDifficulty.index}
 					navigate={setDifficulty}
 				/>
 				<MobileCarousel
-					className="lg:hidden"
+					className="md:hidden"
 					data={imageCarousel}
-					currentLevel={currentLevel}
+					currentLevel={currentDifficulty.index}
 					prev={handleClickPrev}
 					next={handleClickNext}
 				/>

@@ -27,10 +27,10 @@ export default function Card({
 	if (color === 'purple') textColor = '#3e2486';
 	return (
 		<div
-			className={`bg-brand-${background} w-auto sm:w-32 md:w-36 lg:w-full h-full max-w-80 max-h-fit text-center rounded-md ${className} card-${color}`}
+			className={`bg-brand-${background} w-full h-full max-w-80 max-h-fit text-center rounded-md ${className} card-${color}`}
 		>
 			<figure
-				className="relative w-auto h-16 lg:h-32 mt-3"
+				className="relative w-full h-16 lg:h-[12rem] mt-3"
 				onMouseEnter={() => setIsHovered(true)}
 				onMouseLeave={() => setIsHovered(false)}
 			>
@@ -41,7 +41,6 @@ export default function Card({
 					quality={100}
 					sizes="100vw"
 					style={{ objectFit: 'cover' }}
-					className="max-h-32"
 				/>
 			</figure>
 			<h5

@@ -30,7 +30,7 @@ export default function ImageSlide({
 	else shadowColor = '#f3c449';
 
 	return (
-		<div className="cursor-pointer flex flex-col items-center w-full h-full">
+		<div className="cursor-pointer flex flex-col items-center justify-between w-4/5 sm:w-full h-4/5 sm:h-full">
 			{active ? (
 				// When image is selected/active
 				<div className="relative w-full h-full overflow-visible">
@@ -51,11 +51,9 @@ export default function ImageSlide({
 						fill
 						quality={100}
 						sizes="100vw"
-						className="overflow-visible"
+						className="overflow-visible max-w-[23.75rem] max-h-[17rem] sm:max-h-[23rem] lg:max-h-[23.75rem]"
 						style={{
 							objectFit: imageFit,
-							maxHeight: '380px',
-							maxWidth: '380px',
 						}}
 					/>
 				</div>
@@ -71,18 +69,16 @@ export default function ImageSlide({
 						}}
 					></div>
 					{/* Background color */}
-					<div className="relative w-[90%] h-[74.2%] rounded-[30px] birghtness-50 bg-brand-gray-dark px-12 py-14">
+					<div className="relative w-[90%] h-[71%] lg:h-[74%] rounded-[30px] birghtness-50 bg-brand-gray-dark px-12 py-14">
 						<Image
 							src={src}
 							alt={alt}
 							fill
 							quality={100}
 							sizes="100vw"
-							className="brightness-[20%] overflow-visible"
+							className="brightness-[20%] overflow-visible max-w-[25rem] max-h-[26rem] xl:max-h-[34.375]"
 							style={{
 								objectFit: imageFit,
-								maxHeight: '550px',
-								maxWidth: '400px',
 							}}
 						/>
 					</div>
@@ -91,7 +87,7 @@ export default function ImageSlide({
 			<p
 				className={
 					active
-						? `border-dashed-${color}-regular font-vt323 bg-brand-dark bg-opacity-25 text-center pt-2 pb-auto w-full h-[16%] mt-12 text-5xl`
+						? `border-dashed-${color}-regular font-vt323 bg-brand-dark bg-opacity-25 text-center py-3 w-full mt-12 text-[2.7rem] lg:text-5xl`
 						: 'w-[30.063rem]'
 				}
 			>

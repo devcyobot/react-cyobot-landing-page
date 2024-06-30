@@ -23,27 +23,28 @@ export default function Time({ image, atr }: TimeProps) {
 	return (
 		<>
 			<h4
-				className="mt-14 mb-3 text-4xl font-vt323"
+				className="mt-5 sm:mt-14 mb-3 text-3xl md:text-3xl lg:text-4xl font-vt323"
 				style={{ color: currentDifficulty.color }}
 			>
 				TIME ATTRIBUTE
 			</h4>
-			<div className="flex flex-col lg:flex-row items-center h-full">
-				<figure className="relative w-[40%] h-[25rem]">
+			<div className="flex flex-col lg:flex-row items-center h-full w-full">
+				<figure className="relative w-full lg:w-1/2 xl:w-[40%] h-[20rem] md:h-[28rem]">
 					<Image
 						src={image.src}
 						alt={image.alt}
 						quality={100}
 						fill
 						sizes="(max-width: 768px) 100vw, 50vw"
+						className="mx-auto"
 						style={{
-							objectFit: 'cover',
+							objectFit: 'contain',
 							maxHeight: '461px',
 							maxWidth: '473px',
 						}}
 					/>
 				</figure>
-				<div className="pl-16 pt-16 w-2/3">
+				<div className="lg:pl-16 lg:pt-16 w-2/3">
 					{atr.map((a) => {
 						return (
 							<Bar key={a.id} color={a.color} name={a.name} amount={a.amount} />
