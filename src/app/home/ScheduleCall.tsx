@@ -4,7 +4,7 @@ import Image from 'next/image';
 const ScheduleCall: FC = () => {
 	return (
 		<section className="relative bg-brand-gray-light h-[380px] w-full flex justify-between">
-			<div className="grid grid-cols-2 w-full justify-items-center items-center">
+			<div className="mx-auto max-w-[1440px] grid grid-cols-2 w-full justify-items-center items-center">
 				<div className="flex">
 					<Image
 						src="/steps-all-models.png"

@@ -25,16 +25,21 @@ export default function Rewards({ data }: RewardsProps) {
 	const { currentDifficulty } = useDifficultyContext();
 
 	return (
-		<div className="h-[85rem] sm:h-[45rem] md:h-[40rem] lg:h-[60rem]">
+		<div className="h-full max-h- flex flex-col justify-evenly">
 			<h4
-				className="mt-14 mb-3 text-4xl font-vt323"
+				className="mt-14 text-4xl font-vt323"
 				style={{ color: currentDifficulty.color }}
 			>
 				PROJECTS
 			</h4>
+			{/* grid-cols-1 sm:grid-cols-2 md:grid-cols-3 grid-rows-${
+						3 * rowNum
+					} sm:grid-rows-3 lg:grid-rows-${rowNum} */}
 			<div
-				className={`mx-auto my-10 max-w-[1440px] w-full sm:w-[75%] md:w-full h-auto max-h-[27rem]
-					grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 grid-rows-${rowNum} place-items-center justify-items-center 
+				className={`mx-auto my-10 max-w-[1440px] w-full sm:w-[75%] md:w-full h-auto
+					grid md:grid-rows-${rowNum} grid-rows-${
+					3 * rowNum
+				} grid-cols-1 md:grid-cols-3 place-items-center justify-items-center 
 					gap-y-10 sm:gap-5 md:gap-10 lg:gap-5 xl:gap-y-16 xl:gap-x-0`}
 			>
 				{data.map((d) => {
