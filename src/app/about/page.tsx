@@ -7,8 +7,8 @@ import TeamImageCard from '../components/ui/TeamImageCard';
 export default function About() {
 	return (
 		<main className="w-full mx-auto bg-brand-gray-light flex flex-col justify-evenly items-center">
-			<div className="bg-white relative mt-16 lg:mt-24 h-auto flex justify-center items-center">
-				<h1 className="z-10 py-14 sm:py-28 lg:py-32 xl:py-48 text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-center w-full px-5 sm:px-10 md:px-12 lg:px-16 xl:px-20">
+			<div className="w-full relative mt-16 lg:mt-24 h-auto flex justify-center items-center">
+				<h1 className="max-w-[1440px] z-10 py-14 sm:py-28 lg:py-32 xl:py-48 text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-center w-full px-5 sm:px-10 md:px-12 lg:px-16 xl:px-20">
 					WE MAKE LEARNING ROBOTICS AN EXCITING EXPERIENCE WITH REAL-LIFE
 					EXAMPLES FROM THE ENGINEERING INDUSTRIES
 				</h1>
@@ -34,11 +34,11 @@ export default function About() {
 					fill
 					sizes="100vw"
 					style={{
-						objectFit: 'cover',
+						objectFit: 'contain',
 					}}
 				/>
 			</figure>
-			<section className="mb-24 w-4/5 h-full sm:px-7 lg:px-16 mt-10 gap-y-20 flex flex-col items-center justify-evenly">
+			<section className="max-w-[1440px] mb-24 w-4/5 h-full sm:px-7 lg:px-16 mt-10 gap-y-20 flex flex-col items-center justify-evenly">
 				<p className="font-roboto font-medium text-xl sm:text-2xl lg:text-3xl text-center">
 					At CYOBot, we are passionate about bridging the gap between
 					traditional education and the fast-paced world of robotics. In an era
