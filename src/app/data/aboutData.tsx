@@ -1,4 +1,4 @@
-export const aboutData: {
+export const AboutData: {
 	label: string;
 	src: string;
 	description: string;

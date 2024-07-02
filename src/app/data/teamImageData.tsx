@@ -1,36 +1,41 @@
-export const teamImageData: {
+export const TeamImageData: {
 	src: string;
 	alt: string;
 	icon: string;
 }[] = [
 	{
-		src: '',
-		alt: '',
+		src: '/About/Duy.png',
+		alt: 'Duy Nguyen',
 		icon: '/icon/yellow.png',
 	},
 	{
-		src: '',
-		alt: '',
+		src: '/About/KAnh.png',
+		alt: 'Roxy Ho',
 		icon: '/icon/red.png',
 	},
 	{
-		src: '',
+		src: '/About/David.png',
 		alt: '',
 		icon: '/icon/green.png',
 	},
 	{
-		src: '',
-		alt: '',
+		src: '/About/Hoan-Pham.png',
+		alt: 'Hoan Pham',
 		icon: '/icon/blue.png',
 	},
 	{
-		src: '',
-		alt: '',
+		src: '/About/Minh.png',
+		alt: 'Wilson Le',
 		icon: '/icon/gray.png',
 	},
 	{
-		src: '',
-		alt: '',
+		src: '/About/Khanh.png',
+		alt: 'Duy Khan',
 		icon: '/icon/green-darker.png',
+	},
+	{
+		src: '/About/Huy.png',
+		alt: 'Huy Nguyen',
+		icon: '/icon/blue.png',
 	},
 ];

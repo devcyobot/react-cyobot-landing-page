@@ -24,12 +24,12 @@ const DropDown: FC<DropDownProps> = (props) => {
 		>
 			<summary
 				onClick={toggleOpen}
-				className={`${summaryBorder} list-none cursor-pointer font-roboto font-bold text-brand-purple text-base lg:text-lg xl:text-xl flex flex-col justify-center items-center px-2 w-full h-full text-center`}
+				className={`${summaryBorder} list-none cursor-pointer font-roboto font-bold text-brand-purple text-lg lg:text-xl flex flex-col justify-center items-center px-2 w-full h-full text-center`}
 			>
 				<span className="absolute right-2 text-xl xl:text-2xl transition-transform duration-300 transform">
 					{isOpen ? '-' : '+'}
 				</span>
-				{props.label}
+				<span className="w-[90%]">{props.label}</span>
 			</summary>
 			<div className="bg-brand-gray-light card-purple p-5 relative -top-1">
 				<figure className="h-40 w-auto flex gap-x-3">
@@ -56,7 +56,7 @@ const DropDown: FC<DropDownProps> = (props) => {
 						</div>
 					)}
 				</figure>
-				<figcaption className="font-roboto font-medium [grid-area:image] text-xs md:text-sm lg:text-lg text-black text-center">
+				<figcaption className="font-roboto font-medium [grid-area:image] text-base lg:text-lg text-black text-center">
 					{props.caption}
 				</figcaption>
 			</div>
