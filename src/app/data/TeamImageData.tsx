@@ -15,7 +15,7 @@ export const TeamImageData: {
 	},
 	{
 		src: '/About/David.png',
-		alt: '',
+		alt: 'David Truong',
 		icon: '/icon/green.png',
 	},
 	{
@@ -30,7 +30,7 @@ export const TeamImageData: {
 	},
 	{
 		src: '/About/Khanh.png',
-		alt: 'Duy Khan',
+		alt: 'Duy Khanh',
 		icon: '/icon/green-darker.png',
 	},
 	{
