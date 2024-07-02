@@ -25,8 +25,6 @@ export default function Specs() {
 			</h2>
 			<Link
 				href="/stats"
-				passHref={true}
-				target="_blank"
 				className="font-vt323 underline text-base md:text-lg lg:text-3xl underline-offset-4 mb-10 sm:mb-24"
 			>
 				&lt;&lt; Stats for nerds &gt;&gt;
@@ -42,10 +40,7 @@ export default function Specs() {
 						quality={100}
 						fill
 						sizes="(max-width: 1440px) 100vw"
-						style={{
-							objectFit: 'contain',
-						}}
-						className="self-center justify-self-center"
+						className="object-contain self-center justify-self-center"
 					/>
 				</figure>
 				{specsDetailsData.map((detail, index) => (
