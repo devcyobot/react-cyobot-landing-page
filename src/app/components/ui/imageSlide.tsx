@@ -51,7 +51,7 @@ export default function ImageSlide({
 						fill
 						quality={100}
 						sizes="100vw"
-						className="overflow-visible max-w-[23.75rem] max-h-[17rem] sm:max-h-[23rem] lg:max-h-[23.75rem]"
+						className="overflow-visible max-w-[23.75rem] max-h-[21rem] sm:max-h-[23.5rem] lg:max-h-[23.75rem]"
 						style={{
 							objectFit: imageFit,
 						}}
@@ -76,7 +76,7 @@ export default function ImageSlide({
 							fill
 							quality={100}
 							sizes="100vw"
-							className="brightness-[20%] overflow-visible max-w-[25rem] max-h-[26rem] xl:max-h-[34.375]"
+							className="brightness-[20%] overflow-visible"
 							style={{
 								objectFit: imageFit,
 							}}
@@ -87,7 +87,7 @@ export default function ImageSlide({
 			<p
 				className={
 					active
-						? `border-dashed-${color}-regular font-vt323 bg-brand-dark bg-opacity-25 text-center py-3 w-full mt-12 text-[2.7rem] lg:text-5xl`
+						? `text-white border-dashed-${color}-regular font-vt323 bg-brand-dark bg-opacity-25 text-center py-3 w-full mt-12 text-[2.7rem] lg:text-5xl`
 						: 'w-[30.063rem]'
 				}
 			>

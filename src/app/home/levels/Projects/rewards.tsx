@@ -1,12 +1,12 @@
-import Card from '../../components/ui/card';
-import { useDifficultyContext } from '../../context/DifficultyContext';
+import Card from '../../../components/ui/card';
+import { useDifficultyContext } from '../../../context/DifficultyContext';
+import MobileProjects from './MobileProjects';
 
-type RewardsProps = {
-	data: Reward[];
+type ProjectsProps = {
+	data: Project[];
 };
 
-type Reward = {
-	id: number;
+export type Project = {
 	color: string;
 	image: {
 		src: string;
@@ -17,7 +17,7 @@ type Reward = {
 	job: string;
 };
 
-export default function Rewards({ data }: RewardsProps) {
+export default function Projects({ data }: ProjectsProps) {
 	const { currentDifficulty } = useDifficultyContext();
 
 	return (
@@ -28,11 +28,11 @@ export default function Rewards({ data }: RewardsProps) {
 			>
 				PROJECTS
 			</h4>
-			<div className="my-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-14 xl:gap-24">
-				{data.map((d) => {
+			<div className="hidden my-10 sm:grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-14 xl:gap-24">
+				{data.map((d, i) => {
 					return (
 						<Card
-							key={d.id}
+							key={i}
 							image={{
 								src: d.image.src,
 								staticSrc: d.image.staticSrc,
@@ -45,6 +45,7 @@ export default function Rewards({ data }: RewardsProps) {
 					);
 				})}
 			</div>
+			<MobileProjects data={data} />
 		</div>
 	);
 }

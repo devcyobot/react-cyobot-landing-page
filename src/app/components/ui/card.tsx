@@ -30,7 +30,7 @@ export default function Card({
 			className={`bg-brand-${background} w-full h-auto min-h-80 max-w-60 lg:max-w-80 text-center rounded-md ${className} card-${color}`}
 		>
 			<figure
-				className="relative w-full h-1/2 lg:h-[12rem] mt-3"
+				className="relative w-full h-[10rem] lg:h-[12rem] mt-3"
 				onMouseEnter={() => setIsHovered(true)}
 				onMouseLeave={() => setIsHovered(false)}
 			>

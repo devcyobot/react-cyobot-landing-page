@@ -6,7 +6,6 @@ export const levelsData = {
 				'At the Explorer level, you begin your journey of discovery in robotics. You will familiarize yourself with your robot companion by going through hands-on activities and tutorials. As you complete the Explorer level, you will understand the world of robotics, explore different roles in the industry, identify your career interests and ready to level up.',
 			rewards: [
 				{
-					id: 9,
 					image: {
 						src: '/blinking-heart-effect.gif',
 						staticSrc: '/blinking-heart-effect.jpg',
@@ -17,7 +16,6 @@ export const levelsData = {
 					job: 'Display different visuals and light effects on your robot',
 				},
 				{
-					id: 10,
 					image: {
 						src: '/dice-rolling.gif',
 						staticSrc: '/dice-rolling.jpg',
@@ -28,7 +26,6 @@ export const levelsData = {
 					job: 'Simulate a digital dice  that randomly generates numbers when shaked',
 				},
 				{
-					id: 11,
 					image: {
 						src: '/pomodoro.gif',
 						staticSrc: '/pomodoro.jpg',
@@ -45,19 +42,16 @@ export const levelsData = {
 			},
 			timeData: [
 				{
-					id: 12,
 					name: 'CODE LOGIC',
 					color: 'green',
 					amount: '75%',
 				},
 				{
-					id: 13,
 					name: 'DEBUGGING',
 					color: 'yellow',
 					amount: '40%',
 				},
 				{
-					id: 14,
 					name: 'DESIGN',
 					color: 'red',
 					amount: '5%',
@@ -70,7 +64,6 @@ export const levelsData = {
 				'Having mastered the basics, you will now delve deeper into the intricacies of robotics, exploring more complex applications and programming with specific design requirements. You will get to pick your roles  and pathways during your quest to become a master in a field of robotics. As the adventurer’s quest concludes, you will gain multiple essential skills allowing you to enter the real-world industry as your desired role.',
 			rewards: [
 				{
-					id: 0,
 					image: {
 						src: '/flappy-bird.gif',
 						staticSrc: '/flappy-bird.jpg',
@@ -81,7 +74,6 @@ export const levelsData = {
 					job: 'Experience the Flappy Bird game right on your robot',
 				},
 				{
-					id: 1,
 					image: {
 						src: '/simple-imu-gimbal.gif',
 						staticSrc: '/simple-imu-gimbal.jpg',
@@ -92,7 +84,6 @@ export const levelsData = {
 					job: 'Help the robot keep its head balance under extreme attack!',
 				},
 				{
-					id: 2,
 					image: {
 						src: '/led-chasing.gif',
 						staticSrc: '/led-chasing.jpg',
@@ -103,7 +94,6 @@ export const levelsData = {
 					job: 'Catch the running light on the robot LED ring',
 				},
 				{
-					id: 3,
 					image: {
 						src: '/simple-ultrasonic-radar.gif',
 						staticSrc: '/simple-ultrasonic-radar.jpg',
@@ -114,7 +104,6 @@ export const levelsData = {
 					job: 'Equip your robot with a distance sensor to detect incoming obstacles while moving',
 				},
 				{
-					id: 4,
 					image: {
 						src: '/car-chasing-simple.gif',
 						staticSrc: '/car-chasing-simple.jpg',
@@ -125,7 +114,6 @@ export const levelsData = {
 					job: 'Bring back childhood with the famous 8-bit car chasing game',
 				},
 				{
-					id: 5,
 					image: {
 						src: '/humanoid-walking.gif',
 						staticSrc: '/humanoid-walking.jpg',
@@ -142,19 +130,16 @@ export const levelsData = {
 			},
 			timeData: [
 				{
-					id: 6,
 					name: 'CODE LOGIC',
 					color: 'green',
 					amount: '65%',
 				},
 				{
-					id: 7,
 					name: 'DEBUGGING',
 					color: 'yellow',
 					amount: '50%',
 				},
 				{
-					id: 8,
 					name: 'DESIGN',
 					color: 'red',
 					amount: '20%',
@@ -167,7 +152,6 @@ export const levelsData = {
 				'At the Pioneer level, you have entered the rank of the elites. With proficiency in robotics, you’ll be able to come up with your own system design, hardware and software integration, and your own projects. As you master the Pioneer level, you will gain tremendous debugging experience as well as technical weapons to tackle any problems. After completing Pioneer level, you can form your own guild or party to create quests or tackle World Quests.',
 			rewards: [
 				{
-					id: 15,
 					image: {
 						src: '/crawler-attach-ultrasonic-sensor.jpg',
 						staticSrc: '/crawler-attach-ultrasonic-sensor.jpg',
@@ -178,7 +162,6 @@ export const levelsData = {
 					job: 'Upgrade your robot with ultrasonic sensors and control the robot to avoid obstacles',
 				},
 				{
-					id: 16,
 					image: {
 						src: '/cyobrain-prosthesis.gif',
 						staticSrc: '/cyobrain-prosthesis.jpg',
@@ -190,7 +173,6 @@ export const levelsData = {
 					job: 'Control a 3D printed dexterous prosthesis with CYOBrain',
 				},
 				{
-					id: 17,
 					image: {
 						src: '/remote-control-demo.gif',
 						staticSrc: '/remote-control-demo.jpg',
@@ -207,19 +189,16 @@ export const levelsData = {
 			},
 			timeData: [
 				{
-					id: 18,
 					name: 'CODE LOGIC',
 					color: 'green',
 					amount: '40%',
 				},
 				{
-					id: 19,
 					name: 'DEBUGGING',
 					color: 'yellow',
 					amount: '70%',
 				},
 				{
-					id: 20,
 					name: 'DESIGN',
 					color: 'red',
 					amount: '50%',

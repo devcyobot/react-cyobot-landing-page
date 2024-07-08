@@ -44,8 +44,8 @@ export default function MobileNavBar() {
 			<div
 				className={
 					isDrawerOpen
-						? 'z-10 lg:hidden absolute top-[4rem] right-0 bottom-0 left-0 flex flex-col justify-center items-center w-full h-screen bg-brand-dark-2 text-white ease-in duration-300'
-						: 'z-10 lg:hidden absolute top-[4rem] right-0 -left-full flex flex-col justify-center items-center w-full h-screen bg-brand-dark-2 text-white ease-in duration-300'
+						? 'z-10 lg:hidden absolute top-[4rem] right-0 bottom-0 left-0 flex flex-col justify-start items-center w-full h-screen bg-brand-dark-2 text-white ease-in duration-300'
+						: 'z-10 lg:hidden absolute top-[4rem] right-0 -left-full flex flex-col justify-start items-center w-full h-screen bg-brand-dark-2 text-white ease-in duration-300'
 				}
 			>
 				<ul className="h-1/2 text-2xl flex flex-col items-center justify-evenly">
@@ -96,7 +96,13 @@ export default function MobileNavBar() {
 					type="button"
 					className="hover:shadow-[4px_4px_4px_#1AD69C] font-roboto text-2xl font-medium w-32 h-12 text-brand-purple bg-white shadow-md rounded-lg border-none justify-self-end"
 				>
-					<Link href="https://cyobot.myshopify.com/">Shop</Link>
+					<Link
+						href="https://cyobot.myshopify.com/"
+						passHref={true}
+						target="_blank"
+					>
+						Shop
+					</Link>
 				</button>
 			</div>
 		</div>

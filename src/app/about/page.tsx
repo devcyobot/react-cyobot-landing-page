@@ -3,6 +3,7 @@ import { AboutData } from '../data/AboutData';
 import AboutCard from '../components/ui/AboutCard';
 import { TeamImageData } from '../data/TeamImageData';
 import TeamImageCard from '../components/ui/TeamImageCard';
+// import MobileTeamsGalley from './MobileTeamsGallery';
 
 export default function About() {
 	return (
@@ -60,7 +61,7 @@ export default function About() {
 				<h2 className="text-white font-vt32 text-4xl sm:text-5xl lg:text-6xl p-14">
 					MEET THE TEAM
 				</h2>
-				<div className="max-w-72 md:max-w-[75rem] w-4/5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-10 xl:gap-12">
+				<div className="max-w-72 md:max-w-[75rem] w-4/5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-10 xl:gap-12 items-center justify-items-center">
 					{TeamImageData.map((item, i) => {
 						return (
 							<TeamImageCard
@@ -72,6 +73,7 @@ export default function About() {
 						);
 					})}
 				</div>
+				{/* <MobileTeamsGalley data={TeamImageData} /> */}
 			</section>
 		</main>
 	);

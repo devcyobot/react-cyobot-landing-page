@@ -11,7 +11,6 @@ type TimeProps = {
 };
 
 type Attribute = {
-	id: number;
 	name: string;
 	color: string;
 	amount: string;
@@ -45,9 +44,14 @@ export default function Time({ image, atr }: TimeProps) {
 					/>
 				</figure>
 				<div className="lg:pl-16 lg:pt-16 w-2/3">
-					{atr.map((a) => {
+					{atr.map((a, i) => {
 						return (
-							<Bar key={a.id} color={a.color} name={a.name} amount={a.amount} />
+							<Bar
+								key={`bar-${i}`}
+								color={a.color}
+								name={a.name}
+								amount={a.amount}
+							/>
 						);
 					})}
 				</div>

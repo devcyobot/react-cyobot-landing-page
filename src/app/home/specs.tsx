@@ -19,13 +19,13 @@ export default function Specs() {
 
 	return (
 		<section className="h-auto flex flex-col items-center bg-brand-gray-light pb-20 md:pb-56">
-			<h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl text-center w-1/2 lg:w-full my-10">
+			<h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-center w-full my-10">
 				TAKE YOU THROUGH 1,000 LEVELS <br />
 				WITH OUR SUPPORTED HARDWARE
 			</h2>
 			<Link
 				href="/stats"
-				className="font-vt323 underline text-base md:text-lg lg:text-3xl underline-offset-4 mb-10 sm:mb-24"
+				className="font-vt323 underline text-xl md:text-2xl lg:text-3xl underline-offset-4 mb-10 sm:mb-24"
 			>
 				&lt;&lt; Stats for nerds &gt;&gt;
 			</Link>
@@ -53,13 +53,12 @@ export default function Specs() {
 							src={detail.src}
 							src2={detail.src2}
 							caption={detail.caption}
-							index={index + 1}
 						/>
 					</div>
 				))}
 			</div>
 			{/* MOBILE */}
-			<div className="md:hidden h-full relative font-vt323 flex flex-col items-center justify-evenly w-full text-white text-lg md:text-2xl lg:text-3xl">
+			{/* <div className="md:hidden h-full relative font-vt323 flex flex-col items-center justify-evenly w-full text-white text-lg md:text-2xl lg:text-3xl">
 				<div className="w-4/5 max-w-[15rem] bg-brand-gray-light card-purple p-5 relative -top-1">
 					<h5 className="font-roboto font-bold text-brand-purple text-lg flex flex-col justify-center items-center px-2 w-full h-full text-center">
 						{currentData.label}
@@ -130,6 +129,18 @@ export default function Specs() {
 						/>
 					</svg>
 				</div>
+			</div> */}
+			<div className="z-10 md:hidden flex flex-col justify-evenly h-[80vh]">
+				{specsDetailsData.map((detail, index) => (
+					<div key={`specs-details-dropdown-${index}`} className={`sm:hidden}`}>
+						<DropDown
+							label={detail.label}
+							src={detail.src}
+							src2={detail.src2}
+							caption={detail.caption}
+						/>
+					</div>
+				))}
 			</div>
 		</section>
 	);

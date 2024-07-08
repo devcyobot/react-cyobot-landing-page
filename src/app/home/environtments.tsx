@@ -12,7 +12,7 @@ export default function Environments() {
 	return (
 		<section className="h-[45rem] md:h-[55rem] lg:h-[60rem] bg-brand-dark flex flex-col justify-evenly items-center">
 			<div className="flex flex-col justify-between h-[12%]">
-				<h2 className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-6xl text-center">
+				<h2 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-center">
 					CYOBOT ENVIRONMENTS
 				</h2>
 				<p className="font-roboto text-white px-2 sm:text-lg lg:text-2xl text-center">

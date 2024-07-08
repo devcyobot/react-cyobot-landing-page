@@ -1,7 +1,7 @@
 'use client';
 import { levelsData } from '../../data/levelsData';
 import Time from './time';
-import Tasks from './rewards';
+import Tasks from './Projects/rewards';
 import Summary from './objectives';
 import { useState } from 'react';
 // --------TESTING--------------

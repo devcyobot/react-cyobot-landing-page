@@ -2,8 +2,7 @@ import React, { useEffect, useState } from 'react';
 import ImageSlide from '../../components/ui/imageSlide';
 import styles from './carousel.module.css';
 
-type ImageData = {
-	id: number;
+export type ImageData = {
 	title: string;
 	color: string;
 	src: string;
@@ -75,11 +74,11 @@ export default function DesktopCarousel(props: DesktopCarouselProps) {
 			else if (window.matchMedia('(min-width: 768px)').matches) {
 				setDimensions({ d1: 300, d2: 100 });
 			}
-			// sm
+			// sm: set both d1 nd d2 0 because we will different carousel to display the ImageSlide
 			else if (window.matchMedia('(min-width: 640px)').matches) {
 				setDimensions({ d1: 0, d2: 0 });
 			}
-			// mobile
+			// mobile: set both d1 nd d2 0 because we will different carousel to display the ImageSlide
 			else {
 				setDimensions({ d1: 0, d2: 0 }); // Default dimensions for mobile
 			}
@@ -97,19 +96,19 @@ export default function DesktopCarousel(props: DesktopCarouselProps) {
 		<div className={`${props.className}`}>
 			<div className={styles.slideContainer}>
 				{props.data.map((item, i) => (
-					<React.Fragment key={item.id}>
+					<React.Fragment key={i}>
 						<div
 							className={styles.slide}
 							style={{ ...getSlide(i) }}
 							onClick={() => props.navigate(i)}
 						>
 							<ImageSlide
-								active={props.currentLevel === item.id ? true : false}
+								active={props.currentLevel === i ? true : false}
 								src={item.src}
 								alt={item.alt}
 								color={item.color}
 								title={item.title}
-								imageFit={item.id === 2 ? 'contain' : 'cover'}
+								imageFit={i === 2 ? 'contain' : 'cover'}
 							/>
 						</div>
 					</React.Fragment>
