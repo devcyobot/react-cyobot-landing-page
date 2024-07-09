@@ -1,22 +1,22 @@
-import Image from 'next/image';
-import Link from 'next/link';
+import Image from "next/image";
+import Link from "next/link";
 
 export default function Footer() {
 	const options = [
 		{
-			link: 'https://www.instagram.com/roboticsquest',
-			src: '/icon/instagram.png',
-			alt: 'instagram handle',
+			link: "https://www.instagram.com/roboticsquest",
+			src: "/icon/instagram.png",
+			alt: "instagram handle",
 		},
 		{
-			link: 'https://github.com/CYOBot/CYOCrawler',
-			src: '/icon/github.png',
-			alt: 'github handle',
+			link: "https://github.com/CYOBot/CYOCrawler",
+			src: "/icon/github.png",
+			alt: "github handle",
 		},
 		{
-			link: 'https://www.facebook.com/cyobotvn',
-			src: '/icon/facebook.png',
-			alt: 'facebook handle',
+			link: "https://www.facebook.com/cyobotvn",
+			src: "/icon/facebook.png",
+			alt: "facebook handle",
 		},
 	];
 	return (
@@ -46,7 +46,7 @@ export default function Footer() {
 							fill
 							sizes="50vw"
 							style={{
-								objectFit: 'contain',
+								objectFit: "contain",
 							}}
 						/>
 					</div>
@@ -110,11 +110,11 @@ export default function Footer() {
 						</li>
 						<li className="text-sm sm:text-base lg:text-lg xl:text-xl hover:underline">
 							<Link
-								href="https://www.roboticsquest.com/"
+								href="https://www.kickstarter.com/projects/cyobot/cyocrawler-building-tomorrows-innovators"
 								passHref={true}
 								target="_blank"
 							>
-								RoboticsQuest
+								Kickstarter
 							</Link>
 						</li>
 						<li className="text-sm sm:text-base lg:text-lg xl:text-xl hover:underline">
@@ -154,7 +154,7 @@ export default function Footer() {
 									alt={options[0].alt}
 									fill
 									sizes="33vw"
-									style={{ objectFit: 'contain' }}
+									style={{ objectFit: "contain" }}
 								/>
 							</div>
 						</Link>
@@ -170,7 +170,7 @@ export default function Footer() {
 									alt={options[1].alt}
 									fill
 									sizes="33vw"
-									style={{ objectFit: 'cover', transform: 'scale(1.07)' }}
+									style={{ objectFit: "cover", transform: "scale(1.07)" }}
 								/>
 							</div>
 						</Link>
@@ -186,7 +186,7 @@ export default function Footer() {
 									alt={options[2].alt}
 									fill
 									sizes="33vw"
-									style={{ objectFit: 'cover' }}
+									style={{ objectFit: "cover" }}
 								/>
 							</div>
 						</Link>

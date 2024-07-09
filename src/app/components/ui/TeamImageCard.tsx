@@ -1,5 +1,5 @@
-import { FC } from 'react';
-import Image from 'next/image';
+import { FC } from "react";
+import Image from "next/image";
 
 export type TeamImageProps = {
 	src: string;
@@ -12,9 +12,9 @@ const TeamImageCard: FC<TeamImageProps> = (props) => {
 		<div
 			style={{
 				backgroundImage: `url(${props.src})`,
-				backgroundSize: 'contain',
-				backgroundPosition: 'center',
-				backgroundRepeat: 'no-repeat',
+				backgroundSize: "contain",
+				backgroundPosition: "center",
+				backgroundRepeat: "no-repeat",
 			}}
 			className="relative w-full h-[20rem] md:h-[23rem] lg:h-[19rem] xl:h-[25rem]"
 		>

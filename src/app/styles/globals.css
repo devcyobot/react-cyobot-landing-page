@@ -13,6 +13,10 @@
 	--brand-gray-dark: #a2a2a2;
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
 /* GENERAL */
 h1,
 h2,
@@ -65,7 +69,7 @@ details > summary::-webkit-details-marker {
 
 .border-dashed-purple-bold::before,
 .border-dashed-purple-bold::after {
-	content: '';
+	content: "";
 	position: absolute;
 	left: 0;
 	right: 0;
@@ -109,7 +113,7 @@ details > summary::-webkit-details-marker {
 
 .border-dashed-purple-regular::before,
 .border-dashed-purple-regular::after {
-	content: '';
+	content: "";
 	position: absolute;
 	left: 0;
 	right: 0;
@@ -191,7 +195,7 @@ details > summary::-webkit-details-marker {
 
 .border-dashed-yellow-bold::before,
 .border-dashed-yellow-bold::after {
-	content: '';
+	content: "";
 	position: absolute;
 	left: 0;
 	right: 0;
@@ -252,7 +256,7 @@ details > summary::-webkit-details-marker {
 
 .border-dashed-yellow-regular::before,
 .border-dashed-yellow-regular::after {
-	content: '';
+	content: "";
 	position: absolute;
 	left: 0;
 	right: 0;
@@ -334,7 +338,7 @@ details > summary::-webkit-details-marker {
 
 .border-dashed-green-bold::before,
 .border-dashed-green-bold::after {
-	content: '';
+	content: "";
 	position: absolute;
 	left: 0;
 	right: 0;
@@ -395,7 +399,7 @@ details > summary::-webkit-details-marker {
 
 .border-dashed-green-regular::before,
 .border-dashed-green-regular::after {
-	content: '';
+	content: "";
 	position: absolute;
 	left: 0;
 	right: 0;
@@ -477,7 +481,7 @@ details > summary::-webkit-details-marker {
 
 .border-dashed-red-bold::before,
 .border-dashed-red-bold::after {
-	content: '';
+	content: "";
 	position: absolute;
 	left: 0;
 	right: 0;
@@ -538,7 +542,7 @@ details > summary::-webkit-details-marker {
 
 .border-dashed-red-regular::before,
 .border-dashed-red-regular::after {
-	content: '';
+	content: "";
 	position: absolute;
 	left: 0;
 	right: 0;
@@ -616,7 +620,7 @@ details > summary::-webkit-details-marker {
 
 .card-purple::before,
 .card-purple::after {
-	content: '';
+	content: "";
 	position: absolute;
 	left: 0;
 	right: 0;
@@ -694,7 +698,7 @@ details > summary::-webkit-details-marker {
 
 .card-yellow::before,
 .card-yellow::after {
-	content: '';
+	content: "";
 	position: absolute;
 	left: 0;
 	right: 0;
@@ -772,7 +776,7 @@ details > summary::-webkit-details-marker {
 
 .card-green::before,
 .card-green::after {
-	content: '';
+	content: "";
 	position: absolute;
 	left: 0;
 	right: 0;
@@ -850,7 +854,7 @@ details > summary::-webkit-details-marker {
 
 .card-red::before,
 .card-red::after {
-	content: '';
+	content: "";
 	position: absolute;
 	left: 0;
 	right: 0;
@@ -939,7 +943,7 @@ details > summary::-webkit-details-marker {
 
 .dashboard-border::before,
 .dashboard-border::after {
-	content: '';
+	content: "";
 	position: absolute;
 	left: 0;
 	right: 0;

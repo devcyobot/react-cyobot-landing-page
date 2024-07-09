@@ -1,8 +1,8 @@
-import Image from 'next/image';
-import { AboutData } from '../data/AboutData';
-import AboutCard from '../components/ui/AboutCard';
-import { TeamImageData } from '../data/TeamImageData';
-import TeamImageCard from '../components/ui/TeamImageCard';
+import Image from "next/image";
+import { AboutData } from "../data/AboutData";
+import AboutCard from "../components/ui/AboutCard";
+import { TeamImageData } from "../data/TeamImageData";
+import TeamImageCard from "../components/ui/TeamImageCard";
 // import MobileTeamsGalley from './MobileTeamsGallery';
 
 export default function About() {
@@ -24,14 +24,14 @@ export default function About() {
 					/>
 				</div>
 			</div>
-			<figure className="relative w-full h-[20rem] sm:h-[32rem] md:h-[42rem] lg:h-[52rem] xl:h-[62rem]">
+			<figure className="relative w-full h-[20rem] sm:h-[32rem] md:h-[42rem] lg:h-[52rem] xl:h-[60rem]">
 				<Image
-					src="/about-main.png"
+					src="/about-main.jpg"
 					alt="CYOBot Teams"
 					quality={100}
 					fill
 					sizes="100vw"
-					className="object-contain w-full h-full"
+					className="object-cover w-full h-full"
 				/>
 			</figure>
 			<section className="max-w-[1440px] mb-24 w-4/5 h-full sm:px-7 lg:px-16 mt-10 gap-y-20 flex flex-col items-center justify-evenly">

@@ -1,6 +1,6 @@
-import { useDifficultyContext } from '../../context/DifficultyContext';
-import Bar from '../../components/ui/bar';
-import Image from 'next/image';
+import { useDifficultyContext } from "../../context/DifficultyContext";
+import Bar from "../../components/ui/bar";
+import Image from "next/image";
 
 type TimeProps = {
 	image: {
@@ -22,7 +22,7 @@ export default function Time({ image, atr }: TimeProps) {
 	return (
 		<>
 			<h4
-				className="mt-5 sm:mt-14 mb-3 text-3xl md:text-3xl lg:text-4xl font-vt323"
+				className="mt-5 sm:mt-14 mb-3 text-3xl lg:text-4xl font-vt323"
 				style={{ color: currentDifficulty.color }}
 			>
 				TIME ATTRIBUTE
@@ -37,9 +37,9 @@ export default function Time({ image, atr }: TimeProps) {
 						sizes="(max-width: 768px) 100vw, 50vw"
 						className="mx-auto"
 						style={{
-							objectFit: 'contain',
-							maxHeight: '461px',
-							maxWidth: '473px',
+							objectFit: "contain",
+							maxHeight: "461px",
+							maxWidth: "473px",
 						}}
 					/>
 				</figure>

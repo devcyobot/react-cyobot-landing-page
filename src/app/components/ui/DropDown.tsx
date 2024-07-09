@@ -1,6 +1,6 @@
-'use client';
-import { FC, useState } from 'react';
-import Image from 'next/image';
+"use client";
+import { FC, useState } from "react";
+import Image from "next/image";
 
 type DropDownProps = {
 	label: string;
@@ -11,8 +11,8 @@ type DropDownProps = {
 
 const DropDown: FC<DropDownProps> = (props) => {
 	const [isOpen, setIsOpen] = useState(false);
-	const summaryBorder = isOpen ? 'border-dashed-purple-regular' : '';
-	const detailsBorder = isOpen ? '' : 'border-dashed-purple-regular';
+	const summaryBorder = isOpen ? "border-dashed-purple-regular" : "";
+	const detailsBorder = isOpen ? "" : "border-dashed-purple-regular";
 	const toggleOpen = () => {
 		setIsOpen(!isOpen);
 	};
@@ -26,7 +26,32 @@ const DropDown: FC<DropDownProps> = (props) => {
 				className={`${summaryBorder} py-5 list-none cursor-pointer font-roboto font-bold text-brand-purple text-lg lg:text-xl flex flex-col justify-center items-center px-2 w-full h-full text-center`}
 			>
 				<span className="absolute right-2 text-xl xl:text-2xl transition-transform duration-300 transform">
-					{isOpen ? '-' : '+'}
+					{/* {isOpen ? "-" : "+"} */}
+					<svg
+						className="fill-brand-purple shrink-0 ml-8"
+						width="16"
+						height="16"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<rect
+							y="7"
+							width="16"
+							height="2"
+							rx="1"
+							className={`transform origin-center transition duration-200 ease-out ${
+								isOpen && "!rotate-180"
+							}`}
+						/>
+						<rect
+							y="7"
+							width="16"
+							height="2"
+							rx="1"
+							className={`transform origin-center rotate-90 transition duration-200 ease-out ${
+								isOpen && "!rotate-180"
+							}`}
+						/>
+					</svg>
 				</span>
 				<span className="w-[90%]">{props.label}</span>
 			</summary>
@@ -39,7 +64,7 @@ const DropDown: FC<DropDownProps> = (props) => {
 							fill
 							quality={100}
 							sizes="50vw"
-							style={{ objectFit: 'cover', objectPosition: 'center' }}
+							style={{ objectFit: "cover", objectPosition: "center" }}
 						/>
 					</div>
 					{props.src2 && (
@@ -50,7 +75,7 @@ const DropDown: FC<DropDownProps> = (props) => {
 								fill
 								quality={100}
 								sizes="50vw"
-								style={{ objectFit: 'cover' }}
+								style={{ objectFit: "cover" }}
 							/>
 						</div>
 					)}
