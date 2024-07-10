@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useState } from "react";
-import PopupGIF from "./PopupGIF";
+import PopupGIF from "./popup/PopupGIF";
 
 type CardProps = {
 	image: {
