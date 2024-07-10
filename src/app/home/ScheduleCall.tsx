@@ -1,5 +1,6 @@
-import { FC } from 'react';
-import Image from 'next/image';
+import { FC } from "react";
+import Image from "next/image";
+import Link from "next/link";
 
 const ScheduleCall: FC = () => {
 	return (
@@ -14,7 +15,7 @@ const ScheduleCall: FC = () => {
 						height={400}
 						sizes="(max-width: 1440px) 100vw"
 						style={{
-							objectFit: 'contain',
+							objectFit: "contain",
 						}}
 					/>
 				</div>
@@ -23,10 +24,14 @@ const ScheduleCall: FC = () => {
 						Still have question about how our robotic kit would be a good fit
 						for you?
 					</p>
-					<button className="pt-8">
-						<p className="font-vt323 font-medium text-xl sm:text-2xl bg-brand-green px-2 py-1 rounded-md text-brand-purple-dark">
+					<button className="mt-8 font-vt323 font-medium text-xl sm:text-2xl bg-brand-green px-2 py-1 rounded-md text-brand-purple-dark">
+						<Link
+							href="https://calendly.com/cyobot/meet"
+							passHref={true}
+							target="_blank"
+						>
 							Book A Call
-						</p>
+						</Link>
 					</button>
 				</div>
 			</div>
