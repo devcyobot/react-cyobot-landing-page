@@ -20,10 +20,7 @@ export default function MobileNavBar() {
 
 	return (
 		<div className="md:hidden h-full flex flex-col ml-auto mr-5 justify-center">
-			<button
-				onClick={handleDrawerToggle}
-				className="hover:bg-brand-purple bg-opacity-50 rounded"
-			>
+			<button onClick={handleDrawerToggle} className="bg-opacity-50 rounded">
 				<svg
 					className="w-7 h-7"
 					fill="none"

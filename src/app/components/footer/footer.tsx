@@ -24,7 +24,7 @@ export default function Footer() {
 			<div className="max-w-[1440px] mx-auto text-center sm:text-start h-full w-full flex flex-col justify-evenly sm:grid grid-cols-[2fr_1fr_1fr_1fr] gap-x-5 grid-rows-1">
 				<div className="grid grid-cols-1 sm:grid-cols-2 gap-x-2 items-center">
 					<div className="h-full sm:h-2/3 w-full grid grid-cols-1 grid-rows-2 justify-items-center items-center gap-y-2 sm:gap-y-0">
-						<div className="relative h-full w-1/2">
+						<div className="relative h-full w-full">
 							<Image
 								src="/cyobot-logo.png"
 								alt="CYOBot logo"

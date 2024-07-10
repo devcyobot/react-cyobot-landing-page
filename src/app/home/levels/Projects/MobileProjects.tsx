@@ -1,16 +1,16 @@
 // Source used: https://www.hover.dev/components/carousels
-'use client';
-import Card from '../../../components/ui/card';
-import { FC, useEffect, useState } from 'react';
-import { motion, useMotionValue } from 'framer-motion';
-import { Project } from './rewards';
+"use client";
+import Card from "../../../components/ui/card";
+import { FC, useEffect, useState } from "react";
+import { motion, useMotionValue } from "framer-motion";
+import { Project } from "./rewards";
 
 const ONE_SECOND = 1000; // millisecond
 const AUTO_DELAY = ONE_SECOND * 5;
 const DRAG_BUFFER = 50;
 
 const SPRING_OPTIONS = {
-	type: 'spring',
+	type: "spring",
 	mass: 3,
 	stiffness: 400,
 	damping: 50,
@@ -54,7 +54,7 @@ const MobileProjects: FC<MobileProjectsProps> = (props) => {
 							key={idx}
 							onClick={() => setCardIndex(idx)}
 							className={`h-4 w-4 rounded-full transition-colors ${
-								idx === imgIndex ? 'bg-neutral-50' : 'bg-neutral-500'
+								idx === imgIndex ? "bg-neutral-50" : "bg-neutral-500"
 							}`}
 						/>
 					);
@@ -95,7 +95,7 @@ const MobileProjects: FC<MobileProjectsProps> = (props) => {
 			onClick={handleInteraction}
 			onMouseOver={handleInteraction}
 			onTouchStart={handleInteraction}
-			className="py-10 sm:hidden w-full max-w-[20rem] relative overflow-hidden bg-brand-dark-2 mx-auto"
+			className="py-10 sm:hidden w-full max-w-[20rem] overflow-hidden bg-brand-dark-2 mx-auto"
 		>
 			<motion.div
 				drag="x"
@@ -117,7 +117,7 @@ const MobileProjects: FC<MobileProjectsProps> = (props) => {
 					<motion.div
 						key={idx}
 						style={{
-							flex: '0 0 100%', // Ensure each slide takes the full width
+							flex: "0 0 100%", // Ensure each slide takes the full width
 						}}
 						animate={{
 							scale: cardIndex === idx ? 0.95 : 0.85,
