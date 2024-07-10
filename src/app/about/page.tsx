@@ -24,7 +24,7 @@ export default function About() {
 					/>
 				</div>
 			</div>
-			<figure className="relative w-full h-[20rem] sm:h-[32rem] md:h-[42rem] lg:h-[52rem] xl:h-[60rem]">
+			<figure className="relative max-w-screen-2xl w-full h-[20rem] sm:h-[32rem] md:h-[42rem] lg:h-[52rem] xl:h-[60rem]">
 				<Image
 					src="/about-main.jpg"
 					alt="CYOBot Teams"
