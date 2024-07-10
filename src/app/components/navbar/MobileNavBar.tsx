@@ -1,7 +1,7 @@
-'use client';
-import Link from 'next/link';
-import styles from './link.module.css';
-import { useState } from 'react';
+"use client";
+import Link from "next/link";
+import styles from "./link.module.css";
+import { useState } from "react";
 
 export default function MobileNavBar() {
 	const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -10,9 +10,9 @@ export default function MobileNavBar() {
 		setIsDropdownOpen(!isDropdownOpen);
 	};
 
-	const handleOnclick = () => {
-		alert('In progress of developing. Please try download later.');
-	};
+	// const handleOnclick = () => {
+	// 	alert("In progress of developing. Please try download later.");
+	// };
 
 	function handleDrawerToggle() {
 		setIsDrawerOpen(!isDrawerOpen);
@@ -36,7 +36,7 @@ export default function MobileNavBar() {
 						strokeLinejoin="round"
 						strokeWidth="2"
 						d={
-							isDrawerOpen ? 'M6 18L18 6M6 6l12 12' : 'M4 6h16M4 12h16M4 18h16'
+							isDrawerOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"
 						}
 					></path>
 				</svg>
@@ -44,8 +44,8 @@ export default function MobileNavBar() {
 			<div
 				className={
 					isDrawerOpen
-						? 'z-10 lg:hidden absolute top-[4rem] right-0 bottom-0 left-0 flex flex-col justify-start items-center w-full h-screen bg-brand-dark-2 text-white ease-in duration-300'
-						: 'z-10 lg:hidden absolute top-[4rem] right-0 -left-full flex flex-col justify-start items-center w-full h-screen bg-brand-dark-2 text-white ease-in duration-300'
+						? "z-10 lg:hidden absolute top-[4rem] right-0 bottom-0 left-0 flex flex-col justify-start items-center w-full h-screen bg-brand-dark-2 text-white ease-in duration-300"
+						: "z-10 lg:hidden absolute top-[4rem] right-0 -left-full flex flex-col justify-start items-center w-full h-screen bg-brand-dark-2 text-white ease-in duration-300"
 				}
 			>
 				<ul className="h-1/2 text-2xl flex flex-col items-center justify-evenly">
@@ -67,23 +67,35 @@ export default function MobileNavBar() {
 								onMouseLeave={toggleDropdown}
 								className={`text-end absolute mt-2 w-20 bg-brand-dark-2 rounded-md shadow-lg z-20 transition-all duration-300 ${
 									isDropdownOpen
-										? 'animate-slideDown'
-										: 'animate-slideUp hidden'
+										? "animate-slideDown"
+										: "animate-slideUp hidden"
 								}`}
 							>
 								<button
-									onClick={handleOnclick}
+									// onClick={handleOnclick}
 									type="button"
 									className="w-full px-4 py-2 text-white hover:text-brand-green"
 								>
-									Python
+									<Link
+										href={
+											"https://drive.google.com/uc?%20export=download&id=1YfRPhSK-S0nsumdJqDb-pdz0eq0X9PQ1"
+										}
+									>
+										Python
+									</Link>
 								</button>
 								<button
-									onClick={handleOnclick}
+									// onClick={handleOnclick}
 									type="button"
 									className="w-full px-4 py-2 text-white hover:text-brand-green"
 								>
-									Block
+									<Link
+										href={
+											"https://drive.google.com/uc?%20export=download&id=1iAsTuD3ixco-J1ERjiKxOyPH6YPlRRy2"
+										}
+									>
+										Block
+									</Link>
 								</button>
 							</div>
 						</div>

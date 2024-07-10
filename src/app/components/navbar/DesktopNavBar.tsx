@@ -1,7 +1,7 @@
-'use client';
-import Link from 'next/link';
-import styles from './link.module.css';
-import { useState } from 'react';
+"use client";
+import Link from "next/link";
+import styles from "./link.module.css";
+import { useState } from "react";
 
 export default function DesktopNavBar() {
 	const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -9,9 +9,9 @@ export default function DesktopNavBar() {
 		setIsDropdownOpen(!isDropdownOpen);
 	};
 
-	const handleOnclick = () => {
-		alert('In progress of developing. Please try download later.');
-	};
+	// const handleOnclick = () => {
+	// 	alert("You are downloading.");
+	// };
 
 	return (
 		<div className="text-lg lg:text-xl xl:text-2xl font-roboto w-[75%] lg:w-[95%] md:flex hidden items-center justify-between mr-12">
@@ -33,22 +33,34 @@ export default function DesktopNavBar() {
 						<div
 							onMouseLeave={toggleDropdown}
 							className={`text-center absolute mt-2 w-44 bg-brand-dark-2 rounded-md shadow-lg z-20 transition-all duration-300 ${
-								isDropdownOpen ? 'animate-slideDown' : 'animate-slideUp hidden'
+								isDropdownOpen ? "animate-slideDown" : "animate-slideUp hidden"
 							}`}
 						>
 							<button
-								onClick={handleOnclick}
+								// onClick={handleOnclick}
 								type="button"
 								className="block w-full px-4 py-2 text-white hover:text-brand-green"
 							>
-								Python
+								<Link
+									href={
+										"https://drive.google.com/uc?%20export=download&id=1YfRPhSK-S0nsumdJqDb-pdz0eq0X9PQ1"
+									}
+								>
+									Python
+								</Link>
 							</button>
 							<button
-								onClick={handleOnclick}
+								// onClick={handleOnclick}
 								type="button"
 								className="block w-full px-4 py-2 text-white hover:text-brand-green"
 							>
-								Block
+								<Link
+									href={
+										"https://drive.google.com/uc?%20export=download&id=1iAsTuD3ixco-J1ERjiKxOyPH6YPlRRy2"
+									}
+								>
+									Block
+								</Link>
 							</button>
 						</div>
 					</div>
