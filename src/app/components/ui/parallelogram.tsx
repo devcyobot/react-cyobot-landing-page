@@ -1,6 +1,6 @@
-'use client';
-import Link from 'next/link';
-import { useState } from 'react';
+"use client";
+import Link from "next/link";
+import { useState } from "react";
 
 type Parralelogram = {
 	num: number;
@@ -10,26 +10,26 @@ type Parralelogram = {
 };
 
 export default function Parallelogram(props: Parralelogram) {
-	const [bgColor, setBgColor] = useState('bg-black bg-opacity-50');
-	const [pTextColor, setPTextColor] = useState('text-white');
-	const [headerBgColor, setHeaderBgColor] = useState('bg-brand-gray-dark');
-	const [arrowColor, setArrowCollor] = useState('white');
+	const [bgColor, setBgColor] = useState("bg-black bg-opacity-50");
+	const [pTextColor, setPTextColor] = useState("text-white");
+	const [headerBgColor, setHeaderBgColor] = useState("bg-brand-gray-dark");
+	const [arrowColor, setArrowCollor] = useState("white");
 
 	const toggleColor = () => {
 		setBgColor(
-			bgColor === 'bg-black bg-opacity-50'
-				? 'bg-white'
-				: 'bg-black bg-opacity-50'
+			bgColor === "bg-black bg-opacity-50"
+				? "bg-white"
+				: "bg-black bg-opacity-50"
 		);
 		setPTextColor(
-			pTextColor === 'text-white' ? 'text-brand-purple' : 'text-white'
+			pTextColor === "text-white" ? "text-brand-purple" : "text-white"
 		);
 		setHeaderBgColor(
-			headerBgColor === 'bg-brand-gray-dark'
-				? 'bg-brand-green'
-				: 'bg-brand-gray-dark'
+			headerBgColor === "bg-brand-gray-dark"
+				? "bg-brand-green"
+				: "bg-brand-gray-dark"
 		);
-		setArrowCollor(arrowColor === 'white' ? '#1F1441' : 'white');
+		setArrowCollor(arrowColor === "white" ? "#1F1441" : "white");
 	};
 
 	return (
