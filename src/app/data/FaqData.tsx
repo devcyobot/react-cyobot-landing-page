@@ -109,7 +109,7 @@ export const FaqData: FaqDataType[] = [
 			{
 				question: "Are there any subscription fees for the Dashboard?",
 				answer:
-					"Access to the educational dashboard is included with the purchase of the CYOBot kit",
+					"Access to the educational dashboard is included with the purchase of the CYOBot kit.",
 			},
 		],
 	},
