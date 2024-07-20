@@ -1,5 +1,4 @@
-"use client";
-import { FC, useState } from "react";
+import { FC } from "react";
 import { FaqData } from "../data/FaqData";
 import QuestionsList from "./list/QuestionsList";
 
@@ -22,7 +21,7 @@ const FAQ: FC = () => {
 					<NavigationSideBar data={sections} />
 					<div className="md:pl-64 w-[90%] mx-auto">
 						<QuestionsList data={FaqData} />
-						{/* <ContactForm /> */}
+						<ContactForm />
 					</div>
 				</div>
 			</div>
