@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image from "next/image";
 
 type ImageSlideProps = {
 	active: boolean;
@@ -6,7 +6,7 @@ type ImageSlideProps = {
 	alt: string;
 	title?: string;
 	color: string;
-	imageFit: 'cover' | 'contain' | 'none' | 'scale-down';
+	imageFit: "cover" | "contain" | "none" | "scale-down";
 };
 
 export default function ImageSlide({
@@ -18,16 +18,16 @@ export default function ImageSlide({
 	imageFit,
 }: ImageSlideProps) {
 	// Border color
-	let bg = '';
-	if (color === 'yellow') bg = '#f3c449';
-	else if (color === 'green') bg = '#1ad69c';
-	else if (color === 'red') bg = '#e00303';
-	else bg = '#3e2486';
+	let bg = "";
+	if (color === "yellow") bg = "#f3c449";
+	else if (color === "green") bg = "#1ad69c";
+	else if (color === "red") bg = "#e00303";
+	else bg = "#3e2486";
 
 	// Shadow color
-	let shadowColor = '';
-	if (color === 'yellow' || color === 'red') shadowColor = '#1ad69c';
-	else shadowColor = '#f3c449';
+	let shadowColor = "";
+	if (color === "yellow" || color === "red") shadowColor = "#1ad69c";
+	else shadowColor = "#f3c449";
 
 	return (
 		<div className="cursor-pointer flex flex-col items-center justify-between w-4/5 sm:w-full h-4/5 sm:h-full">
@@ -50,7 +50,7 @@ export default function ImageSlide({
 						alt={alt}
 						fill
 						quality={100}
-						sizes="100vw"
+						sizes="(max-width: 768px) 50vw, 33vw"
 						className="overflow-visible max-w-[23.75rem] max-h-[21rem] sm:max-h-[23.5rem] lg:max-h-[23.75rem]"
 						style={{
 							objectFit: imageFit,
@@ -64,8 +64,8 @@ export default function ImageSlide({
 					<div
 						className="left-20 top-24 absolute w-4/5 h-[75%] rounded-[30px]"
 						style={{
-							backgroundColor: 'rgba(0, 0, 0, 0.5)',
-							boxShadow: '0px 4px 10px 2px rgba(0, 0, 0, 0.25)',
+							backgroundColor: "rgba(0, 0, 0, 0.5)",
+							boxShadow: "0px 4px 10px 2px rgba(0, 0, 0, 0.25)",
 						}}
 					></div>
 					{/* Background color */}
@@ -75,7 +75,7 @@ export default function ImageSlide({
 							alt={alt}
 							fill
 							quality={100}
-							sizes="100vw"
+							sizes="(max-width: 768px) 50vw, 33vw"
 							className="brightness-[20%] overflow-visible"
 							style={{
 								objectFit: imageFit,
@@ -88,10 +88,10 @@ export default function ImageSlide({
 				className={
 					active
 						? `text-white border-dashed-${color}-regular font-vt323 bg-brand-dark bg-opacity-25 text-center py-3 w-full mt-12 text-[2.7rem] lg:text-5xl`
-						: 'w-[30.063rem]'
+						: "w-[30.063rem]"
 				}
 			>
-				{active ? title : ''}
+				{active ? title : ""}
 			</p>
 		</div>
 	);

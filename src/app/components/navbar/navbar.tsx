@@ -20,7 +20,7 @@ export default function Navbar({ src, alt }: NavbarProps) {
 								alt={alt}
 								quality={100}
 								fill
-								sizes="100vw"
+								sizes="(max-width: 640px) 50vw, 33vw"
 								style={{
 									objectFit: "contain",
 								}}

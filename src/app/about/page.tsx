@@ -24,14 +24,14 @@ export default function About() {
 					/>
 				</div>
 			</div>
-			<figure className="relative max-w-screen-2xl w-full h-[20rem] sm:h-[32rem] md:h-[42rem] lg:h-[52rem] xl:h-[60rem]">
+			<figure className="relative max-w-screen-2xl w-full h-[20rem] sm:h-[32rem] md:h-[42rem] lg:h-[52rem] xl:h-[65rem]">
 				<Image
 					src="/about-main.jpg"
 					alt="CYOBot Teams"
 					quality={100}
 					fill
 					sizes="100vw"
-					className="object-cover w-full h-full"
+					className="object-center object-contain sm:object-cover w-full h-full"
 				/>
 			</figure>
 			<section className="max-w-[1440px] mb-24 w-4/5 h-full sm:px-7 lg:px-16 mt-10 gap-y-20 flex flex-col items-center justify-evenly">

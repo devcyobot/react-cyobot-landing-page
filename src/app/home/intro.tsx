@@ -17,7 +17,7 @@ export default function Intro() {
 						</p>
 						<button
 							type="button"
-							className="rounded-lg bg-brand-green text-white md:text-xl xl:text-2xl font-normal w-2/3 sm:w-28 xl:w-36 h-full max-h-14"
+							className="rounded-lg bg-brand-green text-white md:text-xl xl:text-2xl font-normal w-2/3 sm:w-28 xl:w-36 h-full max-h-10"
 						>
 							<Link
 								href="https://www.roboticsquest.com/"

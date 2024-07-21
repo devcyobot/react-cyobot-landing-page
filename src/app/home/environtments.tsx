@@ -119,7 +119,7 @@ export default function Environments() {
 											maxHeight: "25rem",
 											maxWidth: "50rem",
 										}}
-										onLoadingComplete={handleLoad}
+										onLoad={handleLoad}
 									/>
 								</figure>
 								<p className="h-auto font-robotoCondensed text-sm sm:text-base lg:text-xl text-white mt-2">

@@ -80,9 +80,9 @@ const PopupGIF: FC<PopupGIFProps> = (props) => {
 						alt={props.alt}
 						fill
 						quality={100}
-						sizes="100vw"
+						sizes="80vw"
 						className="object-contain"
-						onLoadingComplete={handleLoad}
+						onLoad={handleLoad}
 					/>
 				</div>
 				<p className="mt-2 font-bold text-xl lg:text-2xl text-white font-roboto text-center">

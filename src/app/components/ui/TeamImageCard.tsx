@@ -32,7 +32,7 @@ const TeamImageCard: FC<TeamImageProps> = (props) => {
 					alt="team image icon"
 					quality={100}
 					fill
-					sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+					sizes="(max-width: 768px) 80vw, (max-width: 1200px) 50vw, 33vw"
 					className="object-contain w-full h-full"
 				/>
 			</figure>
