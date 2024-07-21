@@ -4,6 +4,7 @@ import "./styles/globals.css";
 import Footer from "./components/footer/footer";
 import Navbar from "./components/navbar/navbar";
 import DifficultyProvider from "./context/DifficultyContext";
+import MobileFooter from "./components/footer/MobileFooter";
 
 export const metadata: Metadata = {
 	title: "CYOBot",
@@ -27,6 +28,7 @@ export default function RootLayout({
 
 				<DifficultyProvider>{children}</DifficultyProvider>
 				<Footer />
+				<MobileFooter />
 			</body>
 		</html>
 	);
