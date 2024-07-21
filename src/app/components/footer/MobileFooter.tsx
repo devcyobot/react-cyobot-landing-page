@@ -31,7 +31,7 @@ export default function MobileFooter() {
 							passHref={true}
 							target="_blank"
 							href={options[0].link}
-							className="relative bg-brand-dark-2 w-10 h-10 overflow-hidden rounded flex items-center justify-center hover:bg-gray-500 transition-colors"
+							className="relative bg-brand-dark-2 w-10 h-10 overflow-hidden rounded-xl flex items-center justify-center"
 						>
 							<div className="absolute inset-0">
 								<Image
@@ -47,7 +47,7 @@ export default function MobileFooter() {
 							passHref={true}
 							target="_blank"
 							href={options[1].link}
-							className="relative bg-brand-dark-2 w-10 h-10 rounded-full overflow-hidden flex items-center justify-center hover:bg-gray-500 transition-colors"
+							className="relative bg-brand-dark-2 w-10 h-10 rounded-full overflow-hidden flex items-center justify-center"
 						>
 							<div className="absolute inset-0">
 								<Image
@@ -63,7 +63,7 @@ export default function MobileFooter() {
 							passHref={true}
 							target="_blank"
 							href={options[2].link}
-							className="relative bg-brand-dark-2 w-10 h-10 rounded-full overflow-hidden flex items-center justify-center hover:bg-gray-500 transition-colors"
+							className="relative bg-brand-dark-2 w-10 h-10 rounded-full overflow-hidden flex items-center justify-center"
 						>
 							<div className="absolute inset-0">
 								<Image

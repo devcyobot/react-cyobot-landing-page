@@ -130,7 +130,7 @@ export default function Footer() {
 							passHref={true}
 							target="_blank"
 							href={options[0].link}
-							className="relative bg-brand-dark-2 w-9 h-9 md:w-10 md:h-10 lg:w-11 lg:h-11 xl:w-14 xl:h-14 overflow-hidden rounded flex items-center justify-center hover:bg-gray-500 transition-colors"
+							className="relative bg-brand-dark-2 w-9 h-9 md:w-10 md:h-10 lg:w-11 lg:h-11 xl:w-14 xl:h-14 overflow-hidden rounded-xl flex items-center justify-center hover:bg-gray-500 transition-colors"
 						>
 							<div className="absolute inset-0">
 								<Image
