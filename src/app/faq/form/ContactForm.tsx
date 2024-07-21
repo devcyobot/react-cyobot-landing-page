@@ -1,7 +1,7 @@
 "use client";
 import { FC, FormEvent, useEffect, useState } from "react";
 import Image from "next/image";
-import { useFormState, useFormStatus } from "react-dom";
+import { useFormState } from "react-dom";
 
 export const submitContactForm = async (
 	prevState: { success: boolean } | null,
@@ -24,8 +24,6 @@ export const submitContactForm = async (
 				body: JSON.stringify(user),
 			}
 		);
-
-		const parsedResponse = await res.json();
 
 		if (res.ok) {
 			return {
@@ -87,13 +85,40 @@ const ContactForm: FC = () => {
 				</figure>
 			</div>
 			<div className="z-10 w-full h-full flex flex-col justify-evenly">
-				<p
-					className={`w-full h-16 text-sm sm:text-base sm:h-14 lg:h-6 font-roboto ${
-						data?.success ? "text-brand-green" : "text-brand-red"
-					} justify-self-center`}
-				>
-					{message}
-				</p>
+				<div className="h-10">
+					{isLoading ? (
+						<svg
+							viewBox="0 0 50 50"
+							xmlns="http://www.w3.org/2000/svg"
+							fill="none"
+							className="w-full h-10"
+						>
+							<path
+								fill="#A2A2A2"
+								d="M43.935,25.145c0-10.318-8.362-18.68-18.68-18.68c-10.317,0-18.68,8.362-18.68,18.68h4.068
+                c0-8.073,6.539-14.612,14.612-14.612c8.073,0,14.612,6.539,14.612,14.612H43.935z"
+							>
+								<animateTransform
+									attributeType="xml"
+									attributeName="transform"
+									type="rotate"
+									from="0 25 25"
+									to="360 25 25"
+									dur="0.6s"
+									repeatCount="indefinite"
+								/>
+							</path>
+						</svg>
+					) : (
+						<p
+							className={`w-full h-16 text-sm sm:text-base sm:h-14 lg:h-6 font-roboto ${
+								data?.success ? "text-brand-green" : "text-brand-red"
+							} justify-self-center`}
+						>
+							{message}
+						</p>
+					)}
+				</div>
 				<form
 					onSubmit={handleSubmit}
 					className="font-vt323 w-full h-full lg:h-4/5 grid grid-cols-1 grid-rows-[1fr_1fr_5fr]"
