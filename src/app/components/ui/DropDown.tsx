@@ -62,7 +62,6 @@ const DropDown: FC<DropDownProps> = (props) => {
 							src={props.src}
 							alt={props.label}
 							fill
-							quality={100}
 							sizes="50vw"
 							style={{ objectFit: "cover", objectPosition: "center" }}
 						/>
@@ -73,7 +72,6 @@ const DropDown: FC<DropDownProps> = (props) => {
 								src={props.src2}
 								alt={props.label}
 								fill
-								quality={100}
 								sizes="50vw"
 								style={{ objectFit: "cover" }}
 							/>

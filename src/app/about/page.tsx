@@ -4,6 +4,7 @@ import AboutCard from "../components/ui/AboutCard";
 import { TeamImageData } from "../data/TeamImageData";
 import TeamImageCard from "../components/ui/TeamImageCard";
 // import MobileTeamsGalley from './MobileTeamsGallery';
+import MainImage from "../../../public/about-main.jpg";
 
 export default function About() {
 	return (
@@ -17,7 +18,7 @@ export default function About() {
 					<Image
 						src="/about-frame.png"
 						alt="CYOBot Teams"
-						quality={100}
+						quality={80}
 						fill
 						sizes="100vw"
 						className="object-contain max-w-[90rem] max-h-[50rem] mx-auto"
@@ -26,11 +27,13 @@ export default function About() {
 			</div>
 			<figure className="relative max-w-screen-2xl w-full h-[20rem] sm:h-[32rem] md:h-[42rem] lg:h-[52rem] xl:h-[65rem]">
 				<Image
-					src="/about-main.jpg"
+					src={MainImage}
 					alt="CYOBot Teams"
-					quality={100}
+					quality={80}
 					fill
 					sizes="100vw"
+					priority
+					placeholder="blur"
 					className="object-center object-contain sm:object-cover w-full h-full"
 				/>
 			</figure>

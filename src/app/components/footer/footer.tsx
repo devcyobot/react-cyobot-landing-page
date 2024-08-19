@@ -12,7 +12,7 @@ export default function Footer() {
 							<Image
 								src="/cyobot-logo.png"
 								alt="CYOBot logo"
-								quality={100}
+								quality={80}
 								fill
 								sizes="(max-width: 768px) 100vw, 50vw"
 								className="object-contain h-full w-full"
@@ -26,7 +26,7 @@ export default function Footer() {
 						<Image
 							src="/intro-robot.png"
 							alt="CYOBot logo"
-							quality={100}
+							quality={80}
 							fill
 							sizes="50vw"
 							style={{

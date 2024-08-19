@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image from "next/image";
 
 export default function Stats() {
 	return (
@@ -8,7 +8,7 @@ export default function Stats() {
 					<Image
 						src="/stats-specs-cyocrawler.png"
 						alt="Stats Specs CYOCrawler"
-						quality={100}
+						quality={80}
 						fill
 						sizes="(max-width: 1440px) 100vw"
 						className="object-contain"
@@ -18,7 +18,7 @@ export default function Stats() {
 					<Image
 						src="/stats-image-cyocrawler.png"
 						alt="Stats Image CYOCrawler"
-						quality={100}
+						quality={80}
 						fill
 						sizes="(max-width: 1440px) 100vw"
 						className="object-contain"

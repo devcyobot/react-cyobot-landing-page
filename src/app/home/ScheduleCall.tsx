@@ -10,7 +10,7 @@ const ScheduleCall: FC = () => {
 					<Image
 						src="/steps-all-models.png"
 						alt="All CYOBot models"
-						quality={100}
+						quality={80}
 						width={800}
 						height={400}
 						sizes="(max-width: 1440px) 100vw"

@@ -77,7 +77,7 @@ const ContactForm: FC = () => {
 					<Image
 						src="/faq-robots.png"
 						alt="CYOBot Robots"
-						quality={100}
+						quality={80}
 						fill
 						sizes="(max-width: 768px) 100vw, 50vw"
 						className="object-contain"
@@ -163,7 +163,7 @@ const ContactForm: FC = () => {
 				<Image
 					src="/faq-form-frame.png"
 					alt="CYOBot Teams"
-					quality={100}
+					quality={80}
 					fill
 					sizes="100vw"
 					className="object-contain mx-auto"

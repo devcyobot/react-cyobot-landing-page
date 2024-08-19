@@ -11,7 +11,7 @@ export default function MobileFooter() {
 					<Image
 						src="/cyobot-logo.png"
 						alt="CYOBot logo"
-						quality={100}
+						quality={80}
 						fill
 						sizes="(max-width: 640px) 50vw"
 						className="object-contain h-full w-full"

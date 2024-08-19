@@ -110,7 +110,7 @@ export default function Environments() {
 									<Image
 										src={envData[activeScreen].src}
 										alt="CYOBot Portals"
-										quality={100}
+										quality={80}
 										fill
 										sizes="100vw"
 										className="w-full h-full"
