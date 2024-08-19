@@ -45,7 +45,7 @@ export default function Card({
 						src={image.staticSrc}
 						alt={image.alt}
 						fill
-						quality={100}
+						quality={80}
 						sizes="(max-width: 640px) 50vw, (max-width: 1000px) 33vw, 25vw"
 						style={{ objectFit: "cover" }}
 					/>

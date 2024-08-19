@@ -49,7 +49,7 @@ export default function ImageSlide({
 						src={src}
 						alt={alt}
 						fill
-						quality={100}
+						quality={80}
 						sizes="(max-width: 768px) 50vw, 33vw"
 						className="overflow-visible max-w-[23.75rem] max-h-[21rem] sm:max-h-[23.5rem] lg:max-h-[23.75rem]"
 						style={{
@@ -74,7 +74,7 @@ export default function ImageSlide({
 							src={src}
 							alt={alt}
 							fill
-							quality={100}
+							quality={80}
 							sizes="(max-width: 768px) 50vw, 33vw"
 							className="brightness-[20%] overflow-visible"
 							style={{

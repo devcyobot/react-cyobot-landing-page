@@ -8,7 +8,8 @@ import MobileFooter from "./components/footer/MobileFooter";
 
 export const metadata: Metadata = {
 	title: "CYOBot",
-	description: "CYOBot",
+	description:
+		"Engineering doesn’t have to be that hard. Advance your career in 6 months!",
 	icons: {
 		icon: "/favicon-cyobot.png",
 	},
@@ -24,7 +25,7 @@ export default function RootLayout({
 			<body
 				className={`bg-brand-dark-2 ${nunito.variable} ${vt323.variable} ${roboto.variable} ${robotoCondensed.variable}`}
 			>
-				<Navbar src="/cyobot-logo.png" alt="CYOBot Logo" />
+				<Navbar />
 
 				<DifficultyProvider>{children}</DifficultyProvider>
 				<Footer />

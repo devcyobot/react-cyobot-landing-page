@@ -32,7 +32,7 @@ export default function Time({ image, atr }: TimeProps) {
 					<Image
 						src={image.src}
 						alt={image.alt}
-						quality={100}
+						quality={80}
 						fill
 						sizes="(max-width: 768px) 100vw, 50vw"
 						className="mx-auto"

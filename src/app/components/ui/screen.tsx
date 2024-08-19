@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image from "next/image";
 
 type ScreenProps = {
 	image: {
@@ -28,11 +28,11 @@ export default function Screen({
 				<Image
 					src={image.src}
 					alt={image.alt}
-					quality={100}
+					quality={80}
 					fill
 					sizes="(max-width: 500px) 50vw, 100vw"
 					style={{
-						objectFit: 'contain',
+						objectFit: "contain",
 						maxWidth: `${width}px`,
 					}}
 					className="justify-self-center"
