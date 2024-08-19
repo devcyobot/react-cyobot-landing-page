@@ -22,7 +22,7 @@ export const GreenButton: FC<GreenButtonProps> = (props) => {
 				</Link>
 			) : (
 				<button
-					aria-disabled={props.disabled}
+					disabled={props.disabled}
 					type={props.type}
 					className="rounded-lg bg-brand-green text-white md:text-xl xl:text-2xl font-normal p-3 w-full"
 				>
