@@ -9,7 +9,7 @@ import MobileFooter from "./components/footer/MobileFooter";
 export const metadata: Metadata = {
 	title: "CYOBot",
 	description:
-		"Engineering doesn’t have to be that hard. Advance your career in 6 months!",
+		"Best platform to master robotics! Engineering doesn’t have to be that hard. Advance your career in 6 months!",
 	icons: {
 		icon: "/favicon-cyobot.png",
 	},
