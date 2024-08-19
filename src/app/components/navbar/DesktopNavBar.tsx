@@ -77,18 +77,14 @@ export default function DesktopNavBar() {
 						<Link href="/faq">FAQ</Link>
 					</li>
 				</ul>
-				<button
-					type="button"
-					className="hover:shadow-[4px_4px_4px_#1AD69C] font-roboto text-lg lg:text-xl xl:text-2xl font-medium py-1 lg:py-2 px-3 lg:px-12 text-brand-purple bg-white shadow-md rounded-lg border-none justify-self-end"
+				<Link
+					className="flex justify-center items-center hover:shadow-[4px_4px_4px_#1AD69C] font-roboto text-lg lg:text-xl xl:text-2xl font-medium py-1 lg:py-2 px-3 lg:px-12 text-brand-purple bg-white shadow-md rounded-lg border-none"
+					href="https://cyobot.myshopify.com/"
+					passHref={true}
+					target="_blank"
 				>
-					<Link
-						href="https://cyobot.myshopify.com/"
-						passHref={true}
-						target="_blank"
-					>
-						Shop
-					</Link>
-				</button>
+					Shop
+				</Link>
 			</div>
 			{showPopup && (
 				<PopupDownloads
