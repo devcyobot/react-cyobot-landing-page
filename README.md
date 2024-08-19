@@ -9,5 +9,5 @@
   - [framer-motion](https://www.framer.com/motion/)
 - To run the development server:
   ```bash
-  yarn dev
+  npm run dev
   ```
