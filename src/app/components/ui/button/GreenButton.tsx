@@ -6,6 +6,7 @@ type GreenButtonProps = {
 	description: string;
 	type?: "button" | "submit";
 	disabled?: boolean;
+	onClick?: () => void;
 };
 
 export const GreenButton: FC<GreenButtonProps> = (props) => {
@@ -22,6 +23,7 @@ export const GreenButton: FC<GreenButtonProps> = (props) => {
 				</Link>
 			) : (
 				<button
+					onClick={props.onClick}
 					disabled={props.disabled}
 					type={props.type}
 					className="rounded-lg bg-brand-green text-white md:text-xl xl:text-2xl font-normal p-3 w-full"

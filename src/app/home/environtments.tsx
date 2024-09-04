@@ -26,7 +26,7 @@ export default function Environments() {
 					tangible results
 				</p>
 			</div>
-			<div className="h-4/5 sm:h-auto grid grid-cols-1 sm:grid-cols-[1fr_1.5fr] items-center w-full mx-auto max-w-[1440px]">
+			<div className="h-4/5 sm:h-auto grid grid-cols-1 sm:grid-cols-[1fr_1.5fr] items-center w-full mx-auto max-w-[1536px]">
 				<ul className="h-full flex flex-col items-center justify-evenly">
 					<li>
 						<button
