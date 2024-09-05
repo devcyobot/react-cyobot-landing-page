@@ -100,25 +100,19 @@ const PopupSubscription: FC<PopupSubscriptionProps> = (props) => {
 			}`}
 		>
 			<div
-				className={`h-[55%] min-h-[26rem] max-h-[28rem] p-5 bg-brand-purple-dark rounded-xl shadow-lg overflow-auto flex flex-col transform transition-all duration-300 ${
+				className={`h-2/3 max-h-custom:min-h-80 min-h-[26rem] max-h-[30rem] p-5 bg-brand-purple-dark rounded-xl shadow-lg overflow-auto flex flex-col transform transition-all duration-300 ${
 					isVisible
 						? "scale-100 translate-y-0 opacity-100"
 						: "scale-90 -translate-y-10 opacity-0"
 				}`}
 			>
-				<div className="flex justify-end">
-					<button
-						onClick={handleClose}
-						className="text-white bg-transparent hover:bg-gray-500 rounded transition w-5"
-					>
-						&#10005;
-					</button>
-				</div>
-				<div
-					className={`px-5 sm:px-10 flex flex-col justify-evenly ${
-						isSubmitted ? "h-full" : "h-4/5"
-					}`}
+				<button
+					onClick={handleClose}
+					className="absolute top-5 right-5 text-white bg-transparent hover:bg-gray-500 rounded transition w-5"
 				>
+					&#10005;
+				</button>
+				<div className="px-5 sm:px-10 flex flex-col justify-evenly h-full">
 					<div className="mx-auto h-10 2xl:h-11">
 						<p className="sr-only">CYOBot Company</p>
 						<LogoBadge description={""} src={"/cyobot-logo.png"} />
@@ -142,7 +136,7 @@ const PopupSubscription: FC<PopupSubscriptionProps> = (props) => {
 									deals of CYOBot products
 								</p>
 								<form
-									className="flex flex-col justify-evenly mx-auto w-[90%] sm:w-[85%] h-[55%]"
+									className="flex flex-col justify-evenly mx-auto w-[90%] sm:w-[85%]"
 									onSubmit={handleSubmit}
 								>
 									<label className="text-base sm:text-lg md:text-xl xl:text-2xl text-white font-robotoRegular mt-3 grid grid-cols-[1fr_4fr] sm:grid-cols-[1fr_6fr] items-center">
