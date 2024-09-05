@@ -31,7 +31,7 @@ export default function Specs() {
 			</Link>
 			<div
 				style={{ backgroundSize: "75%" }}
-				className="hidden md:flex items-center justify-center relative h-[45rem] max-w-[1440px] bg-[url('/specs-background.jpg')] bg-no-repeat bg-center w-full"
+				className="hidden md:flex items-center justify-center relative h-[45rem] max-w-[1536px] bg-[url('/specs-background.jpg')] bg-no-repeat bg-center w-full"
 			>
 				<figure className="relative w-1/3 xl:w-1/4 h-full">
 					<Image
