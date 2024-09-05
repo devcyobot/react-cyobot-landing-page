@@ -1,1 +1,0 @@
-This folder contains helper/ library functions that are used throughout the app. Generally small, pure functions.

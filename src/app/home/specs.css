@@ -1,0 +1,28 @@
+.detail-item {
+	transform: translate(-50%, -50%);
+}
+
+.item-1 {
+	top: 0%;
+	left: 50%;
+}
+.item-2 {
+	top: 25%;
+	left: 85%;
+}
+.item-3 {
+	top: 75%;
+	left: 85%;
+}
+.item-4 {
+	top: 100%;
+	left: 50%;
+}
+.item-5 {
+	top: 80%;
+	left: 15%;
+}
+.item-6 {
+	top: 25%;
+	left: 15%;
+}
