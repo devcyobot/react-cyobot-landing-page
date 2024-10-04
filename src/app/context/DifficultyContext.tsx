@@ -1,5 +1,5 @@
-'use client';
-import { FC, useState, createContext, useContext } from 'react';
+"use client";
+import { FC, useState, createContext, useContext } from "react";
 
 export type CurrentDifficulty = {
 	label: string;
@@ -23,22 +23,22 @@ const DifficultyProvider: FC<{
 }> = ({ children }) => {
 	const [currentDifficulty, setCurrentDifficulty] = useState<CurrentDifficulty>(
 		{
-			label: 'ADVENTURER',
-			color: '#f3c449',
+			label: "ADVENTURER",
+			color: "#f3c449",
 			index: 1,
 		}
 	);
 
 	const setDifficulty = (index: number) => {
-		let currentColor = '';
-		if (index === 0) currentColor = '#1ad69c';
-		else if (index === 1) currentColor = '#f3c449';
-		else if (index === 2) currentColor = '#e00303';
+		let currentColor = "";
+		if (index === 0) currentColor = "#1ad69c";
+		else if (index === 1) currentColor = "#f3c449";
+		else if (index === 2) currentColor = "#e00303";
 
-		let currentLabel = '';
-		if (index === 0) currentLabel = 'EXPLORER';
-		else if (index === 1) currentLabel = 'ADVENTURER';
-		else currentLabel = 'PIONEER';
+		let currentLabel = "";
+		if (index === 0) currentLabel = "EXPLORER";
+		else if (index === 1) currentLabel = "ADVENTURER";
+		else currentLabel = "PIONEER";
 
 		setCurrentDifficulty({
 			label: currentLabel,

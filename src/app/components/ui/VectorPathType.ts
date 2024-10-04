@@ -58,7 +58,7 @@ export class Path {
 	}
 
 	toString(): string {
-		return this.commands.map((command) => command.toString()).join('');
+		return this.commands.map((command) => command.toString()).join("");
 	}
 
 	static M(point: Vector): PathM {
@@ -121,6 +121,6 @@ class PathQ extends PathCommand {
 
 class PathZ extends PathCommand {
 	toString(): string {
-		return 'Z';
+		return "Z";
 	}
 }

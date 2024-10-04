@@ -1,8 +1,8 @@
-'use client';
-import Parallelogram from '../components/ui/parallelogram';
-import { stepsData } from '../data/stepsData';
-import { motion } from 'framer-motion';
-import { useEffect, useRef, useState } from 'react';
+"use client";
+import Parallelogram from "../components/ui/parallelogram";
+import { stepsData } from "../data/stepsData";
+import { motion } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
 
 export default function Steps() {
 	const [width, setWidth] = useState(0);
@@ -16,15 +16,15 @@ export default function Steps() {
 		};
 
 		updateWidth();
-		window.addEventListener('resize', updateWidth);
-		return () => window.removeEventListener('resize', updateWidth);
+		window.addEventListener("resize", updateWidth);
+		return () => window.removeEventListener("resize", updateWidth);
 	}, []);
 
 	return (
 		<section className="bg-brand-purple-dark py-20 overflow-hidden">
 			<motion.div ref={slider}>
 				<motion.div
-					whileTap={{ cursor: 'grabbing' }}
+					whileTap={{ cursor: "grabbing" }}
 					className="flex w-max mx-auto"
 					drag="x"
 					dragConstraints={{ right: 0, left: -width }}

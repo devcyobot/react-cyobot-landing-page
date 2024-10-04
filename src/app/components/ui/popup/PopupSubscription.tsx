@@ -132,8 +132,8 @@ const PopupSubscription: FC<PopupSubscriptionProps> = (props) => {
 							isSubmitted
 								? "animate-slideOut"
 								: animateForm
-								? "animate-slideIn"
-								: ""
+									? "animate-slideIn"
+									: ""
 						}`}
 					>
 						{!isSubmitted && (
