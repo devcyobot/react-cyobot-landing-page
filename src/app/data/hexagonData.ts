@@ -1,8 +1,8 @@
-export const hexagonData: {
+export const hexagonData: Array<{
 	id: number;
 	text: string;
 	available: boolean;
-}[] = [
+}> = [
 	{
 		id: 0,
 		text: "",
