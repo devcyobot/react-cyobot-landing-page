@@ -1,4 +1,4 @@
-## CYOBot landing page
+# CYOBot landing page
 
 [link](https://www.cyobot.com/)
 
