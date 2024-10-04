@@ -4,27 +4,22 @@ on:
   pull_request:
     branches: ["main", "dev"]
 
-  # Able to run jobs individually
   workflow_dispatch:
 jobs:
-  # Checking code styles
+  # Linting with Super-Linter
   lint:
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [20.x, 21.x]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
-
     steps:
-      - uses: actions/checkout@v4
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v4
-        with:
-          node-version: ${{ matrix.node-version }}
-      - run: npm ci
-      - name: Run linter
-        run: npm run lint
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Lint code with Super-Linter
+        uses: super-linter/super-linter@v7.1.0
+        env:
+          VALIDATE_ALL_CODEBASE: true
+          DEFAULT_BRANCH: dev
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   # Checking build and tests
   build:
@@ -33,7 +28,6 @@ jobs:
     strategy:
       matrix:
         node-version: [20.x, 21.x]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
       - uses: actions/checkout@v4
@@ -44,5 +38,3 @@ jobs:
           cache: "npm"
       - run: npm ci
       - run: npm run build --if-present
-      # Will add test later
-      # run: npm run test
