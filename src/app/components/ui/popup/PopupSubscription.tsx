@@ -4,9 +4,10 @@ import FormInput from "../FormInput";
 import Link from "next/link";
 import { GreenButton } from "../button/GreenButton";
 import { useFormState } from "react-dom";
+import useSessionStorage from "@/app/hooks/use-session-storage";
 
 type PopupSubscriptionProps = {
-	onClose: () => void;
+	onClose?: () => void;
 };
 
 export const submitSubscriptionForm = async (
@@ -55,6 +56,8 @@ const PopupSubscription: FC<PopupSubscriptionProps> = (props) => {
 	const [data, formAction] = useFormState(submitSubscriptionForm, null);
 	const [isSubmitted, setIsSubmitted] = useState<boolean>(false);
 	const [animateForm, setAnimateForm] = useState<boolean>(false);
+	const [seenSubscriptionPopup, setSeenSubscriptionPopup] =
+		useSessionStorage<boolean>("seenSubscriptionPopup", false);
 
 	const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
 		event.preventDefault(); // Prevent the default form submission
@@ -88,9 +91,13 @@ const PopupSubscription: FC<PopupSubscriptionProps> = (props) => {
 	}, [data]);
 
 	const handleClose = () => {
+		setSeenSubscriptionPopup(true);
 		setIsVisible(false);
-		setTimeout(props.onClose, 300); // Delay to match the transition duration
+		if (props.onClose) setTimeout(props.onClose, 300); // Delay to match the transition duration
 	};
+
+	if (seenSubscriptionPopup) return;
+
 	return (
 		<div
 			className={`${

@@ -6,7 +6,6 @@ import IntroMainImage from "../../../public/intro-robot.png";
 import PopupSubscription from "../components/ui/popup/PopupSubscription";
 
 export default function Intro() {
-	const [showPopup, setShowPopup] = useState<boolean>(true);
 	return (
 		<>
 			<section className="h-[40rem] lg:h-[50rem] px-9 sm:pl-16 lg:pl-20 w-full pt-16 xl:pt-24 bg-white text-brand-purple">
@@ -46,7 +45,7 @@ export default function Intro() {
 					</div>
 				</div>
 			</section>
-			{showPopup && <PopupSubscription onClose={() => setShowPopup(false)} />}
+			<PopupSubscription />
 		</>
 	);
 }
