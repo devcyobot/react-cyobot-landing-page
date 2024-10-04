@@ -56,10 +56,10 @@ const ContactForm: FC = () => {
 	useEffect(() => {
 		if (data) {
 			if (data.success) {
-				setMessage("Message was succesfully sent to CYOBot Team.");
+				setMessage("Message was succesfully sent to CYOBot.");
 			} else {
 				setMessage(
-					"Message was not able to send to CYOBot Team. Please try again later."
+					"Message was not able to send to CYOBot. Please try again later."
 				);
 			}
 			setIsLoading(false);
@@ -112,7 +112,7 @@ const ContactForm: FC = () => {
 					) : (
 						<p
 							className={`w-full h-16 text-sm sm:text-base sm:h-14 lg:h-6 font-roboto ${
-								data?.success ? "text-brand-green" : "text-brand-red"
+								data?.success ? "text-brand-purple" : "text-brand-red"
 							} justify-self-center`}
 						>
 							{message}
