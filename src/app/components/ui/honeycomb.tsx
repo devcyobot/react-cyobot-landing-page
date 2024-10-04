@@ -1,6 +1,6 @@
-'use client';
-import React, { useEffect, useState } from 'react';
-import HexagonBadge from './hexagon';
+"use client";
+import React, { useEffect, useState } from "react";
+import HexagonBadge from "./hexagon";
 
 type Logo = {
 	text: string;
@@ -23,23 +23,23 @@ const HexagonBadgeMatrix: React.FC<HexagonBadgeMatrixProps> = ({
 		// Trigger the transition effect when the component mounts
 		const updateDimensions = () => {
 			// 2xl
-			if (window.matchMedia('(min-width: 1536px)').matches) {
+			if (window.matchMedia("(min-width: 1536px)").matches) {
 				setDimensions(190);
 			}
 			// xl
-			else if (window.matchMedia('(min-width: 1280px)').matches) {
+			else if (window.matchMedia("(min-width: 1280px)").matches) {
 				setDimensions(190);
 			}
 			// lg
-			else if (window.matchMedia('(min-width: 1024px)').matches) {
+			else if (window.matchMedia("(min-width: 1024px)").matches) {
 				setDimensions(140);
 			}
 			// md
-			else if (window.matchMedia('(min-width: 768px)').matches) {
+			else if (window.matchMedia("(min-width: 768px)").matches) {
 				setDimensions(110);
 			}
 			// sm
-			else if (window.matchMedia('(min-width: 640px)').matches) {
+			else if (window.matchMedia("(min-width: 640px)").matches) {
 				setDimensions(90);
 			}
 			// mobile
@@ -49,10 +49,10 @@ const HexagonBadgeMatrix: React.FC<HexagonBadgeMatrixProps> = ({
 		};
 
 		updateDimensions(); // Set initial dimensions on mount
-		window.addEventListener('resize', updateDimensions);
+		window.addEventListener("resize", updateDimensions);
 
 		return () => {
-			window.removeEventListener('resize', updateDimensions);
+			window.removeEventListener("resize", updateDimensions);
 		};
 	}, []);
 

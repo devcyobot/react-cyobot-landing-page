@@ -1,10 +1,10 @@
-## CYOBot Website
+# CYOBot landing page
 
-[Website link](https://www.cyobot.com/)
+[link](https://www.cyobot.com/)
 
 - Developed using:
   - [Next.js (App Router)](https://nextjs.org/)
-  - [React.js](https://react.dev/)
+  - [React](https://react.dev/)
   - [Tailwind CSS](https://tailwindcss.com/)
   - [framer-motion](https://www.framer.com/motion/)
 - To run the development server:

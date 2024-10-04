@@ -58,10 +58,10 @@ export default function MobileNavBar() {
 					}
 				>
 					<ul className="h-1/2 text-2xl flex flex-col items-center justify-evenly">
-						<li className={styles.navLink} onClick={handleDrawerToggle}>
+						<li className={styles["nav-link"]} onClick={handleDrawerToggle}>
 							<Link href="/">Home</Link>
 						</li>
-						<li className={styles.navLink} onClick={handleDrawerToggle}>
+						<li className={styles["nav-link"]} onClick={handleDrawerToggle}>
 							<Link href="/about">About</Link>
 						</li>
 						<li>
@@ -105,7 +105,7 @@ export default function MobileNavBar() {
 								</div>
 							</div>
 						</li>
-						<li className={styles.navLink} onClick={handleDrawerToggle}>
+						<li className={styles["nav-link"]} onClick={handleDrawerToggle}>
 							<Link href="/faq">FAQ</Link>
 						</li>
 					</ul>

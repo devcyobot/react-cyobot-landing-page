@@ -1,5 +1,5 @@
-import { FC } from 'react';
-import Image from 'next/image';
+import { FC } from "react";
+import Image from "next/image";
 
 type AboutCardProps = {
 	src: string;
@@ -9,17 +9,17 @@ type AboutCardProps = {
 	color: string;
 };
 const AboutCard: FC<AboutCardProps> = (props) => {
-	let shadowColor = '';
-	if (props.color === 'red') shadowColor = 'rgba(224, 3, 3, 0.7)';
-	else if (props.color === 'yellow') shadowColor = 'rgba(242, 190, 53, 0.9)';
-	else if (props.color === 'green') shadowColor = '#1ad69c';
-	else if (props.color === 'purple') shadowColor = '#6B49C9';
+	let shadowColor = "";
+	if (props.color === "red") shadowColor = "rgba(224, 3, 3, 0.7)";
+	else if (props.color === "yellow") shadowColor = "rgba(242, 190, 53, 0.9)";
+	else if (props.color === "green") shadowColor = "#1ad69c";
+	else if (props.color === "purple") shadowColor = "#6B49C9";
 
 	return (
 		<div
 			style={{
 				filter: `drop-shadow(20px 20px 0px ${shadowColor})`,
-				boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)',
+				boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
 			}}
 			className="flex flex-col items-center text-center rounded-xl w-full h-auto min-h-80 bg-white"
 		>
@@ -29,8 +29,8 @@ const AboutCard: FC<AboutCardProps> = (props) => {
 						src={props.src}
 						alt={props.label}
 						fill
-						sizes={'33vw'}
-						style={{ objectFit: 'contain' }}
+						sizes={"33vw"}
+						style={{ objectFit: "contain" }}
 					/>
 				</figure>
 				<h3 className="py-10 w-full text-3xl sm:text-4xl lg:text-5xl font-vt323 text-brand-purple">

@@ -1,5 +1,5 @@
 /* DESKTOP CAROUSEL */
-.slideContainer {
+.slide-container {
 	position: relative;
 	perspective: 1000px;
 	transform-style: preserve-3d;
@@ -11,7 +11,9 @@
 .slide {
 	width: 330px;
 	height: 550px;
-	transition: transform 500ms ease 0s, opacity 500ms ease 0s,
+	transition:
+		transform 500ms ease 0s,
+		opacity 500ms ease 0s,
 		visibility 500ms ease 0s;
 	position: absolute;
 	top: 0;
@@ -21,8 +23,8 @@
 	align-items: center;
 }
 
-@media (max-width: 768px) {
-	.slideContainer {
+@media (width <= 768px) {
+	.slide-container {
 		width: 315px;
 		height: 315 * 1.667px;
 	}
@@ -33,8 +35,8 @@
 	}
 }
 
-@media (max-width: 425px) {
-	.slideContainer {
+@media (width <= 425px) {
+	.slide-container {
 		width: 290px;
 		height: 290 * 1.667px;
 	}
@@ -45,8 +47,8 @@
 	}
 }
 
-@media (max-width: 320px) {
-	.slideContainer {
+@media (width <= 320px) {
+	.slide-container {
 		width: 250px;
 		height: 250 * 1.667px;
 	}

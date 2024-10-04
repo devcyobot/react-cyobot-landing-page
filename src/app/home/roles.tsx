@@ -1,7 +1,7 @@
-import Hexagon from '../components/ui/hexagon';
-import Link from 'next/link';
-import HexagonBadgeMatrix from '../components/ui/honeycomb';
-import { hexagonData } from '../data/hexagonData';
+import Hexagon from "../components/ui/hexagon";
+import Link from "next/link";
+import HexagonBadgeMatrix from "../components/ui/honeycomb";
+import { hexagonData } from "../data/hexagonData";
 
 export default function Roles() {
 	return (
@@ -11,7 +11,7 @@ export default function Roles() {
 					UNLOCK TOP SKILLS IN ENGINEERING
 				</h2>
 				<h3 className="w-2/3 sm:w-full text-center font-roboto text-base sm:text-lg md:text-xl lg:text-2xl font-medium">
-					Discover which career roles would be best fit for you.{' '}
+					Discover which career roles would be best fit for you.{" "}
 					<Link
 						href="https://roboticsquest.com/"
 						className="underline"
@@ -19,7 +19,7 @@ export default function Roles() {
 						target="_blank"
 					>
 						Take Quiz
-					</Link>{' '}
+					</Link>{" "}
 					--&gt;
 				</h3>
 			</div>
