@@ -1,6 +1,6 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import url("tailwindcss/base");
+@import url("tailwindcss/components");
+@import url("tailwindcss/utilities");
 
 :root {
 	--brand-purple: #3e2486;
@@ -43,8 +43,8 @@ details > summary::-webkit-details-marker {
 }
 
 /* BORDER STYLES AND COLORS */
-/* purple bold */
 
+/* purple bold */
 .border-dashed-purple-bold {
 	position: relative;
 	border-left: 0.6rem solid transparent;

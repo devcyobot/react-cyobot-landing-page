@@ -94,7 +94,7 @@ export default function DesktopCarousel(props: DesktopCarouselProps) {
 
 	return (
 		<div className={`${props.className}`}>
-			<div className={styles.slideContainer}>
+			<div className={styles["slide-container"]}>
 				{props.data.map((item, i) => (
 					<React.Fragment key={i}>
 						<div
