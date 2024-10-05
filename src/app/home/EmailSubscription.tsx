@@ -56,6 +56,7 @@ const EmailSubscription: FC = () => {
 		const formData = new FormData(event.currentTarget);
 		setIsLoading(true);
 		formAction(formData);
+		event.currentTarget.reset();
 	};
 
 	useEffect(() => {
@@ -83,7 +84,7 @@ const EmailSubscription: FC = () => {
 					<h2 className="w-full text-center text-4xl lg:text-5xl">
 						GET IN TOUCH WITH US!
 					</h2>
-					<p className="text-center w-full text-lg">
+					<p className="text-center w-full text-xl">
 						Enter your email for the latest updates from us and exclusive deals
 						of CYOBot products
 					</p>
@@ -133,10 +134,7 @@ const EmailSubscription: FC = () => {
 							</p>
 						)}
 					</div>
-					<form
-						onSubmit={handleSubmit}
-						className="font-vt323 grid grid-cols-1 gap-y-5"
-					>
+					<form onSubmit={handleSubmit} className="grid grid-cols-1 gap-y-5">
 						<label>
 							<span className="sr-only">Email</span>
 							<input
@@ -144,10 +142,10 @@ const EmailSubscription: FC = () => {
 								placeholder="Email"
 								name="email"
 								required
-								className="text-lg p-4 lg:p-5 w-full bg-[#E3E3E3] rounded-lg"
+								className="font-roboto p-4 lg:p-5 w-full bg-[#E3E3E3] rounded-lg"
 							/>
 						</label>
-						<p className="text-center">
+						<p className="font-roboto text-center">
 							By joining our list you agree to our
 							<Link
 								passHref={true}

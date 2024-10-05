@@ -23,10 +23,9 @@ const FormInput: FC<FormInputProps> = (props: FormInputProps) => {
 				type={showPassword ? "text" : props.typeInput}
 				name={props.name}
 				placeholder={props.placeHolder}
-				className="py-1 sm:py-2 md:py-4 lg:py-5 px-4 sm:px-6 md:px-8 lg:px-11 
+				className="text-sm sm:text-base 2xl:text-lg font-roboto py-1 sm:py-2 md:py-4 lg:py-5 px-4 sm:px-6 md:px-8 lg:px-11 
       h-10 sm:h-12 lg:h-16 w-full rounded-lg 
-      bg-black bg-opacity-50 
-      font-vt323 text-sm sm:text-base md:text-lg lg:text-xl text-white"
+      bg-black bg-opacity-50"
 				required
 				onChange={props.onChange}
 			/>

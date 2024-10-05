@@ -17,7 +17,7 @@ export const GreenButton: FC<GreenButtonProps> = (props) => {
 					href={props.link}
 					passHref={true}
 					target="_blank"
-					className="rounded-lg bg-brand-green text-white md:text-xl xl:text-2xl font-normal p-3 w-full"
+					className="font-roboto rounded-lg bg-brand-green text-white md:text-xl xl:text-2xl font-normal p-3 w-full"
 				>
 					{props.description}
 				</Link>
@@ -26,7 +26,7 @@ export const GreenButton: FC<GreenButtonProps> = (props) => {
 					onClick={props.onClick}
 					disabled={props.disabled}
 					type={props.type}
-					className="rounded-lg bg-brand-green text-white md:text-xl xl:text-2xl font-normal p-3 w-full"
+					className="font-roboto rounded-lg bg-brand-green text-white md:text-xl xl:text-2xl font-normal p-3 w-full"
 				>
 					{props.description}
 				</button>

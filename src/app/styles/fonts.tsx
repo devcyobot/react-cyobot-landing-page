@@ -5,7 +5,7 @@ export const roboto = Roboto({
 	style: ["normal"],
 	subsets: ["latin"],
 	display: "swap",
-	variable: "--roboto-bold",
+	variable: "--roboto",
 });
 
 export const nunito = Nunito({

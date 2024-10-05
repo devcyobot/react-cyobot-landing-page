@@ -23,7 +23,7 @@ const config: Config = {
 				vt323: ["var(--vt323-regular)", "monospace"],
 				nunito: ["var(--nunito-regular)", "monospace"],
 				robotoCondensed: ["var(--roboto-condensed)", "monospace"],
-				roboto: ["var(--roboto-bold)", "monospace"],
+				roboto: ["var(--roboto)", "monospace"],
 			},
 			keyframes: {
 				slideDown: {

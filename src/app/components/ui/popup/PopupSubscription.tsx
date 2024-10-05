@@ -67,6 +67,7 @@ const PopupSubscription: FC<PopupSubscriptionProps> = (props) => {
 		const formData = new FormData(event.currentTarget);
 		setIsLoading(true);
 		formAction(formData);
+		event.currentTarget.reset();
 	};
 
 	useEffect(() => {
@@ -134,13 +135,13 @@ const PopupSubscription: FC<PopupSubscriptionProps> = (props) => {
 									isSubmitted
 										? "animate-slideOut"
 										: animateForm
-										? "animate-slideIn"
-										: ""
+											? "animate-slideIn"
+											: ""
 								}`}
 							>
 								{!isSubmitted && (
 									<div className="gap-y-2 grid grid-cols-1 justify-evenly">
-										<p className="text-white text-start text-sm sm:text-base 2xl:text-lg">
+										<p className="font-roboto text-white text-start text-sm sm:text-base 2xl:text-lg">
 											Enter your email for the latest updates from us and
 											exclusive deals of CYOBot products
 										</p>
@@ -148,7 +149,7 @@ const PopupSubscription: FC<PopupSubscriptionProps> = (props) => {
 											className="flex flex-col justify-evenly mx-auto w-full"
 											onSubmit={handleSubmit}
 										>
-											<label className="text-base sm:text-lg md:text-xl xl:text-2xl text-white font-robotoRegular mt-3 grid grid-cols-1 items-center">
+											<label className="text-white font-robotoRegular mt-3 grid grid-cols-1 items-center">
 												<FormInput
 													typeInput="email"
 													name="email"
@@ -156,8 +157,8 @@ const PopupSubscription: FC<PopupSubscriptionProps> = (props) => {
 													id="email"
 												/>
 											</label>
-											<div className="font-robotoRegular flex flex-col justify-evenly gap-y-2 h-1/4 w-full my-5">
-												<p className="text-white text-center">
+											<div className="font-roboto flex flex-col justify-evenly gap-y-2 h-1/4 w-full my-5">
+												<p className="text-white text-center text-sm sm:text-base 2xl:text-lg">
 													By joining our list you agree to our
 													<Link
 														passHref={true}
@@ -190,18 +191,20 @@ const PopupSubscription: FC<PopupSubscriptionProps> = (props) => {
 										<p className="text-white text-center text-sm sm:text-xl my-auto">
 											{message}
 										</p>
-										{data !== null && !data.success && (
-											<div className="w-1/2">
-												<GreenButton
-													description="TRY AGAIN"
-													type="button"
-													onClick={() => {
-														setAnimateForm(true);
-														setIsSubmitted(false);
-													}}
-												/>
-											</div>
-										)}
+										<div className="w-1/2">
+											<GreenButton
+												description={
+													data !== null && !data.success
+														? "TRY AGAIN"
+														: "SUBSCRIBE MORE"
+												}
+												type="button"
+												onClick={() => {
+													setAnimateForm(true);
+													setIsSubmitted(false);
+												}}
+											/>
+										</div>
 									</>
 								)}
 							</div>
