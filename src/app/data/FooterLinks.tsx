@@ -27,7 +27,7 @@ export const productsLinks: { link: string; title: string }[] = [
 	},
 	{
 		title: "Dashboard",
-		link: "https://dashboard.cyobot.com/",
+		link: "https://quest.cyobot.com/",
 	},
 	{
 		title: "RoboticsQuest",

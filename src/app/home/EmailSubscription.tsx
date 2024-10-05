@@ -98,8 +98,8 @@ const EmailSubscription: FC = () => {
 						/>
 					</figure>
 				</div>
-				<div className="z-10 w-full sm:w-2/3 lg:w-[90%] h-full flex flex-col justify-center">
-					<div className="h-10">
+				<div className="z-10 w-full sm:w-2/3 lg:w-[90%] h-full flex flex-col justify-center gap-y-5">
+					<div className="h-11">
 						{isLoading ? (
 							<svg
 								viewBox="0 0 50 50"

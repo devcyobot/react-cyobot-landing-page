@@ -12,7 +12,7 @@ export const stepsData: {
 		label: "CHOOSE DIFFICULTY LEVEL",
 		description:
 			": Explorer, Adventurer, or Pioneer; try out the level via Dashboard to help you pick what suits you best!",
-		link: "https://dashboard.cyobot.com",
+		link: "https://quest.cyobot.com",
 	},
 	{
 		label: "CUSTOMIZE YOUR ROBOT COMPANION",

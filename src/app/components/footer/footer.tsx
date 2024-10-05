@@ -60,7 +60,7 @@ export default function Footer() {
 						</li>
 						<li className="text-base lg:text-lg xl:text-xl hover:underline">
 							<Link
-								href="https://dashboard.cyobot.com/"
+								href="https://quest.cyobot.com/"
 								passHref={true}
 								target="_blank"
 							>

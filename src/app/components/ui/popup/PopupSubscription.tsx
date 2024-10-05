@@ -80,7 +80,10 @@ const PopupSubscription: FC<PopupSubscriptionProps> = (props) => {
 				!data.success &&
 				data.message === "email: Value must be unique"
 			) {
-				setMessage("This email was already subscribed to CYOBot.");
+				setMessage(
+					"Your email was not able to subscribe to CYOBot. Please contact CYOBot for further assistance."
+				);
+				// setMessage("This email was already subscribed to CYOBot.");
 			} else {
 				setMessage(
 					"Your email was not able to subscribe to CYOBot. Please contact CYOBot for further assistance."
