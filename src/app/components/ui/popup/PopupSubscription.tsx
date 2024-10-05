@@ -134,8 +134,8 @@ const PopupSubscription: FC<PopupSubscriptionProps> = (props) => {
 									isSubmitted
 										? "animate-slideOut"
 										: animateForm
-											? "animate-slideIn"
-											: ""
+										? "animate-slideIn"
+										: ""
 								}`}
 							>
 								{!isSubmitted && (
@@ -181,7 +181,7 @@ const PopupSubscription: FC<PopupSubscriptionProps> = (props) => {
 								)}
 							</div>
 							<div
-								className={`pb-5 h-1/2 grid grid-rows-1 grid-cols-1 justify-items-center transition-all duration-500 ease-in-out delay-500 ${
+								className={`gap-y-10 grid grid-rows-1 grid-cols-1 justify-items-center transition-all duration-500 ease-in-out delay-500 ${
 									!isSubmitted ? "animate-slideOut hidden" : "animate-slideIn"
 								}`}
 							>

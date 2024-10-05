@@ -48,7 +48,7 @@ const MobileCarousel: FC<MobileCarouselProps> = (props) => {
 
 	return (
 		<div
-			className={`${props.className} w-full max-w-[20rem] relative overflow-hidden bg-brand-dark-2 mx-auto`}
+			className={`${props.className} w-full max-w-[22rem] sm:max-w-[30rem] relative overflow-hidden bg-brand-dark-2 mx-auto`}
 		>
 			<motion.div
 				drag="x"

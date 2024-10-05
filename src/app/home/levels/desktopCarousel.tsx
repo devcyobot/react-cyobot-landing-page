@@ -74,11 +74,11 @@ export default function DesktopCarousel(props: DesktopCarouselProps) {
 			else if (window.matchMedia("(min-width: 768px)").matches) {
 				setDimensions({ d1: 300, d2: 100 });
 			}
-			// sm: set both d1 nd d2 0 because we will different carousel to display the ImageSlide
+			// sm
 			else if (window.matchMedia("(min-width: 640px)").matches) {
 				setDimensions({ d1: 0, d2: 0 });
 			}
-			// mobile: set both d1 nd d2 0 because we will different carousel to display the ImageSlide
+			// mobile: set both d1 and d2 0 because we will use different carousel to display the ImageSlide
 			else {
 				setDimensions({ d1: 0, d2: 0 }); // Default dimensions for mobile
 			}

@@ -51,6 +51,7 @@ const config: Config = {
 			},
 			screens: {
 				"max-h-custom": { raw: "(max-height: 767px)" },
+				"max-w-375px": { max: "375px" },
 			},
 		},
 	},

@@ -22,39 +22,3 @@
 	justify-content: center;
 	align-items: center;
 }
-
-@media (width <= 768px) {
-	.slide-container {
-		width: 315px;
-		height: 315 * 1.667px;
-	}
-
-	.slide {
-		width: 315px;
-		height: 315 * 1.667px;
-	}
-}
-
-@media (width <= 425px) {
-	.slide-container {
-		width: 290px;
-		height: 290 * 1.667px;
-	}
-
-	.slide {
-		width: 290px;
-		height: 290 * 1.667px;
-	}
-}
-
-@media (width <= 320px) {
-	.slide-container {
-		width: 250px;
-		height: 250 * 1.667px;
-	}
-
-	.slide {
-		width: 250px;
-		height: 250 * 1.667px;
-	}
-}
