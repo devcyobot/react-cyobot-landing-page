@@ -5,21 +5,21 @@ export const imageCarousel: {
 	color: string;
 }[] = [
 	{
-		title: 'EXPLORER',
-		src: '/carousel-explorer.png',
-		alt: 'Explorer level model',
-		color: 'green',
+		title: "EXPLORER",
+		src: "/carousel-explorer.png",
+		alt: "Explorer level model",
+		color: "green",
 	},
 	{
-		title: 'ADVENTURER',
-		src: '/carousel-adventurer.png',
-		alt: 'Adventurer level model',
-		color: 'yellow',
+		title: "ADVENTURER",
+		src: "/carousel-adventurer.png",
+		alt: "Adventurer level model",
+		color: "yellow",
 	},
 	{
-		title: 'PIONEER',
-		src: '/carousel-pioneer.png',
-		alt: 'Pioneer level model',
-		color: 'red',
+		title: "PIONEER",
+		src: "/carousel-pioneer.png",
+		alt: "Pioneer level model",
+		color: "red",
 	},
 ];

@@ -26,13 +26,13 @@ export default function DesktopNavBar() {
 		<>
 			<div className="text-lg lg:text-xl xl:text-2xl font-roboto w-[75%] lg:w-[95%] md:flex hidden items-center justify-between mr-12">
 				<ul className="flex justify-around">
-					<li className={styles.navLink}>
+					<li className={styles["nav-link"]}>
 						<Link href="/">Home</Link>
 					</li>
-					<li className={styles.navLink}>
+					<li className={styles["nav-link"]}>
 						<Link href="/about">About</Link>
 					</li>
-					<li className={styles.navLink}>
+					<li className={styles["nav-link"]}>
 						<div className="relative">
 							<button
 								onClick={toggleDropdown}
@@ -73,7 +73,7 @@ export default function DesktopNavBar() {
 							</div>
 						</div>
 					</li>
-					<li className={styles.navLink}>
+					<li className={styles["nav-link"]}>
 						<Link href="/faq">FAQ</Link>
 					</li>
 				</ul>

@@ -5,7 +5,7 @@ import { options } from "../../data/FooterLinks";
 export default function Footer() {
 	return (
 		<footer className="hidden sm:block h-56 bg-brand-dark-2 w-full p-6">
-			<div className="max-w-[1440px] mx-auto text-start h-full w-full grid grid-cols-[2fr_1fr_1fr_1fr] gap-x-5 grid-rows-1">
+			<div className="max-w-[1536px] mx-auto text-start h-full w-full grid grid-cols-[2fr_1fr_1fr_1fr] gap-x-5 grid-rows-1">
 				<div className="grid grid-cols-1 sm:grid-cols-2 gap-x-2 items-center">
 					<div className="h-2/3 w-full grid grid-cols-1 grid-rows-2 justify-items-center items-center gap-y-0">
 						<div className="relative h-full w-full">

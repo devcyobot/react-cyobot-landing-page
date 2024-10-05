@@ -1,6 +1,6 @@
-'use client';
-import { FC, useEffect, useRef, useState } from 'react';
-import { Path, Vector } from './VectorPathType';
+"use client";
+import { FC, useEffect, useRef, useState } from "react";
+import { Path, Vector } from "./VectorPathType";
 
 type HexagonBadgeProps = {
 	roles: string;
@@ -8,7 +8,7 @@ type HexagonBadgeProps = {
 	height: number;
 	color: string;
 	radius: number;
-	orientation: 'pointy' | 'flat';
+	orientation: "pointy" | "flat";
 	available: boolean;
 };
 
@@ -18,14 +18,14 @@ const HexagonBadge: FC<HexagonBadgeProps> = ({
 	height,
 	color,
 	radius = 0,
-	orientation = 'pointy',
+	orientation = "pointy",
 	available = false,
 }) => {
 	// Caculate the path data points
 	function getPath(r: number): string {
 		let a, b, c, d, e, f;
 
-		if (orientation === 'pointy') {
+		if (orientation === "pointy") {
 			a = new Vector(width / 2, 0);
 			b = new Vector(width, height / 4);
 			c = new Vector(width, (height * 3) / 4);
@@ -44,7 +44,7 @@ const HexagonBadge: FC<HexagonBadgeProps> = ({
 		const right = Vector.fromAngle(b.subtract(a).angle(), r);
 		const left = Vector.fromAngle(f.subtract(a).angle(), r);
 		const level =
-			orientation === 'pointy' ? new Vector(0, r) : new Vector(r, 0);
+			orientation === "pointy" ? new Vector(0, r) : new Vector(r, 0);
 
 		return new Path([
 			Path.M(a.add(left)),
@@ -65,26 +65,26 @@ const HexagonBadge: FC<HexagonBadgeProps> = ({
 
 	const textRef = useRef<SVGTextElement | null>(null);
 
-	let startY = '0%';
-	const words = roles.split(' ');
-	if (words.length > 2) startY = '35%';
-	else if (words.length > 1) startY = '45%';
-	else startY = '55%';
+	let startY = "0%";
+	const words = roles.split(" ");
+	if (words.length > 2) startY = "35%";
+	else if (words.length > 1) startY = "45%";
+	else startY = "55%";
 
 	useEffect(() => {
 		const svgText = textRef.current;
 		if (!svgText) return;
 
-		svgText.innerHTML = ''; // Clear existing content
+		svgText.innerHTML = ""; // Clear existing content
 
 		words.forEach((word, index) => {
 			const tspan = document.createElementNS(
-				'http://www.w3.org/2000/svg',
-				'tspan'
+				"http://www.w3.org/2000/svg",
+				"tspan"
 			);
 			tspan.textContent = word;
-			tspan.setAttribute('x', '50%');
-			tspan.setAttribute('dy', index === 0 ? '0' : '1.1em'); // Line height
+			tspan.setAttribute("x", "50%");
+			tspan.setAttribute("dy", index === 0 ? "0" : "1.1em"); // Line height
 
 			svgText.appendChild(tspan);
 		});
@@ -100,8 +100,8 @@ const HexagonBadge: FC<HexagonBadgeProps> = ({
 			>
 				<path
 					strokeLinecap="round"
-					fill={available ? '#1ad69c' : color}
-					fillOpacity={roles ? '100%' : '50%'}
+					fill={available ? "#1ad69c" : color}
+					fillOpacity={roles ? "100%" : "50%"}
 					d={getPath(radius)}
 				></path>
 				<text

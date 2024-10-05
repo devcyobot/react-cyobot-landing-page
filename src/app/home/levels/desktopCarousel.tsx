@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import ImageSlide from '../../components/ui/imageSlide';
-import styles from './carousel.module.css';
+import React, { useEffect, useState } from "react";
+import ImageSlide from "../../components/ui/imageSlide";
+import styles from "./carousel.module.css";
 
 export type ImageData = {
 	title: string;
@@ -26,7 +26,7 @@ export default function DesktopCarousel(props: DesktopCarouselProps) {
 		if (props.currentLevel === index)
 			return {
 				opacity: 1,
-				transform: 'translateX(0px) translateZ(0px) rotateY(0deg)',
+				transform: "translateX(0px) translateZ(0px) rotateY(0deg)",
 				zIndex: 10,
 			};
 		else if (props.currentLevel - 1 === index)
@@ -59,42 +59,42 @@ export default function DesktopCarousel(props: DesktopCarouselProps) {
 		// Trigger the transition effect when the component mounts
 		const updateDimensions = () => {
 			// 2xl
-			if (window.matchMedia('(min-width: 1536px)').matches) {
+			if (window.matchMedia("(min-width: 1536px)").matches) {
 				setDimensions({ d1: 500, d2: 700 });
 			}
 			// xl
-			else if (window.matchMedia('(min-width: 1280px)').matches) {
+			else if (window.matchMedia("(min-width: 1280px)").matches) {
 				setDimensions({ d1: 500, d2: 700 });
 			}
 			// lg
-			else if (window.matchMedia('(min-width: 1024px)').matches) {
+			else if (window.matchMedia("(min-width: 1024px)").matches) {
 				setDimensions({ d1: 400, d2: 600 });
 			}
 			// md
-			else if (window.matchMedia('(min-width: 768px)').matches) {
+			else if (window.matchMedia("(min-width: 768px)").matches) {
 				setDimensions({ d1: 300, d2: 100 });
 			}
-			// sm: set both d1 nd d2 0 because we will different carousel to display the ImageSlide
-			else if (window.matchMedia('(min-width: 640px)').matches) {
+			// sm
+			else if (window.matchMedia("(min-width: 640px)").matches) {
 				setDimensions({ d1: 0, d2: 0 });
 			}
-			// mobile: set both d1 nd d2 0 because we will different carousel to display the ImageSlide
+			// mobile: set both d1 and d2 0 because we will use different carousel to display the ImageSlide
 			else {
 				setDimensions({ d1: 0, d2: 0 }); // Default dimensions for mobile
 			}
 		};
 
 		updateDimensions(); // Set initial dimensions on mount
-		window.addEventListener('resize', updateDimensions);
+		window.addEventListener("resize", updateDimensions);
 
 		return () => {
-			window.removeEventListener('resize', updateDimensions);
+			window.removeEventListener("resize", updateDimensions);
 		};
 	}, []);
 
 	return (
 		<div className={`${props.className}`}>
-			<div className={styles.slideContainer}>
+			<div className={styles["slide-container"]}>
 				{props.data.map((item, i) => (
 					<React.Fragment key={i}>
 						<div
@@ -108,7 +108,7 @@ export default function DesktopCarousel(props: DesktopCarouselProps) {
 								alt={item.alt}
 								color={item.color}
 								title={item.title}
-								imageFit={i === 2 ? 'contain' : 'cover'}
+								imageFit={i === 2 ? "contain" : "cover"}
 							/>
 						</div>
 					</React.Fragment>

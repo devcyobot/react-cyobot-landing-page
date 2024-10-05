@@ -1,15 +1,15 @@
-'use client';
-import { levelsData } from '../../data/levelsData';
-import Time from './time';
-import Tasks from './Projects/rewards';
-import Summary from './objectives';
-import { useState } from 'react';
+"use client";
+import { levelsData } from "../../data/levelsData";
+import Time from "./time";
+import Tasks from "./Projects/rewards";
+import Summary from "./objectives";
+import { useState } from "react";
 // --------TESTING--------------
-import { imageCarousel } from '../../data/imageCarousel';
-import DesktopCarousel from './desktopCarousel';
-import MobileCarousel from './mobileCarousel';
+import { imageCarousel } from "../../data/imageCarousel";
+import DesktopCarousel from "./desktopCarousel";
+import MobileCarousel from "./mobileCarousel";
 
-import { useDifficultyContext } from '../../context/DifficultyContext';
+import { useDifficultyContext } from "../../context/DifficultyContext";
 
 export default function Levels() {
 	const { currentDifficulty, setDifficulty } = useDifficultyContext();
@@ -33,7 +33,7 @@ export default function Levels() {
 			<h2 className="font-vt323 text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl mt-10 sm:my-12">
 				CHOOSE YOUR DIFFICULTY
 			</h2>
-			<div className="mx-auto max-w-[1440px] flex flex-col justify-evenly w-full">
+			<div className="mx-auto max-w-[1536px] flex flex-col justify-evenly w-full">
 				<DesktopCarousel
 					className="hidden md:block"
 					data={imageCarousel}

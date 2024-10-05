@@ -6,11 +6,11 @@ type BarProps = {
 
 export default function Bar({ color, name, amount }: BarProps) {
 	// Choose which color for this bar
-	let bg = '';
-	if (color === 'yellow') bg = '#f3c449';
-	else if (color === 'green') bg = '#1ad69c';
-	else if (color === 'red') bg = '#e00303';
-	else bg = '#3e2486';
+	let bg = "";
+	if (color === "yellow") bg = "#f3c449";
+	else if (color === "green") bg = "#1ad69c";
+	else if (color === "red") bg = "#e00303";
+	else bg = "#3e2486";
 
 	return (
 		<div>

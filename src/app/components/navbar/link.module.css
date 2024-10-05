@@ -1,5 +1,5 @@
-.navLink:after {
-	content: '';
+.nav-link::after {
+	content: "";
 	position: absolute;
 	background-color: var(--brand-green);
 	width: 0;
@@ -10,11 +10,11 @@
 	transition: width 0.3s ease;
 }
 
-.navLink:hover:after {
+.nav-link:hover::after {
 	width: 90%;
 }
 
-.navLink {
+.nav-link {
 	position: relative;
 	margin: 0 2rem;
 }

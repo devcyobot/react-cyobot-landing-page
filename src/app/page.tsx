@@ -4,7 +4,7 @@ import Roles from "./home/roles";
 import Specs from "./home/specs";
 import Environments from "./home/environtments";
 import Steps from "./home/steps";
-import Schedule from "./home/ScheduleCall";
+import EmailSubscription from "./home/EmailSubscription";
 
 export default function Home() {
 	return (
@@ -15,7 +15,7 @@ export default function Home() {
 			<Specs />
 			<Environments />
 			<Steps />
-			<Schedule />
+			<EmailSubscription />
 		</main>
 	);
 }

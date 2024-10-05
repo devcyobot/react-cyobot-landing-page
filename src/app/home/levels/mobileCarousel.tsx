@@ -1,16 +1,16 @@
 // Source used: https://www.hover.dev/components/carousels
-'use client';
-import { FC } from 'react';
-import { motion, useMotionValue } from 'framer-motion';
-import { imageCarousel } from '../../data/imageCarousel';
-import ImageSlide from '../../components/ui/imageSlide';
-import { useDifficultyContext } from '../../context/DifficultyContext';
-import { ImageData } from './desktopCarousel';
+"use client";
+import { FC } from "react";
+import { motion, useMotionValue } from "framer-motion";
+import { imageCarousel } from "../../data/imageCarousel";
+import ImageSlide from "../../components/ui/imageSlide";
+import { useDifficultyContext } from "../../context/DifficultyContext";
+import { ImageData } from "./desktopCarousel";
 
 const DRAG_BUFFER = 50;
 
 const SPRING_OPTIONS = {
-	type: 'spring',
+	type: "spring",
 	mass: 3,
 	stiffness: 400,
 	damping: 50,
@@ -48,7 +48,7 @@ const MobileCarousel: FC<MobileCarouselProps> = (props) => {
 
 	return (
 		<div
-			className={`${props.className} w-full max-w-[20rem] relative overflow-hidden bg-brand-dark-2 mx-auto`}
+			className={`${props.className} w-full max-w-[22rem] sm:max-w-[30rem] relative overflow-hidden bg-brand-dark-2 mx-auto`}
 		>
 			<motion.div
 				drag="x"
@@ -94,7 +94,7 @@ const Images = ({ imgIndex, images }: ImagesProps): JSX.Element => {
 				<motion.div
 					key={idx}
 					style={{
-						flex: '0 0 100%', // Ensure each slide takes the full width
+						flex: "0 0 100%", // Ensure each slide takes the full width
 					}}
 					animate={{
 						scale: imgIndex === idx ? 0.95 : 0.85,
@@ -108,7 +108,7 @@ const Images = ({ imgIndex, images }: ImagesProps): JSX.Element => {
 						alt={img.alt}
 						title={img.title}
 						color={img.color}
-						imageFit={idx === 2 ? 'contain' : 'cover'}
+						imageFit={idx === 2 ? "contain" : "cover"}
 					/>
 				</motion.div>
 			))}
@@ -133,7 +133,7 @@ export const Dots = ({ imgIndex, setImgIndex }: DotsProps): JSX.Element => {
 						key={idx}
 						onClick={() => setImgIndex(idx)}
 						className={`h-4 w-4 rounded-full transition-colors ${
-							idx === imgIndex ? 'bg-neutral-50' : 'bg-neutral-500'
+							idx === imgIndex ? "bg-neutral-50" : "bg-neutral-500"
 						}`}
 					/>
 				);
