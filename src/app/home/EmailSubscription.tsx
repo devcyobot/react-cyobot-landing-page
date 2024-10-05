@@ -106,7 +106,7 @@ const EmailSubscription: FC = () => {
 								viewBox="0 0 50 50"
 								xmlns="http://www.w3.org/2000/svg"
 								fill="none"
-								className="w-full h-10"
+								className="w-full h-11"
 							>
 								<path
 									fill="#A2A2A2"
@@ -126,7 +126,7 @@ const EmailSubscription: FC = () => {
 							</svg>
 						) : (
 							<p
-								className={`w-full h-16 text-sm sm:text-base sm:h-14 lg:h-6 font-roboto ${
+								className={`w-full text-sm sm:text-base font-roboto ${
 									data?.success ? "text-brand-purple" : "text-brand-red"
 								} justify-self-center`}
 							>
@@ -156,7 +156,7 @@ const EmailSubscription: FC = () => {
 								Privacy Policy
 							</Link>
 						</p>
-						<div className="w-1/2 mx-auto">
+						<div className="w-2/3 sm:w-1/2 mx-auto">
 							<GreenButton
 								description="JOIN OUR LIST"
 								type="submit"
