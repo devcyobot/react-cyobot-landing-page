@@ -2,6 +2,7 @@
 import { FC, useState } from "react";
 
 export type FormInputProps = {
+	bgColor: "dark" | "light";
 	typeInput: string;
 	placeHolder: string;
 	name: string;
@@ -10,7 +11,13 @@ export type FormInputProps = {
 };
 
 const FormInput: FC<FormInputProps> = (props: FormInputProps) => {
-	const [showPassword, setShowPassword] = useState(false);
+	let bg = "";
+
+	if (props.bgColor === "dark") bg = "rgba(0, 0, 0, 0.5)";
+	else if (props.bgColor === "light") bg = "rgba(227, 227, 227, 1)";
+	else bg = "rgba(255, 255, 255, 1)";
+
+	const [showPassword, setShowPassword] = useState<boolean>(false);
 
 	const togglePasswordVisibility = () => {
 		setShowPassword(!showPassword);
@@ -23,9 +30,8 @@ const FormInput: FC<FormInputProps> = (props: FormInputProps) => {
 				type={showPassword ? "text" : props.typeInput}
 				name={props.name}
 				placeholder={props.placeHolder}
-				className="text-sm sm:text-base 2xl:text-lg font-roboto py-1 sm:py-2 md:py-4 lg:py-5 px-4 sm:px-6 md:px-8 lg:px-11 
-      h-10 sm:h-12 lg:h-16 w-full rounded-lg 
-      bg-black bg-opacity-50"
+				className="font-roboto px-7 lg:px-10 py-5 w-full rounded-lg"
+				style={{ background: bg }}
 				required
 				onChange={props.onChange}
 			/>

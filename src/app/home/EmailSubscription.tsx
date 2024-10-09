@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useFormState } from "react-dom";
 import { GreenButton } from "../components/ui/button/GreenButton";
 import Link from "next/link";
+import FormInput from "../components/ui/FormInput";
 
 export const submitSubscriptionForm = async (
 	prevState: { success: boolean; message?: string } | null,
@@ -11,7 +12,7 @@ export const submitSubscriptionForm = async (
 ) => {
 	try {
 		let user = {
-			email: (formData.get("email") as string) || "",
+			email: (formData.get("subscription-email") as string) || "",
 		};
 
 		let res;
@@ -135,14 +136,14 @@ const EmailSubscription: FC = () => {
 						)}
 					</div>
 					<form onSubmit={handleSubmit} className="grid grid-cols-1 gap-y-5">
-						<label>
+						<label htmlFor="subscription-email">
 							<span className="sr-only">Email</span>
-							<input
-								type="email"
-								placeholder="Email"
-								name="email"
-								required
-								className="font-roboto p-4 lg:p-5 w-full bg-[#E3E3E3] rounded-lg"
+							<FormInput
+								bgColor={"light"}
+								typeInput={"email"}
+								placeHolder={"Email"}
+								name={"subscription-email"}
+								id={"subscription-email"}
 							/>
 						</label>
 						<p className="font-roboto text-center">

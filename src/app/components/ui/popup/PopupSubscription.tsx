@@ -16,7 +16,7 @@ export const submitSubscriptionForm = async (
 ) => {
 	try {
 		let user = {
-			email: (formData.get("email") as string) || "",
+			email: (formData.get("subscription-email") as string) || "",
 		};
 
 		let res;
@@ -135,8 +135,8 @@ const PopupSubscription: FC<PopupSubscriptionProps> = (props) => {
 									isSubmitted
 										? "animate-slideOut"
 										: animateForm
-											? "animate-slideIn"
-											: ""
+										? "animate-slideIn"
+										: ""
 								}`}
 							>
 								{!isSubmitted && (
@@ -149,12 +149,16 @@ const PopupSubscription: FC<PopupSubscriptionProps> = (props) => {
 											className="flex flex-col justify-evenly mx-auto w-full"
 											onSubmit={handleSubmit}
 										>
-											<label className="text-white font-robotoRegular mt-3 grid grid-cols-1 items-center">
+											<label
+												htmlFor="subscription-email"
+												className="text-white font-robotoRegular mt-3 grid grid-cols-1 items-center"
+											>
 												<FormInput
 													typeInput="email"
-													name="email"
+													name="subscription-email"
 													placeHolder="Email"
-													id="email"
+													id="subscription-email"
+													bgColor="dark"
 												/>
 											</label>
 											<div className="font-roboto flex flex-col justify-evenly gap-y-2 h-1/4 w-full my-5">
@@ -188,9 +192,34 @@ const PopupSubscription: FC<PopupSubscriptionProps> = (props) => {
 							>
 								{isSubmitted && (
 									<>
-										<p className="text-white text-center text-sm sm:text-xl my-auto">
-											{message}
-										</p>
+										{isLoading ? (
+											<svg
+												viewBox="0 0 50 50"
+												xmlns="http://www.w3.org/2000/svg"
+												fill="none"
+												className="w-full h-11"
+											>
+												<path
+													fill="#A2A2A2"
+													d="M43.935,25.145c0-10.318-8.362-18.68-18.68-18.68c-10.317,0-18.68,8.362-18.68,18.68h4.068
+							c0-8.073,6.539-14.612,14.612-14.612c8.073,0,14.612,6.539,14.612,14.612H43.935z"
+												>
+													<animateTransform
+														attributeType="xml"
+														attributeName="transform"
+														type="rotate"
+														from="0 25 25"
+														to="360 25 25"
+														dur="0.6s"
+														repeatCount="indefinite"
+													/>
+												</path>
+											</svg>
+										) : (
+											<p className="text-white text-center text-sm sm:text-xl my-auto">
+												{message}
+											</p>
+										)}
 										<div className="w-1/2">
 											<GreenButton
 												description={
