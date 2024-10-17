@@ -12,6 +12,7 @@ export const submitSubscriptionForm = async (
 ) => {
 	try {
 		let user = {
+			name: (formData.get("subscription-name") as string) || "",
 			email: (formData.get("subscription-email") as string) || "",
 		};
 
@@ -136,6 +137,16 @@ const EmailSubscription: FC = () => {
 						)}
 					</div>
 					<form onSubmit={handleSubmit} className="grid grid-cols-1 gap-y-5">
+						<label htmlFor="subscription-name">
+							<span className="sr-only">Name</span>
+							<FormInput
+								bgColor={"light"}
+								typeInput={"name"}
+								placeHolder={"Name"}
+								name={"subscription-name"}
+								id={"subscription-name"}
+							/>
+						</label>
 						<label htmlFor="subscription-email">
 							<span className="sr-only">Email</span>
 							<FormInput
