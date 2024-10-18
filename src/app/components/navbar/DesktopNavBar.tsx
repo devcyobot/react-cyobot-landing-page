@@ -1,9 +1,9 @@
 "use client";
+import styles from "@/app/components/navbar/link.module.css";
+import { Button } from "@/app/components/ui/Button";
+import PopupDownloads from "@/app/components/ui/popup/PopupDownloads";
 import Link from "next/link";
-import styles from "./link.module.css";
 import { useState } from "react";
-import DownloadButton from "../ui/button/DownloadButton";
-import PopupDownloads from "../ui/popup/PopupDownloads";
 
 export default function DesktopNavBar() {
 	const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -77,14 +77,16 @@ export default function DesktopNavBar() {
 						<Link href="/faq">FAQ</Link>
 					</li>
 				</ul>
-				<Link
-					className="flex justify-center items-center hover:shadow-[4px_4px_4px_#1AD69C] font-roboto text-lg lg:text-xl xl:text-2xl font-medium py-1 lg:py-2 px-3 lg:px-12 text-brand-purple bg-white shadow-md rounded-lg border-none"
-					href="https://cyobot.myshopify.com/"
-					passHref={true}
-					target="_blank"
+				<Button
+					size="lg"
+					variant={"shadow"}
+					className="md:text-xl xl:text-2xl text-brand-purple font-roboto font-medium"
+					onClick={() => {
+						window.open("https://cyobot.myshopify.com", "_blank");
+					}}
 				>
 					Shop
-				</Link>
+				</Button>
 			</div>
 			{showPopup && (
 				<PopupDownloads

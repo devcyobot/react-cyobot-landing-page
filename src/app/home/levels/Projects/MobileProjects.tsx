@@ -1,9 +1,9 @@
 // Source used: https://www.hover.dev/components/carousels
 "use client";
-import Card from "../../../components/ui/card";
-import { FC, useEffect, useState } from "react";
+import Card from "@/app/components/ui/card/card";
+import { Project } from "@/app/home/levels/Projects/rewards";
 import { motion, useMotionValue } from "framer-motion";
-import { Project } from "./rewards";
+import { FC, useEffect, useState } from "react";
 
 const ONE_SECOND = 1000; // millisecond
 const AUTO_DELAY = ONE_SECOND * 5;

@@ -1,9 +1,9 @@
 "use client";
+import { Button } from "@/app/components/ui/Button";
+import PopupDownloads from "@/app/components/ui/popup/PopupDownloads";
 import Link from "next/link";
-import styles from "./link.module.css";
 import { useState } from "react";
-import DownloadButton from "../ui/button/DownloadButton";
-import PopupDownloads from "../ui/popup/PopupDownloads";
+import styles from "./link.module.css";
 
 export default function MobileNavBar() {
 	const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -109,14 +109,15 @@ export default function MobileNavBar() {
 							<Link href="/faq">FAQ</Link>
 						</li>
 					</ul>
-					<Link
-						className="flex justify-center items-center hover:shadow-[4px_4px_4px_#1AD69C] font-roboto text-2xl font-medium w-32 h-12 text-brand-purple bg-white shadow-md rounded-lg border-none"
-						href="https://cyobot.myshopify.com/"
-						passHref={true}
-						target="_blank"
+					<Button
+						variant={"shadow"}
+						className="px-10 py-5 md:text-xl xl:text-2x text-brand-purple"
+						onClick={() => {
+							window.open("https://cyobot.myshopify.com", "_blank");
+						}}
 					>
 						Shop
-					</Link>
+					</Button>
 				</div>
 			</div>
 			{showPopup && (

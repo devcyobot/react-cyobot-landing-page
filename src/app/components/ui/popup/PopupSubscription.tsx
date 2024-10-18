@@ -1,10 +1,10 @@
-import { FC, useEffect, useState } from "react";
-import LogoBadge from "../LogoBadge";
-import FormInput from "../FormInput";
-import Link from "next/link";
-import { GreenButton } from "../button/GreenButton";
-import { useFormState } from "react-dom";
+import { Button } from "@/app/components/ui/Button";
+import FormInput from "@/app/components/ui/FormInput";
+import LogoBadge from "@/app/components/ui/LogoBadge";
 import useSessionStorage from "@/app/hooks/use-session-storage";
+import Link from "next/link";
+import { FC, useEffect, useState } from "react";
+import { useFormState } from "react-dom";
 
 type PopupSubscriptionProps = {
 	onClose?: () => void;
@@ -136,8 +136,8 @@ const PopupSubscription: FC<PopupSubscriptionProps> = (props) => {
 									isSubmitted
 										? "animate-slideOut"
 										: animateForm
-										? "animate-slideIn"
-										: ""
+											? "animate-slideIn"
+											: ""
 								}`}
 							>
 								{!isSubmitted && (
@@ -188,11 +188,15 @@ const PopupSubscription: FC<PopupSubscriptionProps> = (props) => {
 												</p>
 											</div>
 											<div className="sm:w-1/2 mx-auto">
-												<GreenButton
-													description="JOIN OUR LIST"
+												<Button
 													type="submit"
+													size="xl"
 													disabled={isLoading}
-												/>
+													variant={"positive"}
+													className="md:text-xl xl:text-2xl text-white font-roboto"
+												>
+													JOIN OUR LIST
+												</Button>
 											</div>
 										</form>
 									</div>
@@ -233,19 +237,21 @@ const PopupSubscription: FC<PopupSubscriptionProps> = (props) => {
 												{message}
 											</p>
 										)}
-										<div className="w-1/2">
-											<GreenButton
-												description={
-													data !== null && !data.success
-														? "TRY AGAIN"
-														: "SUBSCRIBE MORE"
-												}
-												type="button"
+										<div className="w-fit mx-auto">
+											<Button
+												size="xl"
+												disabled={isLoading}
+												variant={"positive"}
+												className="md:text-xl xl:text-2xl text-white font-roboto"
 												onClick={() => {
 													setAnimateForm(true);
 													setIsSubmitted(false);
 												}}
-											/>
+											>
+												{data !== null && !data.success
+													? "TRY AGAIN"
+													: "SUBSCRIBE MORE"}
+											</Button>
 										</div>
 									</>
 								)}

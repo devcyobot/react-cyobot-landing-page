@@ -1,9 +1,8 @@
 "use client";
+import { Button } from "@/app/components/ui/Button";
+import PopupSubscription from "@/app/components/ui/popup/PopupSubscription";
 import Image from "next/image";
-import { useState } from "react";
-import { GreenButton } from "../components/ui/button/GreenButton";
-import IntroMainImage from "../../../public/intro-robot.png";
-import PopupSubscription from "../components/ui/popup/PopupSubscription";
+import IntroMainImage from "/public/intro-robot.png";
 
 export default function Intro() {
 	return (
@@ -20,10 +19,15 @@ export default function Intro() {
 								Advance your career in 6 months!
 							</p>
 							<div className="w-fit">
-								<GreenButton
-									description={"Start Quest"}
-									link="https://www.roboticsquest.com/"
-								/>
+								<Button
+									variant={"positive"}
+									className="text-white sm:text-xl xl:text-2xl"
+									onClick={() => {
+										window.open("https://www.roboticsquest.com", "_blank");
+									}}
+								>
+									Start Quest
+								</Button>
 							</div>
 						</div>
 					</div>

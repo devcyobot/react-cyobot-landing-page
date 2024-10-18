@@ -1,10 +1,10 @@
 "use client";
-import { FC, FormEvent, useEffect, useState } from "react";
+import { Button } from "@/app/components/ui/Button";
+import FormInput from "@/app/components/ui/FormInput";
 import Image from "next/image";
-import { useFormState } from "react-dom";
-import { GreenButton } from "../components/ui/button/GreenButton";
 import Link from "next/link";
-import FormInput from "../components/ui/FormInput";
+import { FC, useEffect, useState } from "react";
+import { useFormState } from "react-dom";
 
 export const submitSubscriptionForm = async (
 	prevState: { success: boolean; message?: string } | null,
@@ -169,11 +169,15 @@ const EmailSubscription: FC = () => {
 							</Link>
 						</p>
 						<div className="w-2/3 sm:w-1/2 mx-auto">
-							<GreenButton
-								description="JOIN OUR LIST"
+							<Button
 								type="submit"
+								size="xl"
 								disabled={isLoading}
-							/>
+								variant={"positive"}
+								className="md:text-xl xl:text-2xl text-white font-roboto"
+							>
+								JOIN OUR LIST
+							</Button>
 						</div>
 					</form>
 				</div>

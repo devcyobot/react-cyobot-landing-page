@@ -1,10 +1,10 @@
+import Footer from "@/app/components/footer/footer";
+import MobileFooter from "@/app/components/footer/MobileFooter";
+import Navbar from "@/app/components/navbar/navbar";
+import DifficultyProvider from "@/app/context/DifficultyContext";
+import { nunito, roboto, robotoCondensed, vt323 } from "@/app/styles/fonts";
+import "@/app/styles/globals.css";
 import type { Metadata } from "next";
-import { roboto, nunito, vt323, robotoCondensed } from "./styles/fonts";
-import "./styles/globals.css";
-import Footer from "./components/footer/footer";
-import Navbar from "./components/navbar/navbar";
-import DifficultyProvider from "./context/DifficultyContext";
-import MobileFooter from "./components/footer/MobileFooter";
 
 export const metadata: Metadata = {
 	title: "CYOBot",
@@ -26,7 +26,6 @@ export default function RootLayout({
 				className={`bg-brand-dark-2 ${nunito.variable} ${vt323.variable} ${roboto.variable} ${robotoCondensed.variable}`}
 			>
 				<Navbar />
-
 				<DifficultyProvider>{children}</DifficultyProvider>
 				<Footer />
 				<MobileFooter />

@@ -1,7 +1,5 @@
+import { Button } from "@/app/components/ui/Button";
 import { FC, useEffect, useState } from "react";
-import Image from "next/image";
-import DownloadButton from "../button/DownloadButton";
-
 type PopupDownloadsProps = {
 	link: string;
 	description: string;
@@ -47,7 +45,16 @@ const PopupDownloads: FC<PopupDownloadsProps> = (props) => {
 					<p className="mt-2 text-3xl lg:text-4xl text-white font-vt323 text-center">
 						{props.description} Portal
 					</p>
-					<DownloadButton url={props.link} description="Download" />
+					<Button
+						variant={"shadow"}
+						size="lg"
+						className="md:text-xl xl:text-2x text-brand-purple font-roboto font-medium"
+						onClick={() => {
+							window.open(props.link, "_blank");
+						}}
+					>
+						Download
+					</Button>
 				</div>
 			</div>
 		</div>

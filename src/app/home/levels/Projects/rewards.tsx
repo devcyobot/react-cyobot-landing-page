@@ -1,6 +1,6 @@
-import Card from "../../../components/ui/card";
-import { useDifficultyContext } from "../../../context/DifficultyContext";
-import MobileProjects from "./MobileProjects";
+import Card from "@/app/components/ui/card/card";
+import { useDifficultyContext } from "@/app/context/DifficultyContext";
+import MobileProjects from "@/app/home/levels/Projects/MobileProjects";
 
 type ProjectsProps = {
 	data: Project[];
