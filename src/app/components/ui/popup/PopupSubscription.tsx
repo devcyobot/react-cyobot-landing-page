@@ -16,6 +16,7 @@ export const submitSubscriptionForm = async (
 ) => {
 	try {
 		let user = {
+			name: (formData.get("subscription-name") as string) || "",
 			email: (formData.get("subscription-email") as string) || "",
 		};
 
@@ -149,6 +150,18 @@ const PopupSubscription: FC<PopupSubscriptionProps> = (props) => {
 											className="flex flex-col justify-evenly mx-auto w-full"
 											onSubmit={handleSubmit}
 										>
+											<label
+												htmlFor="subscription-name"
+												className="text-white font-robotoRegular mt-3 grid grid-cols-1 items-center"
+											>
+												<FormInput
+													typeInput="name"
+													name="subscription-name"
+													placeHolder="Name"
+													id="subscription-name"
+													bgColor="dark"
+												/>
+											</label>
 											<label
 												htmlFor="subscription-email"
 												className="text-white font-robotoRegular mt-3 grid grid-cols-1 items-center"
