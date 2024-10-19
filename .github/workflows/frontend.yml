@@ -25,6 +25,11 @@ jobs:
           # list of files that changed across commits
           fetch-depth: 0
 
+      - name: Install dependencies
+        run: |
+          npm install eslint-config-next prettier-plugin-organize-imports --save-dev
+          npm ci
+
       - name: Super-linter
         uses: super-linter/super-linter@v7.1.0
         env:
