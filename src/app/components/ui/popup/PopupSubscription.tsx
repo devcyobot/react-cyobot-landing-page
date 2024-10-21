@@ -187,17 +187,15 @@ const PopupSubscription: FC<PopupSubscriptionProps> = (props) => {
 													</Link>
 												</p>
 											</div>
-											<div className="sm:w-1/2 mx-auto">
-												<Button
-													type="submit"
-													size="xl"
-													disabled={isLoading}
-													variant={"positive"}
-													className="md:text-xl xl:text-2xl text-white font-roboto"
-												>
-													JOIN OUR LIST
-												</Button>
-											</div>
+											<Button
+												type="submit"
+												size="xl"
+												disabled={isLoading}
+												variant={"positive"}
+												className="mx-auto md:text-xl xl:text-2xl text-white font-roboto"
+											>
+												JOIN OUR LIST
+											</Button>
 										</form>
 									</div>
 								)}
@@ -237,22 +235,21 @@ const PopupSubscription: FC<PopupSubscriptionProps> = (props) => {
 												{message}
 											</p>
 										)}
-										<div className="w-fit mx-auto">
-											<Button
-												size="xl"
-												disabled={isLoading}
-												variant={"positive"}
-												className="md:text-xl xl:text-2xl text-white font-roboto"
-												onClick={() => {
-													setAnimateForm(true);
-													setIsSubmitted(false);
-												}}
-											>
-												{data !== null && !data.success
-													? "TRY AGAIN"
-													: "SUBSCRIBE MORE"}
-											</Button>
-										</div>
+
+										<Button
+											size="xl"
+											disabled={isLoading}
+											variant={"positive"}
+											className="mx-auto md:text-xl xl:text-2xl text-white font-roboto"
+											onClick={() => {
+												setAnimateForm(true);
+												setIsSubmitted(false);
+											}}
+										>
+											{data !== null && !data.success
+												? "TRY AGAIN"
+												: "SUBSCRIBE MORE"}
+										</Button>
 									</>
 								)}
 							</div>

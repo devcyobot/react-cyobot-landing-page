@@ -52,7 +52,7 @@ export default function DesktopNavBar() {
 									onClick={() =>
 										handleClickDownloadOption(
 											"Python",
-											"https://drive.google.com/uc?%20export=download&id=1YfRPhSK-S0nsumdJqDb-pdz0eq0X9PQ1"
+											`${process.env.NEXT_PUBLIC_DASHBOARD_URL}/api/media/file/python-portal.zip`
 										)
 									}
 									className="w-full px-4 py-2 text-white hover:text-brand-green"
@@ -63,7 +63,7 @@ export default function DesktopNavBar() {
 									onClick={() =>
 										handleClickDownloadOption(
 											"Block",
-											"https://drive.google.com/uc?%20export=download&id=1iAsTuD3ixco-J1ERjiKxOyPH6YPlRRy2"
+											`${process.env.NEXT_PUBLIC_DASHBOARD_URL}/api/media/file/block-portal.zip`
 										)
 									}
 									className="w-full px-4 py-2 text-white hover:text-brand-green"
