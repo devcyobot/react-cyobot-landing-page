@@ -1,11 +1,11 @@
 import * as React from "react";
 
+import { Badge } from "@/app/components/ui/Badge";
+import { useCategoryByIds } from "@/app/hooks/use-categories-by-ids";
 import { useMedia } from "@/app/hooks/use-media";
 import { Category, Media } from "@/app/types";
 import { cn } from "@/app/utils/cn";
 import Image from "next/image";
-import { Badge } from "@/app/components/ui/Badge";
-import { useCategoryByIds } from "@/app/hooks/use-categories-by-ids";
 
 const BlogCard = React.forwardRef<
 	HTMLDivElement,
@@ -95,11 +95,12 @@ const BlogCardCategory = React.forwardRef<
 	React.HTMLAttributes<HTMLDivElement> & { category: (Category | string)[] }
 >(async ({ className, ...props }, ref) => {
 	const categoryIds = Array.from(
-        new Set(props.category
-            ? props.category.filter((cat) => typeof cat === "string")
-            : []
-        )
-    )
+		new Set(
+			props.category
+				? props.category.filter((cat) => typeof cat === "string")
+				: []
+		)
+	);
 	const categoryList = await useCategoryByIds(categoryIds);
 	return (
 		<div ref={ref} className={cn("text-sm text-muted-foreground", className)}>
@@ -133,9 +134,9 @@ BlogCardFooter.displayName = "BlogCardFooter";
 
 export {
 	BlogCard,
+	BlogCardCategory,
 	BlogCardContent,
 	BlogCardDescription,
-	BlogCardCategory,
 	BlogCardFooter,
 	BlogCardHeader,
 	BlogCardImage,

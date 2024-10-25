@@ -1,4 +1,4 @@
-import { Roboto, Nunito, VT323, Roboto_Condensed } from "next/font/google";
+import { Nunito, Roboto, Roboto_Condensed, VT323 } from "next/font/google";
 
 export const roboto = Roboto({
 	weight: ["100", "300", "400", "500", "700"],

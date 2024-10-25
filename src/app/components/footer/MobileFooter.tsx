@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import AccordionFooter from "../ui/AccordionFooter";
 import { options, productsLinks, resourcesLinks } from "../../data/FooterLinks";
+import AccordionFooter from "../ui/AccordionFooter";
 
 export default function MobileFooter() {
 	return (

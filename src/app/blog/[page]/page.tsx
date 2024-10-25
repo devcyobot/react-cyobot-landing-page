@@ -2,7 +2,7 @@ import BlogList from "@/app/blog/BlogList";
 import Pagination from "@/app/components/ui/Pagination";
 import { useBlogByPage } from "@/app/hooks/use-blog-by-page";
 
-const Blog = async({ params }: { params: { page: string } }) => {
+const Blog = async ({ params }: { params: { page: string } }) => {
 	const currentPage = parseInt(params.page, 10) || 1;
 	const { blogsPerPage, totalPages } = await useBlogByPage(currentPage);
 
@@ -11,7 +11,7 @@ const Blog = async({ params }: { params: { page: string } }) => {
 		<main className="w-4/5 sm:w-[70%] mx-auto min-h-[85vh] max-w-[1536px] bg-brand-dark-2 grid lg:grid-cols-1 pt-16 md:pt-24 gap-10">
 			{/* <FilterSearchBar data={["dev"]} /> */}
 			<section className="flex h-full flex-col justify-between w-full mx-auto gap-6">
-				<BlogList data={blogsPerPage}/>
+				<BlogList data={blogsPerPage} />
 				<Pagination currentPage={currentPage} totalPages={totalPages} />
 			</section>
 		</main>

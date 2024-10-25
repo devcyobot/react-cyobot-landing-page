@@ -1,9 +1,8 @@
 "use client";
 import { levelsData } from "../../data/levelsData";
-import Time from "./time";
 import Tasks from "./Projects/rewards";
 import Summary from "./objectives";
-import { useState } from "react";
+import Time from "./time";
 // --------TESTING--------------
 import { imageCarousel } from "../../data/imageCarousel";
 import DesktopCarousel from "./desktopCarousel";

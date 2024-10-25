@@ -1,12 +1,12 @@
 "use client";
-import { FC, useState } from "react";
 import {
 	Select,
+	SelectContent,
 	SelectItem,
 	SelectTrigger,
 	SelectValue,
-	SelectContent,
 } from "@/app/components/ui/Select";
+import { FC, useState } from "react";
 
 type FilterSearchBarProps = { data: string[] };
 

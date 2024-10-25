@@ -1,7 +1,7 @@
 import {
 	BlogCard,
-	BlogCardContent,
 	BlogCardCategory,
+	BlogCardContent,
 	BlogCardDescription,
 	BlogCardHeader,
 	BlogCardImage,
@@ -11,13 +11,11 @@ import { Link } from "@/app/components/ui/Link";
 import { WebsiteBlog } from "@/app/types";
 import { FC } from "react";
 
-type BlogListProps = { 
-	data: WebsiteBlog[]
+type BlogListProps = {
+	data: WebsiteBlog[];
 };
 
-const BlogList: FC<BlogListProps> = ({ 
-	data: blogCardData
-}) => {
+const BlogList: FC<BlogListProps> = ({ data: blogCardData }) => {
 	return (
 		<div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-10 lg:gap-8">
 			{blogCardData.length > 0 ? (
