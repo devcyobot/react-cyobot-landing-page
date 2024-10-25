@@ -9,6 +9,7 @@ export const useBlogByPage = async (
 	blogsPerPage: WebsiteBlog[];
 	totalPages: number;
 }> => {
+	"use server"
 	try {
 		const blogResponse = await fetch(
 			`${process.env.NEXT_PUBLIC_DASHBOARD_URL}/api/website-blogs?${qs.stringify(
@@ -19,7 +20,7 @@ export const useBlogByPage = async (
 					where: { _status: { equals: "published" } },
 				}
 			)}`,
-			{ next: { revalidate: 5 } }
+			{ cache: "no-store" }
 		);
 
 		if (!blogResponse.ok) {

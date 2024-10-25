@@ -1,6 +1,7 @@
 import {
 	BlogCard,
 	BlogCardContent,
+	BlogCardCategory,
 	BlogCardDescription,
 	BlogCardHeader,
 	BlogCardImage,
@@ -10,9 +11,13 @@ import { Link } from "@/app/components/ui/Link";
 import { WebsiteBlog } from "@/app/types";
 import { FC } from "react";
 
-type BlogListProps = { data: WebsiteBlog[] };
+type BlogListProps = { 
+	data: WebsiteBlog[]
+};
 
-const BlogList: FC<BlogListProps> = ({ data: blogCardData }) => {
+const BlogList: FC<BlogListProps> = ({ 
+	data: blogCardData
+}) => {
 	return (
 		<div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-10 lg:gap-8">
 			{blogCardData.length > 0 ? (
@@ -33,22 +38,23 @@ const BlogList: FC<BlogListProps> = ({ data: blogCardData }) => {
 							<BlogCardDescription className="font-nunito line-clamp-6 mb-12">
 								{card.description}
 							</BlogCardDescription>
-							{/* <div className="flex flex-row flex-wrap mt-4 gap-y-1 w-[60%]">
-								{card.categories.length > 0 &&
-									card.categories.map((category, i) => (
+							<div className="flex flex-row flex-wrap mt-4 gap-y-1 w-[60%]">
+								<BlogCardCategory category={card.category ?? []} />
+								{/* {categoryList.length > 0 &&
+									categoryList.map((category, i) => (
 										<Badge
 											key={i}
 											// key={act.tags.topic.slug}
 											// style={{ backgroundColor: act.tags.topic.color }}
 											className="mr-1"
 										>
-											{category}
+											{category.displayName}
 										</Badge>
-									))}
-							</div> */}
+								))} */}
+							</div>
 						</BlogCardContent>
 						<Link
-							href=""
+							href={`/blog-details/${card.id}`}
 							variant={"outline"}
 							className="absolute bottom-5 right-5 text-brand-purple"
 						>

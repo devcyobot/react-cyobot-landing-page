@@ -1,9 +1,11 @@
 import * as React from "react";
 
 import { useMedia } from "@/app/hooks/use-media";
-import { Media } from "@/app/types";
+import { Category, Media } from "@/app/types";
 import { cn } from "@/app/utils/cn";
 import Image from "next/image";
+import { Badge } from "@/app/components/ui/Badge";
+import { useCategoryByIds } from "@/app/hooks/use-categories-by-ids";
 
 const BlogCard = React.forwardRef<
 	HTMLDivElement,
@@ -88,6 +90,35 @@ const BlogCardContent = React.forwardRef<
 ));
 BlogCardContent.displayName = "BlogCardContent";
 
+const BlogCardCategory = React.forwardRef<
+	HTMLDivElement,
+	React.HTMLAttributes<HTMLDivElement> & { category: (Category | string)[] }
+>(async ({ className, ...props }, ref) => {
+	const categoryIds = Array.from(
+        new Set(props.category
+            ? props.category.filter((cat) => typeof cat === "string")
+            : []
+        )
+    )
+	const categoryList = await useCategoryByIds(categoryIds);
+	return (
+		<div ref={ref} className={cn("text-sm text-muted-foreground", className)}>
+			{categoryList.categoryList.length > 0 &&
+				categoryList.categoryList.map((category, i) => (
+					<Badge
+						key={i}
+						// key={act.tags.topic.slug}
+						// style={{ backgroundColor: act.tags.topic.color }}
+						className="mr-1"
+					>
+						{category.displayName}
+					</Badge>
+				))}
+		</div>
+	);
+});
+BlogCardCategory.displayName = "BlogCardCategory";
+
 const BlogCardFooter = React.forwardRef<
 	HTMLDivElement,
 	React.HTMLAttributes<HTMLDivElement>
@@ -104,6 +135,7 @@ export {
 	BlogCard,
 	BlogCardContent,
 	BlogCardDescription,
+	BlogCardCategory,
 	BlogCardFooter,
 	BlogCardHeader,
 	BlogCardImage,
