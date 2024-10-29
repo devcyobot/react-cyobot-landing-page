@@ -1,3 +1,4 @@
+"use server";
 import { Media } from "@/app/types";
 
 export const useMedia = async (media: string | Media | null | undefined) => {

@@ -1,6 +1,7 @@
 import { LayoutBlockTemplate } from "@/app/components/block/layout-block-template";
 import { Badge } from "@/app/components/ui/Badge";
-import useBlogContentByID from "@/app/hooks/use-blog-content-by-id";
+import useBlogContentById from "@/app/hooks/use-blog-content-by-id";
+import { useBlogNeighbors } from "@/app/hooks/use-blog-neighbors";
 import { useCategoryByIds } from "@/app/hooks/use-categories-by-ids";
 import { useMedia } from "@/app/hooks/use-media";
 import { Media } from "@/app/types";
@@ -9,24 +10,14 @@ import Image from "next/image";
 import Link from "next/link";
 import { redirect } from "next/navigation";
 
-const previousBlog = {
-	title: "Understanding IoT with Arduino",
-	link: "/blog/1",
-	image: "/about-main.jpg",
-};
-
-const nextBlog = {
-	title: "How to Build a Smart Garden with Arduino",
-	link: "/blog/1",
-	image: "/about-main.jpg",
-};
-
 const BlogDetails = async ({ params }: { params: { blogId: string } }) => {
 	const blogId = params.blogId;
-	const blogData = await useBlogContentByID(blogId);
+	const blogData = await useBlogContentById(blogId);
 	if (!blogData) {
 		redirect("/blog/1");
 	}
+
+	const { previousBlog, nextBlog } = await useBlogNeighbors(blogData);
 
 	const categoryIds = Array.from(
 		new Set(
@@ -37,89 +28,130 @@ const BlogDetails = async ({ params }: { params: { blogId: string } }) => {
 	);
 	const { categoryList } = await useCategoryByIds(categoryIds);
 	const featuredImage: Media | null = await useMedia(blogData.featuredImage);
+	const previousBlogImage: Media | null = await useMedia(
+		previousBlog ? previousBlog.featuredImage : null
+	);
+	const nextBlogImage: Media | null = await useMedia(
+		nextBlog ? nextBlog.featuredImage : null
+	);
 	if (!featuredImage) return null;
+
 	return (
 		<main className="w-full mx-auto bg-gray-100 flex flex-col items-center">
-			{/* Featured Image */}
-			<div className="relative w-full h-80 mt-24">
-				<Image
-					src={`${process.env.NEXT_PUBLIC_DASHBOARD_URL}${featuredImage.url}`}
-					alt={featuredImage.alt ?? ""}
-					layout="fill"
-					objectFit="cover"
-					className=""
-				/>
-			</div>
-			<div className="bg-gray-100 w-full max-w-4xl rounded-lg">
-				{/* Breadcrumb */}
-				<section className="max-w-4xl mx-auto py-4">
-					<nav className="text-sm text-gray-500">
+			<div className="flex flex-col lg:flex-row w-full my-12 bg-[#f3d1af] h-[400px] lg:mt-24 ">
+				<div className="flex-1 p-4 lg:p-6 flex flex-col justify-between">
+					<nav className="text-sm text-gray-500 mb-2">
 						<Link href="/blog/1" className="hover:text-gray-800">
 							Blog Home
 						</Link>
 						<span className="mx-2"> &gt; </span>
 						<span className="text-gray-800">{blogData.pageTitle}</span>
 					</nav>
-				</section>
-
-				{/* Blog Title */}
-				<h1 className="text-4xl font-bold text-gray-800 mb-4">
-					{blogData.pageTitle}
-				</h1>
-
-				{/* Date */}
-				<div className="flex justify-between text-gray-600 mb-6">
-					<p className="text-md">{formatDate(blogData.publishedDate)}</p>
+					<div className="flex-grow">
+						<h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-4">
+							{blogData.pageTitle}
+						</h1>
+					</div>
+					<div className="text-gray-600">
+						<p className="text-sm sm:text-base">
+							{formatDate(blogData.publishedDate)}
+						</p>
+						<p className="text-xs sm:text-sm font-light">
+							{blogData.description}
+						</p>
+					</div>
 				</div>
+				<div className="flex-1 relative w-full h-full lg:h-auto shadow-md">
+					<Image
+						src={`${process.env.NEXT_PUBLIC_DASHBOARD_URL}${featuredImage.url}`}
+						alt={featuredImage.alt ?? ""}
+						layout="fill"
+						objectFit="cover"
+					/>
+				</div>
+			</div>
 
-				{/* Blog Content */}
-				<article className="prose prose-lg max-w-none text-gray-700">
+			{/* content */}
+			<div className="bg-gray-100 w-full max-w-4xl px-8 rounded-lg">
+				<article className="prose prose-lg max-w-full text-gray-700 mb-8">
 					{blogData.contents.map((content, i) => (
 						<LayoutBlockTemplate layoutBlock={content} key={i} />
 					))}
 				</article>
-
-				<section className="mt-12">
-					<h2 className="text-2xl font-semibold mb-4">Categories</h2>
+				<section className="mt-8">
+					<h2 className="text-xl sm:text-2xl font-semibold mb-4">Categories</h2>
 					<div className="flex flex-wrap gap-2">
 						{categoryList.length > 0 &&
 							categoryList.map((category, i) => (
-								<Badge
-									key={i}
-									// key={act.tags.topic.slug}
-									// style={{ backgroundColor: act.tags.topic.color }}
-									className="mr-1"
-								>
+								<Badge key={i} className="mr-1">
 									{category.displayName}
 								</Badge>
 							))}
 					</div>
 				</section>
-
-				{/* Divider Line */}
-				<div className="border-t border-gray-300 my-12"></div>
-
-				{/* Previous and Next Blog Posts */}
-				{/* <section className="max-w-7xl mx-auto px-4 py-8 grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <Link href={previousBlog.link} className="flex flex-col items-center bg-gray-100 p-6 rounded-lg hover:bg-gray-200 transition-colors duration-300">
-                        <h3 className="text-center text-lg text-gray-600 mb-4">PREVIOUS BLOG POST</h3>
-                        <Image src={previousBlog.image} alt={previousBlog.title} width={400} height={250} className="rounded-md" />
-                        <p className="mt-4 text-center text-blue-600 hover:text-blue-800 transition-colors duration-300">
-                        {previousBlog.title}
-                        </p>
-                    </Link>
-
-                    <Link href={nextBlog.link} className="flex flex-col items-center bg-gray-100 p-6 rounded-lg hover:bg-gray-200 transition-colors duration-300">
-                        <h3 className="text-center text-lg text-gray-600 mb-4">NEXT BLOG POST</h3>
-                        <Image src={nextBlog.image} alt={nextBlog.title} width={400} height={250} className="rounded-md" />
-                        <p className="mt-4 text-center text-blue-600 hover:text-blue-800 transition-colors duration-300">
-                        {nextBlog.title}
-                        </p>
-                    </Link>
-                </section> */}
+				<div className="border-t border-gray-300 my-8"></div>
+				<section className="grid grid-cols-1 md:grid-cols-2 gap-4 p-4">
+					{previousBlog && (
+						<Link
+							href={`/blog-details/${previousBlog.id}`}
+							className="flex flex-col items-center bg-gray-200 p-4 rounded-lg 
+										transition-colors duration-300 hover:bg-brand-dark-2 group"
+						>
+							<h3
+								className="text-center text-base sm:text-lg text-brand-purple-dark 
+										mb-2 transition-colors duration-300 group-hover:text-brand-gray-light"
+							>
+								PREVIOUS BLOG POST
+							</h3>
+							<div className="w-[300px] h-[200px] overflow-hidden rounded-md">
+								<Image
+									src={`${process.env.NEXT_PUBLIC_DASHBOARD_URL}${previousBlogImage?.url}`}
+									alt={previousBlog.pageTitle}
+									width={300}
+									height={200}
+									objectFit="cover"
+								/>
+							</div>
+							<p
+								className="mt-2 text-center text-brand-dark-2 
+										transition-colors duration-300 group-hover:text-brand-gray-light"
+							>
+								{previousBlog.pageTitle}
+							</p>
+						</Link>
+					)}
+					{nextBlog && (
+						<Link
+							href={`/blog-details/${nextBlog.id}`}
+							className="flex flex-col items-center bg-gray-200 p-4 rounded-lg 
+										transition-colors duration-300 hover:bg-brand-dark-2 group"
+						>
+							<h3
+								className="text-center text-base sm:text-lg text-brand-purple-dark 
+										mb-2 transition-colors duration-300 group-hover:text-brand-gray-light"
+							>
+								NEXT BLOG POST
+							</h3>
+							<div className="w-[300px] h-[200px] overflow-hidden rounded-md">
+								<Image
+									src={`${process.env.NEXT_PUBLIC_DASHBOARD_URL}${nextBlogImage?.url}`}
+									alt={nextBlog.pageTitle}
+									width={300}
+									height={200}
+									objectFit="cover"
+								/>
+							</div>
+							<p
+								className="mt-2 text-center text-brand-dark-2 
+										transition-colors duration-300 group-hover:text-brand-gray-light"
+							>
+								{nextBlog.pageTitle}
+							</p>
+						</Link>
+					)}
+				</section>
 			</div>
 		</main>
 	);
 };
-
 export default BlogDetails;
