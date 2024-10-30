@@ -2,7 +2,6 @@ import { FC } from "react";
 import { FaqData } from "../data/FaqData";
 import QuestionsList from "./list/QuestionsList";
 
-import ContactForm from "./form/ContactForm";
 import NavigationSideBar from "./navigation/NavigationSideBar";
 
 const FAQ: FC = () => {
@@ -21,7 +20,6 @@ const FAQ: FC = () => {
 					<NavigationSideBar data={sections} />
 					<div className="md:pl-64 w-[90%] mx-auto">
 						<QuestionsList data={FaqData} />
-						<ContactForm />
 					</div>
 				</div>
 			</div>
