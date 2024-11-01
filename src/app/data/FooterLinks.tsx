@@ -42,7 +42,7 @@ export const resourcesLinks: { link: string; title: string }[] = [
 	},
 	{
 		title: "Kickstarter",
-		link: "https://www.kickstarter.com/projects/cyobot/cyocrawler-building-tomorrows-innovators",
+		link: "https://www.kickstarter.com/projects/cyobot/cyobot-a-transformable-quadruped-robot-for-innovation-and-fun?ref=discovery&term=CYOBot&total_hits=2&category_id=338",
 	},
 	{
 		title: "Privacy Policy",
