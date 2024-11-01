@@ -1,8 +1,8 @@
 import Image from "next/image";
-import DesktopNavBar from "./DesktopNavBar";
-import MobileNavBar from "./MobileNavBar";
 import Link from "next/link";
 import Logo from "../../../../public/cyobot-logo.png";
+import DesktopNavBar from "./DesktopNavBar";
+import MobileNavBar from "./MobileNavBar";
 
 export default function Navbar() {
 	return (

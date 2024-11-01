@@ -1,6 +1,6 @@
 "use client";
-import { FC, FormEvent, useEffect, useState } from "react";
 import Image from "next/image";
+import { FC, useEffect, useState } from "react";
 import { useFormState } from "react-dom";
 
 export const submitContactForm = async (
