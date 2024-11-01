@@ -19,7 +19,7 @@ const DownloadsPage: FC = () => {
 						key={i}
 						className="font-roboto relative max-h-[40rem] min-h-72"
 					>
-						<figure className="relative h-80 mx-auto">
+						<figure className="relative h-56 sm:h-80 mx-auto">
 							<Image
 								src={item.imageSrc}
 								alt={item.imageAlt}
