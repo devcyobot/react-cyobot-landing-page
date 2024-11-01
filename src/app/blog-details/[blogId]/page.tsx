@@ -62,11 +62,13 @@ const BlogDetails = async ({ params }: { params: { blogId: string } }) => {
 					</div>
 				</div>
 				<div className="flex-1 relative w-full h-full lg:h-auto shadow-md">
-					<Image
-						src={`${process.env.NEXT_PUBLIC_DASHBOARD_URL}${featuredImage.url}`}
-						alt={featuredImage.alt ?? ""}
-						layout="fill"
-						objectFit="cover"
+					 <Image
+						src={featuredImage?.url ? `${process.env.NEXT_PUBLIC_DASHBOARD_URL}${featuredImage.url}` : ''}
+						alt={featuredImage?.alt || ""}
+						fill
+						sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+						style={{ objectFit: "cover" }}
+						priority
 					/>
 				</div>
 			</div>
@@ -103,13 +105,15 @@ const BlogDetails = async ({ params }: { params: { blogId: string } }) => {
 							>
 								PREVIOUS BLOG POST
 							</h3>
-							<div className="w-[300px] h-[200px] overflow-hidden rounded-md">
+							<div className="w-full h-full overflow-hidden rounded-md">
 								<Image
-									src={`${process.env.NEXT_PUBLIC_DASHBOARD_URL}${previousBlogImage?.url}`}
-									alt={previousBlog.pageTitle}
+									src={previousBlogImage?.url ? `${process.env.NEXT_PUBLIC_DASHBOARD_URL}${previousBlogImage.url}` : ''}
+									alt={previousBlog.pageTitle || "Blog Image"}
 									width={300}
 									height={200}
-									objectFit="cover"
+									sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+									style={{ width: "100%", height: "100%" }}
+									priority		
 								/>
 							</div>
 							<p
@@ -132,13 +136,15 @@ const BlogDetails = async ({ params }: { params: { blogId: string } }) => {
 							>
 								NEXT BLOG POST
 							</h3>
-							<div className="w-[300px] h-[200px] overflow-hidden rounded-md">
+							<div className="w-full h-full overflow-hidden rounded-md">
 								<Image
-									src={`${process.env.NEXT_PUBLIC_DASHBOARD_URL}${nextBlogImage?.url}`}
-									alt={nextBlog.pageTitle}
+									src={nextBlogImage?.url ? `${process.env.NEXT_PUBLIC_DASHBOARD_URL}${nextBlogImage.url}` : ''}
+									alt={nextBlog.pageTitle || "Blog Image"}
 									width={300}
 									height={200}
-									objectFit="cover"
+									sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+									style={{ width: "100%", height: "100%" }}		
+									priority
 								/>
 							</div>
 							<p

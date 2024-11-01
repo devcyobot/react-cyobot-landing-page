@@ -36,7 +36,7 @@ const BlogList: FC<BlogListProps> = ({ data: blogCardData }) => {
 							<BlogCardDescription className="font-nunito line-clamp-6 mb-12">
 								{card.description}
 							</BlogCardDescription>
-							<div className="flex flex-row flex-wrap mt-4 gap-y-1 w-[60%]">
+							<div className="flex flex-row flex-wrap mt-4 gap-y-1 w-[60%] absolute bottom-7">
 								<BlogCardCategory category={card.category ?? []} />
 								{/* {categoryList.length > 0 &&
 									categoryList.map((category, i) => (
