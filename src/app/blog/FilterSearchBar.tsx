@@ -11,6 +11,7 @@ import { useParams, useRouter } from "next/navigation";
 import { FC, useState } from "react";
 import { Button } from "../components/ui/Button";
 
+
 type FilterSearchBarProps = { data: Category[] };
 
 const FilterSearchBar: FC<FilterSearchBarProps> = ({ data }) => {

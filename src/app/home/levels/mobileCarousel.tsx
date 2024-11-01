@@ -1,10 +1,10 @@
 // Source used: https://www.hover.dev/components/carousels
 "use client";
-import { FC } from "react";
 import { motion, useMotionValue } from "framer-motion";
-import { imageCarousel } from "../../data/imageCarousel";
+import { FC } from "react";
 import ImageSlide from "../../components/ui/imageSlide";
 import { useDifficultyContext } from "../../context/DifficultyContext";
+import { imageCarousel } from "../../data/imageCarousel";
 import { ImageData } from "./desktopCarousel";
 
 const DRAG_BUFFER = 50;

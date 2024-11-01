@@ -2,7 +2,9 @@ import { WebsiteBlog } from "@/app/types";
 import { FC } from "react";
 import BlogCardWrapper from "../components/ui/card/BlogCardWrapper";
 
-type BlogListProps = { data: WebsiteBlog[] };
+type BlogListProps = {
+	data: WebsiteBlog[];
+};
 
 const BlogList: FC<BlogListProps> = async ({ data: blogCardData }) => {
 	return (

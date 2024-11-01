@@ -1,3 +1,4 @@
+"use server";
 import { Category } from "@/app/types";
 
 export const useCategories = async () => {

@@ -1,8 +1,8 @@
 import Image from "next/image";
-import { AboutData } from "../data/AboutData";
 import AboutCard from "../components/ui/AboutCard";
-import { TeamImageData } from "../data/TeamImageData";
 import TeamImageCard from "../components/ui/TeamImageCard";
+import { AboutData } from "../data/AboutData";
+import { TeamImageData } from "../data/TeamImageData";
 // import MobileTeamsGalley from './MobileTeamsGallery';
 import MainImage from "../../../public/about-main.jpg";
 

@@ -1,8 +1,8 @@
 "use client";
-import Parallelogram from "../components/ui/parallelogram";
-import { stepsData } from "../data/stepsData";
 import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
+import Parallelogram from "../components/ui/parallelogram";
+import { stepsData } from "../data/stepsData";
 
 export default function Steps() {
 	const [width, setWidth] = useState(0);

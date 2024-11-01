@@ -1,10 +1,10 @@
 "use client";
 import Image from "next/image";
-import { specsDetailsData } from "../data/imageSpecs";
-import DropDown from "../components/ui/DropDown";
 import Link from "next/link";
-import "./specs.css";
 import { useState } from "react";
+import DropDown from "../components/ui/DropDown";
+import { specsDetailsData } from "../data/imageSpecs";
+import "./specs.css";
 
 export default function Specs() {
 	const [current, setCurrent] = useState<number>(0);

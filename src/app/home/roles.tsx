@@ -1,4 +1,3 @@
-import Hexagon from "../components/ui/hexagon";
 import Link from "next/link";
 import HexagonBadgeMatrix from "../components/ui/honeycomb";
 import { hexagonData } from "../data/hexagonData";
