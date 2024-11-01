@@ -21,7 +21,7 @@ const linkVariants = cva(
 				sm: "h-9 rounded-md px-3",
 				lg: "h-11 rounded-md px-10",
 				xl: "rounded-md px-16 py-3",
-				icon: "h-10 w-10",
+				icon: "h-14 w-14",
 			},
 		},
 		defaultVariants: {
@@ -35,7 +35,6 @@ export interface LinkProps
 	extends React.AnchorHTMLAttributes<HTMLAnchorElement>,
 		VariantProps<typeof linkVariants> {
 	asChild?: boolean;
-	href: string;
 }
 
 const Link = React.forwardRef<HTMLAnchorElement, LinkProps>(
