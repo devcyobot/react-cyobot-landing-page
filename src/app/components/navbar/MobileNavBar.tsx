@@ -76,17 +76,17 @@ export default function MobileNavBar() {
 							</Link>
 							<Link
 								className="hover:text-brand-green w-full text-start"
-								href="/faq"
-								onClick={handleDrawerToggle}
-							>
-								FAQ
-							</Link>
-							<Link
-								className="hover:text-brand-green w-full text-start"
 								href="/downloads"
 								onClick={handleDrawerToggle}
 							>
 								Downloads
+							</Link>
+							<Link
+								className="hover:text-brand-green w-full text-start"
+								href="/faq"
+								onClick={handleDrawerToggle}
+							>
+								FAQ
 							</Link>
 						</div>
 					</li>

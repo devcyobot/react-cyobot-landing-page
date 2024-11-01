@@ -41,15 +41,15 @@ export default function DesktopNavBar() {
 						</Link>
 						<Link
 							className="hover:text-brand-green w-full text-start"
-							href="/faq"
-						>
-							FAQ
-						</Link>
-						<Link
-							className="hover:text-brand-green w-full text-start"
 							href="/downloads"
 						>
 							Downloads
+						</Link>
+						<Link
+							className="hover:text-brand-green w-full text-start"
+							href="/faq"
+						>
+							FAQ
 						</Link>
 					</div>
 				</li>
