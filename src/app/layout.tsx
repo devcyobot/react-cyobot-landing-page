@@ -1,9 +1,10 @@
 import Footer from "@/app/components/footer/footer";
-import MobileFooter from "@/app/components/footer/MobileFooter";
 import Navbar from "@/app/components/navbar/navbar";
+import { Link } from "@/app/components/ui/Link";
 import DifficultyProvider from "@/app/context/DifficultyContext";
 import { nunito, roboto, robotoCondensed, vt323 } from "@/app/styles/fonts";
 import "@/app/styles/globals.css";
+import { ShoppingCart } from "lucide-react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -27,8 +28,17 @@ export default function RootLayout({
 			>
 				<Navbar />
 				<DifficultyProvider>{children}</DifficultyProvider>
+				<Link
+					className="rounded-full text-white bottom-3 right-3 sm:bottom-5 sm:right-5 z-10 fixed flex justify-center items-center"
+					variant={"positive"}
+					size={"icon"}
+					aria-label="Shop CYOBot products at Shopify"
+					href="https://cyobot.myshopify.com/"
+					target="_blank"
+				>
+					<ShoppingCart />
+				</Link>
 				<Footer />
-				<MobileFooter />
 			</body>
 		</html>
 	);
