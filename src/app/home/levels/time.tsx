@@ -1,6 +1,6 @@
-import { useDifficultyContext } from "../../context/DifficultyContext";
-import Bar from "../../components/ui/bar";
 import Image from "next/image";
+import Bar from "../../components/ui/bar";
+import { useDifficultyContext } from "../../context/DifficultyContext";
 
 type TimeProps = {
 	image: {

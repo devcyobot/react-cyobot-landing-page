@@ -1,5 +1,5 @@
 "use client";
-import { FC, useState, createContext, useContext } from "react";
+import { createContext, FC, useContext, useState } from "react";
 
 export type CurrentDifficulty = {
 	label: string;

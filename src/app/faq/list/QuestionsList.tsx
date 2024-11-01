@@ -1,6 +1,6 @@
 import { FC } from "react";
 import AccordionQA from "../../components/ui/AccordionQA";
-import { FaqDataType, FaqData } from "../../data/FaqData";
+import { FaqData, FaqDataType } from "../../data/FaqData";
 type QuestionsListProps = {
 	data: FaqDataType[];
 };

@@ -1,14 +1,17 @@
-"use client";
 import { Link } from "@/app/components/ui/Link";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { FC } from "react";
 
 type PaginationProps = {
+	activeCategory: string;
 	currentPage: number;
 	totalPages: number;
 };
-const Pagination: FC<PaginationProps> = ({ totalPages, currentPage }) => {
-	console.log(`/blog?page=${currentPage + 1}`);
+const Pagination: FC<PaginationProps> = ({
+	totalPages,
+	currentPage,
+	activeCategory,
+}) => {
 	return (
 		<div className="w-full grid grid-cols-3 items-center">
 			<div className="justify-self-start">
@@ -16,7 +19,7 @@ const Pagination: FC<PaginationProps> = ({ totalPages, currentPage }) => {
 					<Link
 						size={"sm"}
 						variant={"outline"}
-						href={`/blog/${currentPage - 1}`}
+						href={`/blog/${currentPage - 1}/${activeCategory}`}
 						className="text-brand-purple"
 					>
 						<ArrowLeft size={20} />
@@ -32,7 +35,7 @@ const Pagination: FC<PaginationProps> = ({ totalPages, currentPage }) => {
 					<Link
 						size={"sm"}
 						variant={"outline"}
-						href={`/blog/${currentPage + 1}`}
+						href={`/blog/${currentPage + 1}/${activeCategory}`}
 						className="text-brand-purple"
 					>
 						Next

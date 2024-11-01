@@ -1,9 +1,11 @@
-"use server";
 import { WebsiteBlog } from "@/app/types";
 import qs from "qs";
 
-export const useBlogByPage = async (
-	currentPage: number
+export const BLOG_PER_PAGE = 10;
+
+export const useBlogByPageCategory = async (
+	currentPage: number,
+	category: string
 ): Promise<{
 	blogsPerPage: WebsiteBlog[];
 	totalPages: number;
@@ -12,13 +14,18 @@ export const useBlogByPage = async (
 		const blogResponse = await fetch(
 			`${process.env.NEXT_PUBLIC_DASHBOARD_URL}/api/website-blogs?${qs.stringify(
 				{
-					sort: ["-publishedDate", "-createdAt"],
+					sort: "-publishedDate",
 					page: currentPage,
-					limit: 10,
-					where: { _status: { equals: "published" } },
+					limit: BLOG_PER_PAGE,
+					where: {
+						and: [
+							{ _status: { equals: "published" } },
+							{ category: { equals: category } },
+						],
+					},
 				}
 			)}`,
-			{ cache: "no-store" }
+			{ next: { revalidate: 5 } }
 		);
 
 		if (!blogResponse.ok) {
