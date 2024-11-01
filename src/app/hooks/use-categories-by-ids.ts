@@ -1,3 +1,5 @@
+"use server";
+
 import { Category } from "@/app/types";
 import qs from "qs";
 
