@@ -39,7 +39,6 @@ export const submitContactForm = async (
 };
 
 const ContactForm: FC = () => {
-	// const { pending } = useFormStatus();
 	const [isLoading, setIsLoading] = useState<boolean>(false);
 	const [message, setMessage] = useState<string | null>(null);
 	const [data, formAction] = useFormState(submitContactForm, null);
@@ -67,7 +66,7 @@ const ContactForm: FC = () => {
 	}, [data]);
 
 	return (
-		<section className="relative w-full bg-white h-auto max-h-[55rem] sm:max-h-[52rem] lg:max-h-[45rem] grid grid-cols-1 grid-rows-2 lg:grid-cols-2 lg:grid-rows-1 gap-x-3 justify-items-center items-center p-10 lg:p-16 my-5">
+		<section className="min-h-[90vh] relative w-full bg-white h-auto grid grid-cols-1 grid-rows-2 lg:grid-cols-2 lg:grid-rows-1 gap-x-3 justify-items-center items-center p-10 lg:p-16">
 			<div className="z-10 flex flex-col justify-center items-center h-full w-full font-vt323 text-black">
 				<p className="text-center w-full text-lg">Still have more question?</p>
 				<h2 className="w-full text-center text-4xl lg:text-5xl">
