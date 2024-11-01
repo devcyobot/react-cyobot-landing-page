@@ -49,7 +49,7 @@ const BlogCardWrapper: FC<BlogCardWrapper> = async ({ data }) => {
 				</div>
 			</BlogCardContent>
 			<Link
-				href=""
+				href={`/blog-details/${data.id}`}
 				variant={"outline"}
 				className="absolute bottom-5 right-5 text-brand-purple"
 			>
