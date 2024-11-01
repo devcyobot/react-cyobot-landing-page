@@ -1,12 +1,12 @@
+import AccordionFooter from "@/app/components/ui/AccordionFooter";
+import { options, productsLinks, resourcesLinks } from "@/app/data/FooterLinks";
 import Image from "next/image";
 import Link from "next/link";
-import { options, productsLinks, resourcesLinks } from "../../data/FooterLinks";
-import AccordionFooter from "../ui/AccordionFooter";
 
 export default function MobileFooter() {
 	return (
-		<footer className="sm:hidden h-auto bg-brand-dark-2 w-full p-6 flex flex-col justify-evenly">
-			<div className="h-full w-full grid grid-cols-1 grid-rows-2 justify-items-center items-center gap-y-2 sm:gap-y-0">
+		<div className="lg:hidden h-auto bg-brand-dark-2 w-full p-6 flex flex-col justify-evenly">
+			<div className="h-full w-full grid grid-cols-1 grid-rows-2 justify-items-center items-center gap-y-2">
 				<div className="relative h-full w-full">
 					<Image
 						src="/cyobot-logo.png"
@@ -27,54 +27,60 @@ export default function MobileFooter() {
 				<div className="text-white font-vt323 h-40 w-full flex flex-col justify-evenly">
 					<h4 className="font-vt323 text-xl">GET IN TOUCH</h4>
 					<ul className="flex justify-between w-1/2">
-						<Link
-							passHref={true}
-							target="_blank"
-							href={options[0].link}
-							className="relative bg-brand-dark-2 w-10 h-10 overflow-hidden rounded-xl flex items-center justify-center"
-						>
-							<div className="absolute inset-0">
-								<Image
-									src={options[0].src}
-									alt={options[0].alt}
-									fill
-									sizes="33vw"
-									style={{ objectFit: "contain" }}
-								/>
-							</div>
-						</Link>
-						<Link
-							passHref={true}
-							target="_blank"
-							href={options[1].link}
-							className="relative bg-brand-dark-2 w-10 h-10 rounded-full overflow-hidden flex items-center justify-center"
-						>
-							<div className="absolute inset-0">
-								<Image
-									src={options[1].src}
-									alt={options[1].alt}
-									fill
-									sizes="33vw"
-									style={{ objectFit: "cover", transform: "scale(1.07)" }}
-								/>
-							</div>
-						</Link>
-						<Link
-							passHref={true}
-							target="_blank"
-							href={options[2].link}
-							className="relative bg-brand-dark-2 w-10 h-10 rounded-full overflow-hidden flex items-center justify-center"
-						>
-							<div className="absolute inset-0">
-								<Image
-									src={options[2].src}
-									alt={options[2].alt}
-									fill
-									sizes="33vw"
-									style={{ objectFit: "cover" }}
-								/>
-							</div>
-						</Link>
+						<li>
+							<Link
+								aria-label="CYOBot Instagram"
+								target="_blank"
+								href={options[0].link}
+								className="relative bg-brand-dark-2 w-10 h-10 overflow-hidden rounded-xl flex items-center justify-center"
+							>
+								<div className="absolute inset-0">
+									<Image
+										src={options[0].src}
+										alt={options[0].alt}
+										fill
+										sizes="33vw"
+										style={{ objectFit: "contain" }}
+									/>
+								</div>
+							</Link>
+						</li>
+						<li>
+							<Link
+								aria-label="CYOBot Github"
+								target="_blank"
+								href={options[1].link}
+								className="relative bg-brand-dark-2 w-10 h-10 rounded-full overflow-hidden flex items-center justify-center"
+							>
+								<div className="absolute inset-0">
+									<Image
+										src={options[1].src}
+										alt={options[1].alt}
+										fill
+										sizes="33vw"
+										style={{ objectFit: "cover", transform: "scale(1.07)" }}
+									/>
+								</div>
+							</Link>
+						</li>
+						<li>
+							<Link
+								aria-label="CYOBot Facebook"
+								target="_blank"
+								href={options[2].link}
+								className="relative bg-brand-dark-2 w-10 h-10 rounded-full overflow-hidden flex items-center justify-center"
+							>
+								<div className="absolute inset-0">
+									<Image
+										src={options[2].src}
+										alt={options[2].alt}
+										fill
+										sizes="33vw"
+										style={{ objectFit: "cover" }}
+									/>
+								</div>
+							</Link>
+						</li>
 					</ul>
 					<div>
 						<p className="text-base">team.cyobot@gmail.com</p>
@@ -82,6 +88,6 @@ export default function MobileFooter() {
 					</div>
 				</div>
 			</div>
-		</footer>
+		</div>
 	);
 }
