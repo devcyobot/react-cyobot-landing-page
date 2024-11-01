@@ -1,12 +1,19 @@
 import BlogList from "@/app/blog/BlogList";
 import FilterSearchBar from "@/app/blog/FilterSearchBar";
 import Pagination from "@/app/components/ui/Pagination";
-import { useBlogByPage } from "@/app/hooks/use-blog-by-page";
+import { useBlogByPageCategory } from "@/app/hooks/use-blog-by-page-category";
 import { useCategories } from "@/app/hooks/use-categories";
 
-const Blog = async ({ params }: { params: { page: string } }) => {
+const Blog = async ({
+	params,
+}: {
+	params: { page: string; categoryId: string };
+}) => {
 	const currentPage = parseInt(params.page, 10) || 1;
-	const { blogsPerPage, totalPages } = await useBlogByPage(currentPage);
+	const { blogsPerPage, totalPages } = await useBlogByPageCategory(
+		currentPage,
+		params.categoryId
+	);
 	const categories = await useCategories();
 
 	return (
@@ -17,7 +24,7 @@ const Blog = async ({ params }: { params: { page: string } }) => {
 				<Pagination
 					currentPage={currentPage}
 					totalPages={totalPages}
-					activeCategory=""
+					activeCategory={params.categoryId}
 				/>
 			</section>
 		</main>
