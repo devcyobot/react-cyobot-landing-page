@@ -57,7 +57,7 @@ const HexagonBadgeMatrix: React.FC<HexagonBadgeMatrixProps> = ({
 	}, []);
 
 	return (
-		<div className="w-full h-1/2 sm:h-[65%] flex flex-col items-center">
+		<div className="w-full flex flex-col items-center">
 			<div className="flex items-center">
 				{combinedLogos.slice(0, 7).map((logo, index) => (
 					<HexagonBadge

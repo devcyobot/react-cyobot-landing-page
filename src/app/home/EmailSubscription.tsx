@@ -136,7 +136,7 @@ const EmailSubscription: FC = () => {
 							</p>
 						)}
 					</div>
-					<form onSubmit={handleSubmit} className="grid grid-cols-1 gap-y-5">
+					<form onSubmit={handleSubmit} className="grid grid-cols-1 gap-y-5 ">
 						<label htmlFor="subscription-name">
 							<span className="sr-only">Name</span>
 							<FormInput
@@ -168,13 +168,13 @@ const EmailSubscription: FC = () => {
 								Privacy Policy
 							</Link>
 						</p>
-						<div className="w-2/3 sm:w-1/2 mx-auto">
+						<div className="flex justify-center justify-self-center">
 							<Button
 								type="submit"
 								size="xl"
 								disabled={isLoading}
 								variant={"positive"}
-								className="md:text-xl xl:text-2xl text-white font-roboto"
+								className="text-xl xl:text-2xl text-white font-roboto"
 							>
 								JOIN OUR LIST
 							</Button>
