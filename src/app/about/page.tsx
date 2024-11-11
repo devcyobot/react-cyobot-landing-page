@@ -1,10 +1,9 @@
+import AboutCard from "@/app/components/ui/AboutCard";
+import TeamImageCard from "@/app/components/ui/TeamImageCard";
+import { AboutData } from "@/app/data/AboutData";
+import { TeamImageData } from "@/app/data/TeamImageData";
 import Image from "next/image";
-import AboutCard from "../components/ui/AboutCard";
-import TeamImageCard from "../components/ui/TeamImageCard";
-import { AboutData } from "../data/AboutData";
-import { TeamImageData } from "../data/TeamImageData";
-// import MobileTeamsGalley from './MobileTeamsGallery';
-import MainImage from "../../../public/about-main.jpg";
+import MainImage from "/public/about-main.jpg";
 
 export default function About() {
 	return (
@@ -76,7 +75,6 @@ export default function About() {
 						);
 					})}
 				</div>
-				{/* <MobileTeamsGalley data={TeamImageData} /> */}
 			</section>
 		</main>
 	);
