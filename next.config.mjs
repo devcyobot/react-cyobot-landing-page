@@ -16,21 +16,6 @@ const nextConfig = {
 			},
 		],
 	},
-	videos: {
-		remotePatterns: [
-			{
-				protocol: "http",
-				hostname: "localhost",
-				port: "3000",
-				pathname: "/api/media/**",
-			},
-			{
-				protocol: "https",
-				hostname: "quest.cyobot.com",
-				pathname: "/api/media/**",
-			},
-		],
-	},
 };
 
 export default withNextVideo(nextConfig);
