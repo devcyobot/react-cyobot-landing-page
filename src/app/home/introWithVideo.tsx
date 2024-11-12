@@ -11,7 +11,7 @@ export default function IntroWithVideo(): JSX.Element {
 		setIsVideoVisible(false);
 		setTimeout(() => {
 			setIsTitleVisible(true);
-		}, 700);
+		}, 500);
 	};
 
 	const handleReplay = (): void => {
