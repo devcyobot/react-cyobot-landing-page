@@ -39,7 +39,7 @@ export default function IntroWithVideo(): JSX.Element {
 	};
 
 	return (
-		<section className="relative h-[30rem] lg:h-[40rem] w-full pt-16 xl:pt-24 text-white">
+		<section className="relative h-[30rem] lg:h-[40rem] w-full text-white">
 			{isVideoVisible ? (
 				<NextVideo
 					src={`${process.env.NEXT_PUBLIC_DASHBOARD_URL}/api/media/file/intro.mp4`}
