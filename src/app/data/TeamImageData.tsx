@@ -19,9 +19,14 @@ export const TeamImageData: {
 		icon: "/icon/green.png",
 	},
 	{
+		src: "/About/Tam-Le.jpg",
+		alt: "Tam Le",
+		icon: "/icon/blue.png",
+	},
+	{
 		src: "/About/Hoan-Pham.jpg",
 		alt: "Hoan Pham",
-		icon: "/icon/blue.png",
+		icon: "/icon/green-darker.png",
 	},
 	{
 		src: "/About/Minh.jpg",

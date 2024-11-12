@@ -1,3 +1,4 @@
+"use client";
 import { Button } from "@/app/components/ui/Button";
 import FormInput from "@/app/components/ui/FormInput";
 import LogoBadge from "@/app/components/ui/LogoBadge";
