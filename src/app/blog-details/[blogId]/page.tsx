@@ -62,8 +62,12 @@ const BlogDetails = async ({ params }: { params: { blogId: string } }) => {
 					</div>
 				</div>
 				<div className="flex-1 relative w-full h-full lg:h-auto shadow-md">
-					 <Image
-						src={featuredImage?.url ? `${process.env.NEXT_PUBLIC_DASHBOARD_URL}${featuredImage.url}` : ''}
+					<Image
+						src={
+							featuredImage?.url
+								? `${process.env.NEXT_PUBLIC_DASHBOARD_URL}${featuredImage.url}`
+								: ""
+						}
 						alt={featuredImage?.alt || ""}
 						fill
 						sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -107,13 +111,17 @@ const BlogDetails = async ({ params }: { params: { blogId: string } }) => {
 							</h3>
 							<div className="w-full h-full overflow-hidden rounded-md">
 								<Image
-									src={previousBlogImage?.url ? `${process.env.NEXT_PUBLIC_DASHBOARD_URL}${previousBlogImage.url}` : ''}
+									src={
+										previousBlogImage?.url
+											? `${process.env.NEXT_PUBLIC_DASHBOARD_URL}${previousBlogImage.url}`
+											: ""
+									}
 									alt={previousBlog.pageTitle || "Blog Image"}
 									width={300}
 									height={200}
 									sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
 									style={{ width: "100%", height: "100%" }}
-									priority		
+									priority
 								/>
 							</div>
 							<p
@@ -138,12 +146,16 @@ const BlogDetails = async ({ params }: { params: { blogId: string } }) => {
 							</h3>
 							<div className="w-full h-full overflow-hidden rounded-md">
 								<Image
-									src={nextBlogImage?.url ? `${process.env.NEXT_PUBLIC_DASHBOARD_URL}${nextBlogImage.url}` : ''}
+									src={
+										nextBlogImage?.url
+											? `${process.env.NEXT_PUBLIC_DASHBOARD_URL}${nextBlogImage.url}`
+											: ""
+									}
 									alt={nextBlog.pageTitle || "Blog Image"}
 									width={300}
 									height={200}
 									sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-									style={{ width: "100%", height: "100%" }}		
+									style={{ width: "100%", height: "100%" }}
 									priority
 								/>
 							</div>
