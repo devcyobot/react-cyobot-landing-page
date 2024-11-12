@@ -41,7 +41,7 @@ export default function IntroWithVideo(): JSX.Element {
 		<section className="relative aspect-[19/9] w-full text-white">
 			{isVideoVisible ? (
 				<video
-					src={`${process.env.NEXT_PUBLIC_URL}/api/media/file/intro.mp4`}
+					src={`${process.env.NEXT_PUBLIC_DASHBOARD_URL}/api/media/file/intro.mp4`}
 					className="w-full h-full object-cover"
 					controls
 					playsInline

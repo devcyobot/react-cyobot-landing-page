@@ -33,7 +33,7 @@ const BlogCardImage = React.forwardRef<
 		<Image
 			ref={ref}
 			alt={imageData.alt ?? ""}
-			src={`${process.env.NEXT_PUBLIC_URL}${imageData.url}`}
+			src={`${process.env.NEXT_PUBLIC_DASHBOARD_URL}${imageData.url}`}
 			sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
 			fill
 			className={cn("rounded-t-lg object-cover", className)}

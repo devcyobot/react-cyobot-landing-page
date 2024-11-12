@@ -5,7 +5,7 @@ export const useMedia = async (media: string | Media | null | undefined) => {
 		if (media === null || media === undefined) return null;
 		if (typeof media === "string") {
 			const mediaResponse = await fetch(
-				`${process.env.NEXT_PUBLIC_URL}/api/media/${media}`
+				`${process.env.NEXT_PUBLIC_DASHBOARD_URL}/api/media/${media}`
 			);
 			if (!mediaResponse.ok) {
 				throw new Error(

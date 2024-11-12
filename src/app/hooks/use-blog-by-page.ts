@@ -10,12 +10,14 @@ export const useBlogByPage = async (
 }> => {
 	try {
 		const blogResponse = await fetch(
-			`${process.env.NEXT_PUBLIC_URL}/api/website-blogs?${qs.stringify({
-				sort: ["-publishedDate", "-createdAt"],
-				page: currentPage,
-				limit: 10,
-				where: { _status: { equals: "published" } },
-			})}`,
+			`${process.env.NEXT_PUBLIC_DASHBOARD_URL}/api/website-blogs?${qs.stringify(
+				{
+					sort: ["-publishedDate", "-createdAt"],
+					page: currentPage,
+					limit: 10,
+					where: { _status: { equals: "published" } },
+				}
+			)}`,
 			{ cache: "no-store" }
 		);
 

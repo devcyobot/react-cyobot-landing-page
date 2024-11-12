@@ -12,17 +12,19 @@ export const useBlogByPageCategory = async (
 }> => {
 	try {
 		const blogResponse = await fetch(
-			`${process.env.NEXT_PUBLIC_URL}/api/website-blogs?${qs.stringify({
-				sort: "-publishedDate",
-				page: currentPage,
-				limit: BLOG_PER_PAGE,
-				where: {
-					and: [
-						{ _status: { equals: "published" } },
-						{ category: { equals: category } },
-					],
-				},
-			})}`,
+			`${process.env.NEXT_PUBLIC_DASHBOARD_URL}/api/website-blogs?${qs.stringify(
+				{
+					sort: "-publishedDate",
+					page: currentPage,
+					limit: BLOG_PER_PAGE,
+					where: {
+						and: [
+							{ _status: { equals: "published" } },
+							{ category: { equals: category } },
+						],
+					},
+				}
+			)}`,
 			{ next: { revalidate: 5 } }
 		);
 

@@ -6,7 +6,7 @@ export default async function useBlogContentById(
 ): Promise<WebsiteBlog | null> {
 	try {
 		const response = await fetch(
-			`${process.env.NEXT_PUBLIC_URL}/api/website-blogs/${id}`,
+			`${process.env.NEXT_PUBLIC_DASHBOARD_URL}/api/website-blogs/${id}`,
 			{ cache: "no-store" }
 		);
 
