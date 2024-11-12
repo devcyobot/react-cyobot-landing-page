@@ -39,11 +39,11 @@ export const useBlogNeighbors = async (
 
 		const [previousResponse, nextResponse] = await Promise.all([
 			fetch(
-				`${process.env.NEXT_PUBLIC_DASHBOARD_URL}/api/website-blogs?${previousBlogQuery}`,
+				`${process.env.NEXT_PUBLIC_URL}/api/website-blogs?${previousBlogQuery}`,
 				{ cache: "no-store" }
 			),
 			fetch(
-				`${process.env.NEXT_PUBLIC_DASHBOARD_URL}/api/website-blogs?${nextBlogQuery}`,
+				`${process.env.NEXT_PUBLIC_URL}/api/website-blogs?${nextBlogQuery}`,
 				{ cache: "no-store" }
 			),
 		]);

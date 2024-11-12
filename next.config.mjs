@@ -11,7 +11,22 @@ const nextConfig = {
 			},
 			{
 				protocol: "https",
-				hostname: "quest.cybobot.com",
+				hostname: "quest.cyobot.com",
+				pathname: "/api/media/**",
+			},
+		],
+	},
+	videos: {
+		remotePatterns: [
+			{
+				protocol: "http",
+				hostname: "localhost",
+				port: "3000",
+				pathname: "/api/media/**",
+			},
+			{
+				protocol: "https",
+				hostname: "quest.cyobot.com",
 				pathname: "/api/media/**",
 			},
 		],

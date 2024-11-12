@@ -10,7 +10,7 @@ export const useCategoryByIds = async (
 }> => {
 	try {
 		const categoryResponse = await fetch(
-			`${process.env.NEXT_PUBLIC_DASHBOARD_URL}/api/categories?${qs.stringify({
+			`${process.env.NEXT_PUBLIC_URL}/api/categories?${qs.stringify({
 				where: { id: { in: ids } },
 			})}`
 		);

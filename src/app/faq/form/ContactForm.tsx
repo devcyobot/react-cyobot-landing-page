@@ -16,7 +16,7 @@ export const submitContactForm = async (
 
 		let res;
 		res = await fetch(
-			`${process.env.NEXT_PUBLIC_DASHBOARD_URL}/api/landing-page-contacts`,
+			`${process.env.NEXT_PUBLIC_URL}/api/landing-page-contacts`,
 			{
 				method: "POST",
 				credentials: "include",

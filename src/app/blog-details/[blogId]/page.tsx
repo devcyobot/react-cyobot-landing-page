@@ -65,7 +65,7 @@ const BlogDetails = async ({ params }: { params: { blogId: string } }) => {
 					<Image
 						src={
 							featuredImage?.url
-								? `${process.env.NEXT_PUBLIC_DASHBOARD_URL}${featuredImage.url}`
+								? `${process.env.NEXT_PUBLIC_URL}${featuredImage.url}`
 								: ""
 						}
 						alt={featuredImage?.alt || ""}
@@ -113,7 +113,7 @@ const BlogDetails = async ({ params }: { params: { blogId: string } }) => {
 								<Image
 									src={
 										previousBlogImage?.url
-											? `${process.env.NEXT_PUBLIC_DASHBOARD_URL}${previousBlogImage.url}`
+											? `${process.env.NEXT_PUBLIC_URL}${previousBlogImage.url}`
 											: ""
 									}
 									alt={previousBlog.pageTitle || "Blog Image"}
@@ -148,7 +148,7 @@ const BlogDetails = async ({ params }: { params: { blogId: string } }) => {
 								<Image
 									src={
 										nextBlogImage?.url
-											? `${process.env.NEXT_PUBLIC_DASHBOARD_URL}${nextBlogImage.url}`
+											? `${process.env.NEXT_PUBLIC_URL}${nextBlogImage.url}`
 											: ""
 									}
 									alt={nextBlog.pageTitle || "Blog Image"}

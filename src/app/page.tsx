@@ -11,7 +11,7 @@ import Steps from "./home/steps";
 export default function Home() {
 	return (
 		<main className="pt-16 lg:pt-24">
-      <IntroWithVideo />
+			<IntroWithVideo />
 			<Banner />
 			<Intro />
 			<Roles />

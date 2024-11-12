@@ -12,11 +12,7 @@ const RichTextImage = async ({ value }: { value: string | Media }) => {
 		<div className="w-3/4 h-full overflow-hidden mx-auto flex flex-col items-center justify-center py-6">
 			<Image
 				alt={media.alt ?? "Blog Image"}
-				src={
-					media.url
-						? `${process.env.NEXT_PUBLIC_DASHBOARD_URL}${media.url}`
-						: ""
-				}
+				src={media.url ? `${process.env.NEXT_PUBLIC_URL}${media.url}` : ""}
 				height={media.height ?? undefined}
 				width={media.width ?? undefined}
 				className="rounded-md"
