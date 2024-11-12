@@ -11,7 +11,7 @@ export default function IntroWithVideo(): JSX.Element {
 		setIsVideoVisible(false);
 		setTimeout(() => {
 			setIsTitleVisible(true);
-		}, 500);
+		}, 700);
 	};
 
 	const handleReplay = (): void => {
@@ -38,11 +38,11 @@ export default function IntroWithVideo(): JSX.Element {
 	};
 
 	return (
-		<section className="relative h-[30rem] lg:h-[40rem] w-full text-white">
+		<section className="relative aspect-[19/9] w-full text-white">
 			{isVideoVisible ? (
 				<video
 					src={`${process.env.NEXT_PUBLIC_DASHBOARD_URL}/api/media/file/intro.mp4`}
-					className="absolute top-0 left-0 w-full h-full object-cover"
+					className="w-full h-full object-cover"
 					controls
 					playsInline
 					autoPlay
@@ -52,7 +52,7 @@ export default function IntroWithVideo(): JSX.Element {
 				<div className="relative z-10 h-full w-full px-9 sm:pl-16 lg:pl-20 bg-brand-dark-2 flex flex-col items-center justify-center">
 					{isTitleVisible && (
 						<motion.h1
-							className="leading-none text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-center"
+							className="leading-none text-3xl sm:text-5xl md:text-7xl text-center"
 							variants={containerVariants}
 							initial="hidden"
 							animate="visible"
