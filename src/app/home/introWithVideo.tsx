@@ -1,7 +1,6 @@
 "use client";
 import { Button } from "@/app/components/ui/Button";
 import { motion, Variants } from "framer-motion";
-import NextVideo from "next-video";
 import { useState } from "react";
 
 export default function IntroWithVideo(): JSX.Element {
@@ -12,7 +11,7 @@ export default function IntroWithVideo(): JSX.Element {
 		setIsVideoVisible(false);
 		setTimeout(() => {
 			setIsTitleVisible(true);
-		}, 700);
+		}, 500);
 	};
 
 	const handleReplay = (): void => {
@@ -28,7 +27,7 @@ export default function IntroWithVideo(): JSX.Element {
 		visible: {
 			opacity: 1,
 			transition: {
-				staggerChildren: 0.2,
+				staggerChildren: 0.15,
 			},
 		},
 	};
@@ -41,7 +40,7 @@ export default function IntroWithVideo(): JSX.Element {
 	return (
 		<section className="relative h-[30rem] lg:h-[40rem] w-full text-white">
 			{isVideoVisible ? (
-				<NextVideo
+				<video
 					src={`${process.env.NEXT_PUBLIC_DASHBOARD_URL}/api/media/file/intro.mp4`}
 					className="absolute top-0 left-0 w-full h-full object-cover"
 					controls
