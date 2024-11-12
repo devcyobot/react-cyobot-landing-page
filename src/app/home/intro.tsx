@@ -19,7 +19,7 @@ export default function Intro() {
 							</p>
 							<Link
 								variant={"positive"}
-								className="w-fit p-5 md:p-6 font-roboto text-white text-lg lg:text-2xl"
+								className="w-fit p-5 md:p-7 font-roboto text-white text-lg lg:text-2xl"
 								href="https://www.roboticsquest.com"
 								target="_blank"
 							>
