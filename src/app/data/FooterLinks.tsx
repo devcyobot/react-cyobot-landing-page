@@ -1,6 +1,6 @@
 export const options: { link: string; src: string; alt: string }[] = [
 	{
-		link: "https://www.instagram.com/roboticsquest",
+		link: "https://www.instagram.com/cyobot.kit",
 		src: "/icon/instagram.png",
 		alt: "instagram handle",
 	},
