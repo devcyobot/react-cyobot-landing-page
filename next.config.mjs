@@ -14,6 +14,11 @@ const nextConfig = {
 				hostname: "quest.cyobot.com",
 				pathname: "/api/media/**",
 			},
+			{
+				protocol: "https",
+				hostname: "dashboard-s.cyobot.com",
+				pathname: "/api/media/**",
+			},
 		],
 	},
 };
