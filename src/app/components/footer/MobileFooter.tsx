@@ -17,7 +17,7 @@ export default function MobileFooter() {
 						className="object-contain h-full w-full"
 					/>
 				</div>
-				<p className="h-auto w-auto font-roboto text-sm sm:text-base lg:text-lg text-white">
+				<p className="h-auto w-auto font-roboto text-lg text-white">
 					©2024 CYOBot, All right reserved.
 				</p>
 			</div>
@@ -25,7 +25,7 @@ export default function MobileFooter() {
 				<AccordionFooter sectionName="PRODUCTS" list={productsLinks} />
 				<AccordionFooter sectionName="RESOURCES" list={resourcesLinks} />
 				<div className="text-white font-vt323 h-40 w-full flex flex-col justify-evenly">
-					<h4 className="font-vt323 text-xl">GET IN TOUCH</h4>
+					<h2 className="text-2xl">GET IN TOUCH</h2>
 					<ul className="flex justify-between w-1/2">
 						<li>
 							<Link
@@ -37,7 +37,7 @@ export default function MobileFooter() {
 								<div className="absolute inset-0">
 									<Image
 										src={options[0].src}
-										alt={options[0].alt}
+										alt=""
 										fill
 										sizes="33vw"
 										style={{ objectFit: "contain" }}
@@ -55,7 +55,7 @@ export default function MobileFooter() {
 								<div className="absolute inset-0">
 									<Image
 										src={options[1].src}
-										alt={options[1].alt}
+										alt=""
 										fill
 										sizes="33vw"
 										style={{ objectFit: "cover", transform: "scale(1.07)" }}
@@ -73,7 +73,7 @@ export default function MobileFooter() {
 								<div className="absolute inset-0">
 									<Image
 										src={options[2].src}
-										alt={options[2].alt}
+										alt=""
 										fill
 										sizes="33vw"
 										style={{ objectFit: "cover" }}
@@ -82,9 +82,9 @@ export default function MobileFooter() {
 							</Link>
 						</li>
 					</ul>
-					<div>
-						<p className="text-base">team.cyobot@gmail.com</p>
-						<p className="text-base">Dover, DE, 19901</p>
+					<div className="text-xl">
+						<p>team.cyobot@gmail.com</p>
+						<p>Dover, DE, 19901</p>
 					</div>
 				</div>
 			</div>

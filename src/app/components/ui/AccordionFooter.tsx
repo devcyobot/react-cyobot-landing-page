@@ -15,7 +15,7 @@ const AccordionQA: FC<AccordionFooterProps> = (props) => {
 				className="flex justify-between w-full"
 				onClick={() => setAccordionOpen((prev) => !prev)}
 			>
-				<span className="py-2 text-xl lg:text-2xl text-start w-full">
+				<span className="py-2 text-2xl text-start w-full">
 					{props.sectionName}
 				</span>
 				<svg
@@ -45,7 +45,7 @@ const AccordionQA: FC<AccordionFooterProps> = (props) => {
 				</svg>
 			</button>
 			<ul
-				className={`overflow-hidden transition-all duration-300 ease-in-out text-white text-base ${
+				className={`overflow-hidden transition-all duration-300 ease-in-out text-white text-xl ${
 					accordionOpen
 						? `max-h-fit grid-rows-${props.list.length} opacity-100`
 						: "max-h-0 grid-rows-0 opacity-0"
