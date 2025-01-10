@@ -12,7 +12,10 @@ type PopupSubscriptionProps = {
 };
 
 export const submitSubscriptionForm = async (
-	prevState: { success: boolean; message?: string } | null,
+	prevState: {
+		success: boolean;
+		errors?: { message: string; path: string }[];
+	} | null,
 	formData: FormData
 ) => {
 	try {
@@ -42,7 +45,7 @@ export const submitSubscriptionForm = async (
 
 		return {
 			success: false,
-			message: `${responseData.errors[0].data.errors[0].field}: ${responseData.errors[0].data.errors[0].message}`,
+			errors: responseData.errors[0].data.errors,
 		};
 	} catch (error) {
 		return {
@@ -78,15 +81,16 @@ const PopupSubscription: FC<PopupSubscriptionProps> = (props) => {
 
 		if (data) {
 			if (data.success) {
-				setMessage("Your email was succesfully subscribed to CYOBot.");
+				setMessage("SUCCESS: Your email was succesfully subscribed to CYOBot.");
 			} else if (
 				!data.success &&
-				data.message === "email: Value must be unique"
+				data.errors[0].message === "Value must be unique" &&
+				data.errors[0].path === "email"
 			) {
-				setMessage("This email was already subscribed to CYOBot.");
+				setMessage("ERROR: This email was already subscribed to CYOBot.");
 			} else {
 				setMessage(
-					"Your email was not able to subscribe to CYOBot. Please contact CYOBot for further assistance."
+					"ERROR: Your email was not able to subscribe to CYOBot. Please contact CYOBot for further assistance."
 				);
 			}
 			setIsLoading(false);
@@ -156,9 +160,9 @@ const PopupSubscription: FC<PopupSubscriptionProps> = (props) => {
 												className="text-white font-robotoRegular mt-3 grid grid-cols-1 items-center"
 											>
 												<FormInput
-													typeInput="name"
+													type="name"
 													name="subscription-name"
-													placeHolder="Name"
+													placeholder="Name"
 													id="subscription-name"
 													bgColor="dark"
 												/>
@@ -168,9 +172,9 @@ const PopupSubscription: FC<PopupSubscriptionProps> = (props) => {
 												className="text-white font-robotoRegular mt-3 grid grid-cols-1 items-center"
 											>
 												<FormInput
-													typeInput="email"
+													type="email"
 													name="subscription-email"
-													placeHolder="Email"
+													placeholder="Email"
 													id="subscription-email"
 													bgColor="dark"
 												/>
