@@ -4,7 +4,7 @@ export const options: { link: string; src: string }[] = [
 		src: "/icon/instagram.png",
 	},
 	{
-		link: "https://github.com/CYOBot/CYOCrawler",
+		link: "https://github.com/CYOBot/CYOBot-v2",
 		src: "/icon/github.png",
 	},
 	{

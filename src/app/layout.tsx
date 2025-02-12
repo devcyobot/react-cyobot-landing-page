@@ -1,11 +1,9 @@
 import Footer from "@/app/components/footer/footer";
 import Navbar from "@/app/components/navbar/navbar";
-import { Link } from "@/app/components/ui/Link";
 import DifficultyProvider from "@/app/context/DifficultyContext";
 import { nunito, roboto, robotoCondensed, vt323 } from "@/app/styles/fonts";
 import "@/app/styles/globals.css";
 import { GoogleTagManager } from "@next/third-parties/google";
-import { ShoppingCart } from "lucide-react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -30,7 +28,7 @@ export default function RootLayout({
 				<GoogleTagManager gtmId="GTM-55J9KR83" />
 				<Navbar />
 				<DifficultyProvider>{children}</DifficultyProvider>
-				<Link
+				{/* <Link
 					className="rounded-full text-white bottom-3 right-3 sm:bottom-5 sm:right-5 z-10 fixed flex justify-center items-center"
 					variant={"positive"}
 					size={"icon"}
@@ -39,7 +37,7 @@ export default function RootLayout({
 					target="_blank"
 				>
 					<ShoppingCart />
-				</Link>
+				</Link> */}
 				<Footer />
 			</body>
 		</html>

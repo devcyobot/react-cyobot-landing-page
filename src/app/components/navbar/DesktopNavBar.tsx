@@ -1,6 +1,5 @@
 "use client";
 import styles from "@/app/components/navbar/link.module.css";
-import { Button } from "@/app/components/ui/Button";
 import { sendGTMEvent } from "@next/third-parties/google";
 import Link from "next/link";
 import { useState } from "react";
@@ -73,7 +72,7 @@ export default function DesktopNavBar() {
 					<Link href="/contact-us">Contact Us</Link>
 				</li>
 			</ul>
-			<Button
+			{/* <Button
 				size="lg"
 				variant={"shadow"}
 				className="md:text-xl xl:text-2xl text-brand-purple font-roboto font-medium"
@@ -83,7 +82,7 @@ export default function DesktopNavBar() {
 				}}
 			>
 				Shop
-			</Button>
+			</Button> */}
 		</div>
 	);
 }

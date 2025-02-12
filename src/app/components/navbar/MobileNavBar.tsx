@@ -2,7 +2,6 @@
 import { sendGTMEvent } from "@next/third-parties/google";
 import Link from "next/link";
 import { useState } from "react";
-import { Button } from "../ui/Button";
 import styles from "./link.module.css";
 
 export default function MobileNavBar() {
@@ -115,7 +114,7 @@ export default function MobileNavBar() {
 						<Link href="/contact-us">Contact Us</Link>
 					</li>
 				</ul>
-				<Button
+				{/* <Button
 					variant={"shadow"}
 					className="px-10 py-5 text-xl xl:text-2x xl:text-2xl text-brand-purple font-roboto font-medium"
 					onClick={() => {
@@ -124,7 +123,7 @@ export default function MobileNavBar() {
 					}}
 				>
 					Shop
-				</Button>
+				</Button> */}
 			</div>
 		</div>
 	);
