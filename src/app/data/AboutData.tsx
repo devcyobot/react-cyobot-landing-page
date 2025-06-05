@@ -30,7 +30,7 @@ export const AboutData: {
 		label: "OUR STORY",
 		src: "/icon/story.png",
 		description:
-			"CYOBot was born from the personal experiences of our founder, Duy. On his first day at work, Duy was faced with an incredibly challenging task. Despite being an A student, he found himself unprepared by his formal education and had to relearn everything on the job. This eye-opening experience led him to question the effectiveness of traditional education in preparing students for real-world challenges. ",
+			"CYOBot was born from the personal experiences of our founder, Duy. On his first day at work, Duy was faced with an incredibly challenging task. Despite being an A student, he found himself unprepared by his formal education and had to relearn everything on the job. This eye-opening experience led him to question the effectiveness of traditional education in preparing students for real-world challenges.",
 		description2:
 			"Duy realized that a hands-on study kit could have made a significant difference in his learning experience. Observing that existing robotic kits were either too costly or overly simplistic, he envisioned a more accessible and practical solution for future students. Determined to help students develop technical engineering skills and inspire a new generation of innovators, Duy collaborated with his friends from high school and college to create CYOBot.",
 		color: "purple",

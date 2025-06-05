@@ -43,7 +43,7 @@ const AboutCard: FC<AboutCardProps> = (props) => {
 				</p>
 				{props.description2 && (
 					<p className="px-5 sm:px-10 xl:px-20 mt-10 font-roboto font-medium text-lg sm:text-xl lg:text-2xl">
-						{props.description}
+						{props.description2}
 					</p>
 				)}
 			</div>
